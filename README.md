@@ -9,7 +9,7 @@ Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor es
 2. Replicar o layout do link abaixo, pode usar dados de um JSON local:\
 [Link para o layout](https://xd.adobe.com/view/c715f110-fbd4-4323-be0c-0e453c1450db-9246/?fullscreen&hints=off)
 2. Fazer a funcionalidade de busca funcionar.
-3. Os cliques nos botões de editar/excluir/novo card podem exibir um alerta de que a funcionalidade não foi implementada.
+3. Os cliques nos botões de editar/excluir/criar card podem exibir um alerta de que a funcionalidade não foi implementada.
 4. Ao finalizar a avaliação modifique esse README com as instruções de como podemos fazer o seu código rodar na nossa máquina. Ou seja, passo a passo do que instalar e de quais comandos rodar para podermos visualizar o seu trabalho!
 5. Realizar um Pull Request para o nosso repositório e mandar um e-mail para pedro.paradella@impar.com.br com o assunto "Avaliação Front-end Jr", informando que finalizou a avaliação e colocando o link do Pull Request. 
 
