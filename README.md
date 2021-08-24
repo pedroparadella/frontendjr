@@ -1,4 +1,4 @@
-# Avaliação Front-end Junior
+# Avaliação Junior
 Olá desenvolvedor!\
 Tudo bem?! 😊\
 \
