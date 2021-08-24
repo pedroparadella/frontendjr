@@ -2,7 +2,7 @@
 Olá desenvolvedor!\
 Tudo bem?! 😊\
 \
-Bem-vindo à Impar, o intuito do teste não é reprovar e sim conhecer seu melhor estilo de programar e resolver problemas. Faça um fork e realize o teste no seu ambiente.
+Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor estilo de programar e resolver problemas. Faça um fork e realize o teste no seu ambiente.
 
 ## O que fazer
 1. Fazer um fork desse repositório e trabalhar no seu ambiente.
