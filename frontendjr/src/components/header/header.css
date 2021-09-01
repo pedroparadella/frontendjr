@@ -1,0 +1,7 @@
+/* navbar */
+.nav {
+    background-image: url("../../imagens/reuniao.jpg") !important;
+    
+    background-position:top;
+    background: cover;
+}
