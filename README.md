@@ -28,11 +28,18 @@ Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor es
 
 - Usar alguma API na internet, tipo https://pokeapi.co/, para trazer os dados que vão aparecer nos cards da tela.
 
----
+## ----------------------------------
 
 A versão usada do node é: v14.16.1
 Se estiver usando o nvm, basta executar no terminal nvm use para mudar de versão.
 
+## ----------------------------------
+
 O que foi usado no projeto:
 Styled-components
 Redux
+Axios
+
+## ----------------------------------
+
+Agrupei as cores mais frequentes no projeto e coloquei como variáveis

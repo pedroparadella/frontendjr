@@ -13,6 +13,11 @@ const Button = styled.button`
   box-shadow: 0 0.1875rem 0.375rem #92207242;
   outline: none;
   border-radius: 0.5rem;
+
+  @media (max-width: 648px) {
+    width: ${(props) => props.widthMob || "50%"};
+    padding: ${(props) => props.paddingMob || ".75rem"};
+  }
 `;
 
 const Home = (props) => {
