@@ -53,11 +53,18 @@ const Line = styled.div`
 `;
 
 const TextCard = styled.p`
+  display: flex;
+  align-items: center;
+  max-height: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
   font-size: 1rem;
   font-weight: 400;
   color: var(--color_blue);
   text-align: center;
-  padding: 0 1.375rem;
+  padding: 2rem 1.375rem;
+  text-transform: capitalize;
 `;
 
 const Buttons = styled.div`
@@ -95,7 +102,7 @@ const Button = styled.button`
   }
 `;
 
-const CardComponent = ({ dataCard, ...props }) => {
+const CardComponent = ({ setIsOpen, dataCard, ...props }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -105,9 +112,7 @@ const CardComponent = ({ dataCard, ...props }) => {
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
       });
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  console.log(data);
+  }, [dataCard]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Container>
@@ -126,7 +131,7 @@ const CardComponent = ({ dataCard, ...props }) => {
           <img src={trash} alt="Icone de editar" />
           Excluir
         </Button>
-        <Button colorButtonOrange>
+        <Button onClick={() => setIsOpen(true)} colorButtonOrange>
           <img src={edit} alt="Icone de excluir" />
           Editar
         </Button>

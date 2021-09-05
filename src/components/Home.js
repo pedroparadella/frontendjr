@@ -10,6 +10,8 @@ import backgroundSearch from "../assets/image/background-search.png";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import api from "../Api";
+import BaseModal from "./BaseModal";
+import CreateCard from "./CreateCard";
 
 const Container = styled.div`
   width: 100%;
@@ -69,8 +71,8 @@ const Search = styled.input`
 `;
 
 const ButtonSearch = styled.img`
-  width: 3.125rem;
-  height: 3.125rem;
+  width: 2.125rem;
+  height: 2.125rem;
   position: absolute;
   right: 1.5625rem;
 
@@ -80,7 +82,7 @@ const ButtonSearch = styled.img`
 `;
 
 const ContainerCards = styled.div`
-  padding: 2rem 0 11.6875rem 0;
+  padding: 2rem 0 5.6875rem 0;
 
   @media (max-width: 648px) {
     padding: 2rem 0;
@@ -140,6 +142,8 @@ const Home = () => {
   const [data, setData] = useState([]);
   const [valueSearch, setValueSearch] = useState("");
   const [dataSearch, setDataSearch] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [animation, setAnimation] = useState(false);
 
   useEffect(() => {
     api
@@ -170,9 +174,6 @@ const Home = () => {
     }
   };
 
-  console.log("data", data);
-  console.log("dataSearch", dataSearch);
-
   return (
     <Container>
       <Header>
@@ -191,7 +192,7 @@ const Home = () => {
       <ContainerCards>
         <HeaderCards>
           <TitleCards>Resultado da busca</TitleCards>
-          <Button funcAction={() => null}>Novo Card</Button>
+          <Button funcAction={() => setIsOpen(true)}>Novo Card</Button>
         </HeaderCards>
         <GroupCards>
           {!dataSearch?.search?.length ? (
@@ -199,10 +200,18 @@ const Home = () => {
               <p>Nenhum resultado encontrado.</p>
             </Message>
           ) : (
-            dataSearch?.search?.map((item) => <Card dataCard={item} />)
+            dataSearch?.search?.map((item) => (
+              <Card dataCard={item} setIsOpen={setIsOpen} />
+            ))
           )}
         </GroupCards>
       </ContainerCards>
+      {/* {setTimeout(() => setIsOpen(false), 400) setAnimation(true)} */}
+      {isOpen && (
+        <BaseModal closeModal={() => setIsOpen(false)}>
+          <CreateCard isOpen={isOpen} />
+        </BaseModal>
+      )}
     </Container>
   );
 };
