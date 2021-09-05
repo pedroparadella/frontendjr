@@ -148,12 +148,12 @@ const Home = () => {
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
       });
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     setValueSearch("");
     setDataSearch({ search: data.results });
-  }, [data?.results?.length]);
+  }, [data?.results?.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleChange = (e) => {
     const { value } = e.target;

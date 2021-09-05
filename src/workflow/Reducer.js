@@ -4,7 +4,7 @@ export const initialState = {
   tvShow: [],
 };
 
-export default function Reducer(state = initialState, action) {
+const Reducer = (state = initialState, action) => {
   switch (action.type) {
     case TV_SHOW_UPDATE_VALUE:
       return {
@@ -14,7 +14,9 @@ export default function Reducer(state = initialState, action) {
     default:
       return state;
   }
-}
+};
+
+export default Reducer;
 
 export const actionTvShow = (info) => ({
   type: TV_SHOW_UPDATE_VALUE,

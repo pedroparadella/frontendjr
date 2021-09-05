@@ -105,7 +105,7 @@ const CardComponent = ({ dataCard, ...props }) => {
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
       });
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   console.log(data);
 
