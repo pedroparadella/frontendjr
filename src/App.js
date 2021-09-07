@@ -1,9 +1,18 @@
-function App() {
+import React from 'react';
+import Topbar from './components/Topbar';
+import Home from './pages/home';
+import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+export default function App() {
   return (
-    <div>
-      <p>Teste</p>
-    </div>
+    <>
+      <Router>
+        <Topbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+        </Switch>
+      </Router>
+    </>
   );
 }
-
-export default App;
