@@ -53,3 +53,10 @@ hr {
 .icon {
   margin-right: 5px;
 }
+
+.lupa {
+  position: absolute;
+  top: 163px;
+  right: 19px;
+  width: 2rem;
+}

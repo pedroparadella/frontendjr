@@ -1,25 +1,21 @@
 import React from 'react';
 import * as S from './styled';
+import Search from '../components/Search';
 import Card from '../components/Card';
 
 export default function home() {
   return (
     <>
-      <S.SearchSection>
-        <S.Container>
-          <S.Input
-            placeholder="Digite aqui sua busca..."
-            className="usuarioInput"
-          />
-        </S.Container>
-      </S.SearchSection>
+      <Search />
 
       <S.ResultSection>
+        
         <S.Search>
           <S.TituloCard>Resultado de busca</S.TituloCard>
           <S.Button>Novo Card</S.Button>
         </S.Search>
-        <S.Cards>
+
+        <S.ContainerCards>
           <Card />
           <Card />
           <Card />
@@ -29,7 +25,8 @@ export default function home() {
           <Card />
           <Card />
           <Card />
-        </S.Cards>
+        </S.ContainerCards>
+
       </S.ResultSection>
     </>
   );

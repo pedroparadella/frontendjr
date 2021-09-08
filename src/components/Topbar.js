@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Container } from './TopbarElements';
+import { Header, Container } from './TopbarStyles';
 import { Link } from 'react-router-dom';
 import logo from '../images/logo-teste.svg';
 

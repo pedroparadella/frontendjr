@@ -2,7 +2,7 @@ import React from 'react';
 import icone from '../images/icone.svg';
 import iconEdit from '../images/Icon-edit.svg';
 import iconTrash from '../images/Icon-trash.svg';
-import * as S from './CardElements';
+import * as S from './CardStyles';
 import { Link } from 'react-router-dom';
 
 function Card() {
