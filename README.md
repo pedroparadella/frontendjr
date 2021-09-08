@@ -1,38 +1,62 @@
-# Avaliação Junior
+## Projeto frontEnd Jr
 
-Olá desenvolvedor!
-Tudo bem?! 😊
+Projeto desenvolvido com ReactJs, lib para construir interfaces do usuário com componentes reutilizáveis
 
-Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor estilo de programar e resolver problemas.
+### Online no netlify:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e73ee918-fa75-4147-8794-24611f033749/deploy-status)](https://app.netlify.com/sites/cards-maiconavila/deploys)
 
-## O que fazer
+### [Link do projeto](https://cards-maiconavila.netlify.app)
 
-1. Fazer um fork desse repositório e trabalhar no seu ambiente.
-2. Replicar o layout do link abaixo, pode usar dados de um JSON local:
-   [Link para o layout](https://xd.adobe.com/view/c715f110-fbd4-4323-be0c-0e453c1450db-9246/?fullscreen&hints=off)
-3. Fazer a funcionalidade de busca funcionar.
-4. Os cliques nos botões de editar/excluir/criar card podem exibir um alerta de que a funcionalidade não foi implementada.
-5. Ao finalizar a avaliação modifique esse README com as instruções de como podemos fazer o seu código rodar na nossa máquina. Ou seja, passo a passo do que instalar e de quais comandos rodar para podermos visualizar o seu trabalho!
-6. Realizar um Pull Request para o nosso repositório e mandar um e-mail para pedro.paradella@impar.com.br com o assunto "Avaliação Junior", informando que finalizou a avaliação e colocando o link do Pull Request.
+### Features
 
-## Dicas
+- [x] Pesquisar
+- [x] Adicionar cards
+- [x] Pegar dados da api
+- [x] Upload de imagem
+- [x] Editar cards
+- [x] Apagar cards
+- [x] Paginação dos dados da api
+- [x] Cores mais frequentes no projeto agrupadas como variáveis
+- [x] responsivo a partir de 648px
 
-- Não foi definido limite de linhas e colunas, portanto fique à vontade para tal escolha.
-- Gostamos de interfaces limpas e elegantes.
+### Pré-requisitos
 
-## Quais tecnologias usar
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+>A versão do node usada no projeto é: v14.16.1
+>Se estiver usando o nvm, com a versão baixada, basta executar no terminal `$ nvm use` para mudar de versão a nível de desenvolvimento
 
-- Deixaremos a seu critério qual tecnologia utilizar no entanto você terá mais pontos conosco se utilizar React para criação da interface e também o uso de pré-processadores/styled-components para o CSS.
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-## Desafios se você se sentir confiante
+### 🖱️ Rodando o Projeto
 
-- Usar alguma API na internet, tipo https://pokeapi.co/, para trazer os dados que vão aparecer nos cards da tela.
+```bash
+# Abra o terminal/cmd e em seguida Clone este repositório
+$ git clone <https://github.com/MaiconAvila/frontendjr>
 
----
+# Acesse a pasta do projeto no terminal/cmd
+$ cd frontendjr
 
-A versão usada do node é: v14.16.1
-Se estiver usando o nvm, basta executar no terminal nvm use para mudar de versão.
+# Vá para a pasta src
+$ cd src
 
-O que foi usado no projeto:
-Styled-components
-Redux
+# Instale as dependências
+$ yarn install ou apenas yarn
+
+# Execute a aplicação em modo de desenvolvimento
+$ yarn start
+
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
+
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Node.js](https://nodejs.org/en/)
+- [Axios](https://axios-http.com/ptbr/)
+- [React Query](https://react-query.tanstack.com/)
+- [React](https://pt-br.reactjs.org/)
+- [Styled-components](https://styled-components.com/)
+
+Feito com ❤️ por  Maicon Avila 👋
