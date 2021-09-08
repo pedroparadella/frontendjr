@@ -17,10 +17,13 @@ const Button = styled.button`
   position: ${(props) => props.positionButton};
   top: ${(props) => props.topButton};
   right: ${(props) => props.rightButton};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  @media (max-width: 648px) {
-    width: ${(props) => props.widthMob || "50%"};
-    padding: ${(props) => props.paddingMob || ".75rem"};
+  :disabled {
+    opacity: 0.4;
+    cursor: initial;
   }
 `;
 
@@ -30,17 +33,16 @@ const Home = (props) => {
       type="button"
       onClick={props.funcAction}
       widthButton={props.widthButton}
-      widthMob={props.widthMob}
       positionButton={props.positionButton}
       topButton={props.topButton}
       rightButton={props.rightButton}
       paddingButton={props.paddingButton}
-      paddingMob={props.paddingMob}
       heightButton={props.heightButton}
       colorButton={props.colorButton}
       borderButton={props.borderButton}
       alignSelfButton={props.alignSelfButton}
       backgroundButton={props.backgroundButton}
+      disabled={props.disabled}
     >
       {props.children}
     </Button>

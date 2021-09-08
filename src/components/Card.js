@@ -43,6 +43,11 @@ const CircleImageCard = styled.div`
   margin-bottom: 1.625rem;
   background: var(--color_gray);
   border: 0.0625rem solid #e4e4e4;
+  overflow: hidden;
+
+  img {
+    max-width: 4.9375rem;
+  }
 `;
 
 const Line = styled.div`
@@ -65,6 +70,7 @@ const TextCard = styled.p`
   text-align: center;
   padding: 2rem 1.375rem;
   text-transform: capitalize;
+  word-break: break-word;
 `;
 
 const Buttons = styled.div`
@@ -102,36 +108,62 @@ const Button = styled.button`
   }
 `;
 
-const CardComponent = ({ setIsOpen, dataCard, ...props }) => {
+const CardComponent = ({
+  setWarning,
+  dataCard,
+  result,
+  setDataUpdate,
+  setDataDelete,
+  setIsOpen,
+}) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     api
-      .get(`pokemon/${dataCard?.name}/`)
-      .then((response) => setData(response.data))
+      .get(`pokemon/${result?.name}/`)
+      .then((response) => setData(response?.data))
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
       });
-  }, [dataCard]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [result]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Container>
       <Card>
         <CircleImageCard>
           <img
-            src={data?.sprites?.back_default || defaultCard}
+            src={
+              dataCard?.front_default?.preview
+                ? dataCard?.front_default?.preview
+                : data?.sprites?.front_default
+                ? data?.sprites?.front_default
+                : defaultCard
+            }
             alt="Imagem do card"
           />
         </CircleImageCard>
         <Line />
-        <TextCard>{data?.name}</TextCard>
+        <TextCard>{dataCard?.name ? dataCard?.name : data?.name}</TextCard>
       </Card>
       <Buttons>
-        <Button colorButtonRed>
+        <Button
+          colorButtonRed
+          onClick={() => {
+            setDataDelete(dataCard);
+            result && setWarning(true);
+          }}
+        >
           <img src={trash} alt="Icone de editar" />
           Excluir
         </Button>
-        <Button onClick={() => setIsOpen(true)} colorButtonOrange>
+        <Button
+          onClick={() => {
+            !data?.name && dataCard?.name && setIsOpen(true);
+            result && setWarning(true);
+            dataCard && setDataUpdate(dataCard);
+          }}
+          colorButtonOrange
+        >
           <img src={edit} alt="Icone de excluir" />
           Editar
         </Button>
