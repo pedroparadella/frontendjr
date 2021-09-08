@@ -69,8 +69,11 @@ const TextCard = styled.p`
   color: var(--color_blue);
   text-align: center;
   padding: 2rem 1.375rem;
-  text-transform: capitalize;
   word-break: break-word;
+
+  p:first-letter {
+    text-transform: capitalize;
+  }
 `;
 
 const Buttons = styled.div`
