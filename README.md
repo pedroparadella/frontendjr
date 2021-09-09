@@ -12,8 +12,8 @@ Você precisará do [Node.js](https://nodejs.org) instalado no seu computador pa
 ```bash
 git clone https://github.com/lipeneves/frontendjr.git
 $ cd frontendjr
-$ yarn install
-$ yarn dev
+$ npm install
+$ npm dev
 ```
 
 Execução em modo de desenvolvimento. <br/>
