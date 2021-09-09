@@ -21,9 +21,11 @@ export default function CreateCard() {
       </label>
       <S.Linha />
 
-      <R.Button type="button" className="right">
-        Criar card
-      </R.Button>
+      <R.ContainerButton>
+        <R.Button type="button" className="right">
+          Criar card
+        </R.Button>
+      </R.ContainerButton>
     </S.Container>
   );
 }

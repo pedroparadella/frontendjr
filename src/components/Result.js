@@ -12,7 +12,7 @@ function Result() {
   return (
     <>
       <div
-        className={sidebar ? 'bgCreateCard active' : 'bgCreateCard'}
+        className={sidebar ? 'bgCreateCard active2' : 'bgCreateCard'}
         onClick={showSidebar}
       />
       <div className={sidebar ? 'createCard active' : 'createCard'}>

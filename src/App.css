@@ -9,6 +9,8 @@ body,
 html,
 #root {
   height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -31,7 +33,7 @@ hr {
 }
 
 .icone {
-  width: 64px;
+  width: 95px;
   padding: 15px;
   border-radius: 70px;
   margin-top: 30px;
@@ -47,6 +49,8 @@ hr {
   transition: all 300ms;
   display: flex;
   align-items: flex-start;
+  color: #263238;
+  margin-top: 5px;
 }
 
 .edit:hover {
@@ -70,34 +74,79 @@ hr {
 
 .createCard {
   position: absolute;
-  width: 40%;
   height: 100vh;
   background: white;
   top: 0;
   z-index: 1100;
   right: 0;
-  display: none;
+  overflow-x: hidden;
+  width: 0;
+  transition: width 50ms;
+}
+
+@media (min-width: 1201px) {
+  .active {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .active {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .active {
+    width: 60%;
+  }
+}
+
+@media (max-width: 900px) {
+  .active {
+    width: 70%;
+  }
+}
+
+@media (max-width: 680px) {
+  .active {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .active {
+    width: 85%;
+  }
 }
 
 .bgCreateCard {
   position: absolute;
-  width: 100%;
+  width: 0;
   height: 100vh;
   background: rgba(255, 255, 255, 0.7);
   top: 0;
   z-index: 1099;
   right: 0;
-  display: none;
+  transition: all 150ms;
 }
 
-.active {
-  display: block;
-}
-
-.right {
-  float: right;
+.active2 {
+  width: 100%;
 }
 
 .criar {
   margin-right: 15px;
+}
+
+.desactive {
+  display: none;
+}
+
+.iconTrash {
+  width: 130px;
+  padding: 10px;
+  border-radius: 70px;
+  margin-bottom: 20px;
+  background: #f6f4f6;
 }

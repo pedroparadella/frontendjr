@@ -10,9 +10,15 @@ export const Search = styled.div`
 export const TituloCard = styled.h2`
   color: #5f1478;
   font-weight: 700;
+  font-size: 1.6rem;
   @media (max-width: 450px) {
     font-size: 1.1rem;
   }
+`;
+
+export const ContainerButton = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `;
 
 export const Button = styled.button`
