@@ -32,7 +32,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 # Abra o terminal/cmd e em seguida Clone este repositório
-$ git clone <https://github.com/MaiconAvila/frontendjr>
+$ git clone https://github.com/MaiconAvila/frontendjr.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd frontendjr
