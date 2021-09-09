@@ -1,6 +1,6 @@
 # Projeto para Avaliação Ímpar | Estágio Felipe Neves
 
-Olá avaliador! 😊
+Olá avaliador! 👋🏾
 Espero que goste do meu projeto!
 
 Apenas a parte da busca que ainda não consegui implementar, mas para não atrasar com a entrega resolvi enviar logo, porém acho que consigo implementar daqui alguns dias. Por isso continuarei tentando 😀
