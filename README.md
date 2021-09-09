@@ -13,7 +13,7 @@ Você precisará do [Node.js](https://nodejs.org) instalado no seu computador pa
 git clone https://github.com/lipeneves/frontendjr.git
 $ cd frontendjr
 $ npm install
-$ npm dev
+$ npm start
 ```
 
 Execução em modo de desenvolvimento. <br/>
