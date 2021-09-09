@@ -45,4 +45,5 @@ export const Button = styled.button`
   border-radius: 8px;
   border: none;
   color: white;
+  cursor: pointer;
 `;
