@@ -10,7 +10,7 @@ Apenas a parte da busca que ainda não consegui implementar, mas para não atras
 Você precisará do [Node.js](https://nodejs.org) instalado no seu computador para rodar este app.
 
 ```bash
-git clone https://github.com/lipeneves/frontendjr.git
+$ git clone https://github.com/lipeneves/frontendjr.git
 $ cd frontendjr
 $ npm install
 $ npm start
