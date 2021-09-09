@@ -1,4 +1,4 @@
-# Projeto para Avaliação Ímpar | Estagiário Felipe Neves
+# Projeto para Avaliação Ímpar | Estágio Felipe Neves
 
 Olá avaliador! 😊
 Espero que goste do meu projeto!
