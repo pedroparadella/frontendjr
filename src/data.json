@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Pikachu"
+  },
+  {
+    "id": 2,
+    "name": "Charmander"
+  },
+  {
+    "id": 3,
+    "name": "Bulbasaur"
+  },
+  {
+    "id": 4,
+    "name": "Squirtle"
+  },
+  {
+    "id": 5,
+    "name": "Jigglypuff"
+  },
+  {
+    "id": 6,
+    "name": "Eevee"
+  },
+  {
+    "id": 7,
+    "name": "Raichu"
+  },
+  {
+    "id": 8,
+    "name": "Snorlax"
+  },
+  {
+    "id": 9,
+    "name": "Vulpix"
+  },
+  {
+    "id": 10,
+    "name": "Meowth"
+  },
+  {
+    "id": 11,
+    "name": "Psyduck"
+  }
+  
+]
