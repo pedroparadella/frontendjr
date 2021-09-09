@@ -16,8 +16,6 @@ $ npm install
 $ npm start
 ```
 
-Execução em modo de desenvolvimento. <br/>
-
 ## Informações
 
 - As informações dos cards estão armazenadas no arquivo JSON chamado "dados.json"
