@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+html, body {
+  background-color: #F6F4F6;
+  font-family: 'Muli', sans-serif;
+}

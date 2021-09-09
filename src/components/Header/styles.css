@@ -1,0 +1,10 @@
+.header-container {
+  height: auto;
+  width: 100%;
+  padding: 8px 15px;
+  background: linear-gradient(to right, #5F1478, #AE276F);
+}
+  .header-container>img {
+    width: 192px;
+    height: 37px;
+  }
