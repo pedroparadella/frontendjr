@@ -11,7 +11,7 @@ Você precisará do [Node.js](https://nodejs.org) instalado no seu computador pa
 
 ```bash
 git clone https://github.com/lipeneves/frontendjr.git
-$ cd rocketredis
+$ cd frontendjr
 $ yarn install
 $ yarn dev
 ```
