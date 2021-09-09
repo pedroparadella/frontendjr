@@ -1,0 +1,19 @@
+.btn-div{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.btn-div>button{
+  width: 50%;
+  margin-top: 20px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+}
+.btn-div>button:hover{
+  cursor: pointer;
+}
+.btn-div>button>span{
+  font-size: 1.4rem;
+  margin-left: 5px
+}
