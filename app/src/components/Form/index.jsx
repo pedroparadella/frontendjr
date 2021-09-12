@@ -1,17 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import SearchInputField from "./../SearchInputField";
 
 const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-top: 147px;;
+    width:73vw;
+`; 
+
+const ResultContainer = styled.div`
+    background-color: #fff;
 `;
+
+
 
 export default function Form(props) {
   return (
     <Container>
-        <p>opa</p>
+          <SearchInputField />
+         
+          <ResultContainer />
     </Container>
   )
 }
