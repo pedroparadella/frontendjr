@@ -2,15 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import SearchInputField from "./../SearchInputField";
 import Button from "../Button";
+import ResultContainer from "../ResultContainer";
 
 const Container = styled.div`
     margin-top: 147px;;
-    width:73vw;
+    margin-bottom: 153px;
+    width: 1056px;
 `; 
-
-const ResultContainer = styled.div`
-    background-color: #fff;
-`;
 
 const Row = styled.div`
     display: flex;
