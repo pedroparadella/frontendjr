@@ -106,7 +106,7 @@ select {
     font-size: var(--unnamed-font-size-32);
     line-height: var(--unnamed-line-spacing-40);
     letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(---cor-primaria);
+    color: var(--cor-primaria);
 }
 .-titulo-h2 {
     font-family: var(--unnamed-font-family-muli);

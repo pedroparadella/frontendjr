@@ -27,8 +27,8 @@ const Circle = styled.div`
 
 const HBar = styled.div`
     width: 72%;
-    height: 0;
-    border: 1px solid #F0EFF0;
+    height: 1px;
+    background-color: #F0EFF0;
     margin-top: 1.375rem;
 `;
 

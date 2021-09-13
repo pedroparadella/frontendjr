@@ -11,7 +11,7 @@ const Bar = styled.div`
     box-shadow: 0px 3px 6px #00000029;
     opacity: 1;
     position: fixed;
-    z-index: 999;
+    z-index: 1;
     top: 0;
 `;
 
