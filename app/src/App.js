@@ -15,6 +15,7 @@ const BannerBackground  = styled.img`
     top:0;
     left:0;
     position: absolute;
+    width: 100%;
 `;
 
 

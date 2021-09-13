@@ -4,6 +4,7 @@ import Card from "../Card";
 
 const Container = styled.div`
     margin-top: 1.313rem;
+    margin-left: 10px;
     display: grid;
     grid-template-columns: repeat(4, minmax(200px, 234px));
     grid-template-rows: repeat(auto-fill, max-content);

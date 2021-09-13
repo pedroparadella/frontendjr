@@ -85,23 +85,25 @@ const CardButton = styled.div`
         color: var(--unnamed-color-263238);
         opacity: 0.52;
     } 
+
     
-    &.delete-btn span:hover {
+    &.btn:hover, &.btn:hover span {
         cursor: pointer;
-        color: var(--cor-erro);
         opacity: 1;
     }
-    
-    &.edit-btn span:hover {
-        cursor: pointer;
+
+    &.edit-btn:hover, &.edit-btn:hover span {
         color: var(--cor-destaque);
-        opacity: 1;
-    } 
+    }
+
+    &.delete-btn:hover, &.delete-btn:hover span {
+        color: var(--cor-erro);
+    }
 `;
 
 
 const EditButton =  ({children}) => (
-    <CardButton className="edit-btn">
+    <CardButton className="edit-btn btn">
         <img style={{marginRight: 9.5, float: 'left',  marginTop: 2.46, marginBottom: 3.32}} width={12.64} height={14.05} src={editIcon} />
         <span>{children}</span>
     </CardButton>
@@ -109,7 +111,7 @@ const EditButton =  ({children}) => (
 
 
 const DeleteButton = ({children}) => (
-    <CardButton className="delete-btn">
+    <CardButton className="delete-btn btn">
         <img style={{marginRight: 11.75, float: 'left', marginTop: 1.87, marginBottom: 3.08}} width={12.64} height={14.05} src={trashIcon} />
         <span>{children}</span>
     </CardButton>
