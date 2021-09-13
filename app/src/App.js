@@ -10,10 +10,7 @@ const AppContainer = styled.div`
   align-items: center;
 `;
 
-const BannerBackground  = styled.div`
-    background-image: url(${Banner});
-    width: 100%;
-    height:261px;
+const BannerBackground  = styled.img`
     z-index: -1;
     top:0;
     left:0;
@@ -25,7 +22,7 @@ function App() {
   return (
       <AppContainer>
       <AppBar />
-      <BannerBackground />
+      <BannerBackground src={Banner}/>
       <Form></Form>
       </AppContainer>
   );
