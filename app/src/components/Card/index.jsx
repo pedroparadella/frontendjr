@@ -117,15 +117,15 @@ const DeleteButton = ({children}) => (
     </CardButton>
 );
 
-export default function Card() {
+export default function Card({item}) {
     return (
         <Container>
             <Circle>
-                <img width={64} height={63} src={icone} alt="icone" />
+                <img width={64} height={63} src={item.image} alt="icone" />
             </Circle>
             <HBar />
             <Text>
-                Lorem ipsum dolor sit amet consectetur
+                {item.name}
             </Text>
             <ButtonsContainer>
                 <DeleteButton> Excluir </DeleteButton>

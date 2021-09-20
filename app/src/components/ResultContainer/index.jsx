@@ -17,13 +17,8 @@ export default function ResultContainer({list}) {
 
     return (
     <Container>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {list.map((item, index) => (
+            <Card key={index} item={item}/>
+        ))}
     </Container>);
 }

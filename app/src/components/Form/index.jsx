@@ -1,9 +1,11 @@
-import React, { useRef, useState }  from "react";
+import React, { useRef, useState, useEffect }  from "react";
 import styled from "styled-components";
 import SearchInputField from "./../SearchInputField";
 import Button from "../Button";
 import ResultContainer from "../ResultContainer";
 import newCardIcon from './../../icons/icone_criar.svg';
+import { PokemonService } from "../../services/pokemonService";
+
 
 const Container = styled.div`
     margin-top: 147px;;
@@ -60,6 +62,17 @@ const HBar  = styled.div`
 export default function Form(props) {
   const sideNav = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
+  const [pokemonList, setPokemonList] = useState([]);
+  const service = new PokemonService();
+
+  useEffect(() => {
+    service.getAllPokemons().then(response => {
+      setPokemonList(response || []);
+    });
+  }, []);
+
+
 
   function toggleSideNav(){
     sideNav.current.style.left = isOpen ?  "100%" : 0;
@@ -75,7 +88,7 @@ export default function Form(props) {
               </Label>
               <Button onClick={toggleSideNav}>Novo Card</Button>
           </Row>
-          <ResultContainer />
+          <ResultContainer list={pokemonList}/>
           <SideNav ref={sideNav} onClick={toggleSideNav}>
           <SideNavContent>
               <div style={{display: 'flex'}}>
