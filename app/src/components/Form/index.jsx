@@ -66,11 +66,21 @@ export default function Form(props) {
   const [pokemonList, setPokemonList] = useState([]);
   const service = new PokemonService();
 
-  useEffect(() => {
+  function loadPokemonList() {
     service.getAllPokemons().then(response => {
       setPokemonList(response || []);
     });
-  }, []);
+  }
+
+  useEffect(() => {
+    loadPokemonList();
+  }, [pokemonList]);
+
+  function deletePokemon(pokemon) {
+    service.deletePokemon(pokemon.id).then(response => {
+      loadPokemonList();
+    });
+  }
 
 
 
@@ -88,7 +98,7 @@ export default function Form(props) {
               </Label>
               <Button onClick={toggleSideNav}>Novo Card</Button>
           </Row>
-          <ResultContainer list={pokemonList}/>
+          <ResultContainer onDelete={e => deletePokemon(e)} list={pokemonList}/>
           <SideNav ref={sideNav} onClick={toggleSideNav}>
           <SideNavContent>
               <div style={{display: 'flex'}}>
@@ -103,7 +113,7 @@ export default function Form(props) {
                 <span>
                   Nenhum arquivo selecionado
                 </span>
-                <label for="files">Escolher arquivo</label>
+                <label htmlFor="files">Escolher arquivo</label>
                 <input type="file" id="files" style={{"display": "none"}}/>
               </div>
               <HBar style={{marginTop: 51.22}} />

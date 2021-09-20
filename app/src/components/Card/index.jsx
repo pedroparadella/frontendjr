@@ -102,22 +102,23 @@ const CardButton = styled.div`
 `;
 
 
-const EditButton =  ({children}) => (
-    <CardButton className="edit-btn btn">
+const EditButton =  ({children, onClick}) => (
+    <CardButton onClick={e => onClick(e)} className="edit-btn btn">
         <img style={{marginRight: 9.5, float: 'left',  marginTop: 2.46, marginBottom: 3.32}} width={12.64} height={14.05} src={editIcon} />
         <span>{children}</span>
     </CardButton>
 );
 
 
-const DeleteButton = ({children}) => (
-    <CardButton className="delete-btn btn">
+const DeleteButton = ({children, onClick}) => (
+    <CardButton onClick={e => onClick(e)} className="delete-btn btn">
         <img style={{marginRight: 11.75, float: 'left', marginTop: 1.87, marginBottom: 3.08}} width={12.64} height={14.05} src={trashIcon} />
         <span>{children}</span>
     </CardButton>
 );
 
-export default function Card({item}) {
+export default function Card({item,onDelete,onEdit}) {
+
     return (
         <Container>
             <Circle>
@@ -128,9 +129,9 @@ export default function Card({item}) {
                 {item.name}
             </Text>
             <ButtonsContainer>
-                <DeleteButton> Excluir </DeleteButton>
+                <DeleteButton onClick={e => onDelete(item)} > Excluir </DeleteButton>
                 <VBar />
-                <EditButton> Editar </EditButton>
+                <EditButton onClick={d => onEdit(d)}> Editar </EditButton>
             </ButtonsContainer>
         </Container>
     );

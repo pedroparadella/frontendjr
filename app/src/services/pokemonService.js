@@ -8,13 +8,25 @@ const api  = axios.create({
 class PokemonService {
     constructor() {
         this.api = api;
-        this._deletePokemons = [];
-        this._addPokemons = [];
+        if(!localStorage.getItem('data'))
+            localStorage.setItem('data', JSON.stringify({
+                deletePokemons: [],
+                addPokemons: []
+            }));
+        this._deletePokemons = JSON.parse(localStorage.getItem('data')).deletePokemons;
+        this._addPokemons = JSON.parse(localStorage.getItem('data')).addPokemons;
         this.count  = 0;
         //load the count
         this.api.get('/pokemon/').then(res => {
             this.count = res.data.count;
         });
+    }
+
+    async saveChanges() {
+        localStorage.setItem('data', JSON.stringify({
+            deletePokemons: this._deletePokemons,
+            addPokemons: this._addPokemons
+        }));
     }
 
     async addPokemon(pokemon) {
@@ -25,6 +37,8 @@ class PokemonService {
                 image: pokemon.imageUrl
             }  
         );
+        this.count++;
+        await this.saveChanges();
     }
 
     async deletePokemon(id) {
@@ -33,12 +47,13 @@ class PokemonService {
             return;
         }
         this._deletePokemons.push(id);
+        await this.saveChanges();
     }
 
 
-    async getAllPokemons({limit = 16 , offset = 0}) {
+    async getAllPokemons(offset, limit=16) {
         //filter out the deleted pokemons
-        let d  = await this.api.get(`/pokemon/?limit=${limit}&offset=${offset}`);
+        let d  = await this.api.get(`/pokemon/?limit=${limit || 16}&offset=${offset||0}`);
         d = await Promise.all(d.data.results.map(async obj => {
             let attributes = (await axios.get(obj.url)).data;
             return {

@@ -13,12 +13,12 @@ const Container = styled.div`
 `;
 
 
-export default function ResultContainer({list}) {
+export default function ResultContainer({list,onDelete,onEdit}) {
 
     return (
     <Container>
         {list.map((item, index) => (
-            <Card key={index} item={item}/>
+            <Card onDelete={d => onDelete(d)} onEdit={d => onEdit(d)} key={index} item={item}/>
         ))}
     </Container>);
 }
