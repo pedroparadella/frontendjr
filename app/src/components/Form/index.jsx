@@ -90,11 +90,14 @@ export default function Form(props) {
   const [searchValue, setSearchValue] = useState("");
   const [pokemonList, setPokemonList] = useState([]);
   const [offset, setOffset] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
   const service = new PokemonService();
 
   function loadPokemonList() {
+    setIsLoading(true);
     service.getAllPokemons(offset).then(response => {
       setPokemonList(response || []);
+      setIsLoading(false);
     });
   }
 
@@ -131,7 +134,7 @@ export default function Form(props) {
             </span>
             <button onClick={() => offset<service.count && setOffset(offset+1)}> {'>'}</button>
           </PaginationContainer>
-          <ResultContainer onDelete={e => deletePokemon(e)} list={pokemonList}/>
+          <ResultContainer isLoading={isLoading} onDelete={e => deletePokemon(e)} list={pokemonList}/>
           <SideNav ref={sideNav} onClick={toggleSideNav}>
           <SideNavContent>
               <div style={{display: 'flex'}}>

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "../Card";
-
+import { Loader } from "../Loader";
 const Container = styled.div`
     margin-top: 1.313rem;
     margin-left: 10px;
@@ -13,12 +13,14 @@ const Container = styled.div`
 `;
 
 
-export default function ResultContainer({list=[],onDelete=() =>{},onEdit =()=>{}}) {
+export default function ResultContainer({isLoading= false, list=[],onDelete=() =>{},onEdit =()=>{}}) {
 
     return (
-    <Container>
-        {list.map((item, index) => (
-            <Card onDelete={d => onDelete(d)} onEdit={d => onEdit(d)} key={index} item={item}/>
-        ))}
-    </Container>);
+        <Container>
+            <Loader isLoading={isLoading} color={'var(--cor-destaque)'}/>
+            {list.map((item, index) => (
+                <Card onDelete={d => onDelete(d)} onEdit={d => onEdit(d)} key={index} item={item}/>
+            ))}
+        </Container>
+        );
 }
