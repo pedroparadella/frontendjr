@@ -13,7 +13,7 @@ const Container = styled.div`
 `;
 
 
-export default function ResultContainer({list,onDelete,onEdit}) {
+export default function ResultContainer({list=[],onDelete=() =>{},onEdit =()=>{}}) {
 
     return (
     <Container>

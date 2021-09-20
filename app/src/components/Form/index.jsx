@@ -57,6 +57,31 @@ const HBar  = styled.div`
   background-color: #D4D4D4;
 `;
 
+const PaginationContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 16px;
+  font-family: Muri;
+  font-weight: semibold;
+
+  & button {
+    border: none;
+    border-radius: 8px;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  & button + span {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+`;
+
 
 
 export default function Form(props) {
@@ -64,17 +89,18 @@ export default function Form(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [pokemonList, setPokemonList] = useState([]);
+  const [offset, setOffset] = useState(0);
   const service = new PokemonService();
 
   function loadPokemonList() {
-    service.getAllPokemons().then(response => {
+    service.getAllPokemons(offset).then(response => {
       setPokemonList(response || []);
     });
   }
 
   useEffect(() => {
     loadPokemonList();
-  }, [pokemonList]);
+  }, [offset]);
 
   function deletePokemon(pokemon) {
     service.deletePokemon(pokemon.id).then(response => {
@@ -98,6 +124,13 @@ export default function Form(props) {
               </Label>
               <Button onClick={toggleSideNav}>Novo Card</Button>
           </Row>
+          <PaginationContainer>
+            <button onClick={() => offset >=1 && setOffset(offset-1) }>{'<'}</button>
+            <span>
+              {offset+1}
+            </span>
+            <button onClick={() => offset<service.count && setOffset(offset+1)}> {'>'}</button>
+          </PaginationContainer>
           <ResultContainer onDelete={e => deletePokemon(e)} list={pokemonList}/>
           <SideNav ref={sideNav} onClick={toggleSideNav}>
           <SideNavContent>
