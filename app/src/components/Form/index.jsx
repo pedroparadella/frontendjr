@@ -5,7 +5,8 @@ import Button from "../Button";
 import ResultContainer from "../ResultContainer";
 import newCardIcon from './../../icons/icone_criar.svg';
 import { PokemonService } from "../../services/pokemonService";
-
+import { DeleteModal } from "../modals/DeleteModal";
+import HSeparator from "../HSeparator";
 
 const Container = styled.div`
     margin-top: 147px;;
@@ -51,11 +52,11 @@ const SideNavContent = styled.div`
   padding: 41px 34px 235px 32px;
 `;
 
-const HBar  = styled.div`
-  height: 1px;
-  width: 100%;
-  background-color: #D4D4D4;
-`;
+// const HBar  = styled.div`
+//   height: 1px;
+//   width: 100%;
+//   background-color: #D4D4D4;
+// `;
 
 const PaginationContainer = styled.div`
   display: flex;
@@ -91,6 +92,8 @@ export default function Form(props) {
   const [pokemonList, setPokemonList] = useState([]);
   const [offset, setOffset] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedPokemon, setSelectedPokemon] = useState(null);
   const service = new PokemonService();
 
   function loadPokemonList() {
@@ -109,6 +112,12 @@ export default function Form(props) {
     service.deletePokemon(pokemon.id).then(response => {
       loadPokemonList();
     });
+    setShowModal(false);
+  }
+
+  function openModal(pokemon) {
+    setShowModal(true);
+    setSelectedPokemon(pokemon);
   }
 
 
@@ -120,6 +129,7 @@ export default function Form(props) {
 
   return (
     <Container>
+      <DeleteModal show={showModal} onClose={() => setShowModal(false)} onDelete={() => deletePokemon(selectedPokemon)}/>
           <SearchInputField />
           <Row>
               <Label>
@@ -134,14 +144,14 @@ export default function Form(props) {
             </span>
             <button onClick={() => offset<service.count && setOffset(offset+1)}> {'>'}</button>
           </PaginationContainer>
-          <ResultContainer isLoading={isLoading} onDelete={e => deletePokemon(e)} list={pokemonList}/>
+          <ResultContainer isLoading={isLoading} onDelete={e => openModal(e)} list={pokemonList}/>
           <SideNav ref={sideNav} onClick={toggleSideNav}>
           <SideNavContent>
               <div style={{display: 'flex'}}>
                 <img style={{width: '46px', height: '46px', marginRight: '18px'}} src={newCardIcon} />
                 <h1 className="-titulo-h1" >Criar card</h1>
               </div>
-              <HBar style={{marginTop: 30.71}} />
+              <HSeparator style={{marginTop: 30.71}} />
               <h2 style={{marginTop: 43.29}}>DIGITE UM NOME PARA O CARD</h2>
               <input type="text" name="" id="" placeholder="Digite o título"/>
               <h2 style={{marginTop: 43.29}}>INCLUA UMA IMAGEM PARA APARECER NO CARD</h2>
@@ -152,7 +162,7 @@ export default function Form(props) {
                 <label htmlFor="files">Escolher arquivo</label>
                 <input type="file" id="files" style={{"display": "none"}}/>
               </div>
-              <HBar style={{marginTop: 51.22}} />
+              <HSeparator style={{marginTop: 51.22}} />
               <div style={{display: 'flex', justifyContent:"end"}}>
                 <Button style={{marginTop: 26}}>Criar card</Button>
               </div>

@@ -14,7 +14,7 @@ const Loader = styled.div`
     --loader-size: ${props => props.size || '8rem'};
     --loader-width: ${props => props.width || '12px'};
     --loader-duration: ${props => props.duration || '2s'};
-    z-index: 9999;
+    z-index: 3;
     width: var(--loader-size);
     height: var(--loader-size);
     position: absolute;
