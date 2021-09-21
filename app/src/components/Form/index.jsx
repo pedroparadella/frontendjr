@@ -43,6 +43,7 @@ const SideNav = styled.div`
   background-color: #F6F4F6CC;
   overflow-x: hidden;
   transition: 0.5s;
+  font-family: 'Muli';
 `;
 
 const SideNavContent = styled.div`
@@ -84,7 +85,6 @@ const PaginationContainer = styled.div`
 `;
 
 
-
 export default function Form(props) {
   const sideNav = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -94,14 +94,24 @@ export default function Form(props) {
   const [isLoading, setIsLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [selectedPokemon, setSelectedPokemon] = useState(null);
+  const [storePokemon, setStorePokemon] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [isSelectedFile, setIsSelectedFile] = useState(false);
   const service = new PokemonService();
 
   function loadPokemonList() {
     setIsLoading(true);
-    service.getAllPokemons(offset).then(response => {
-      setPokemonList(response || []);
-      setIsLoading(false);
+    if (searchValue) {
+      service.searchPokemon(searchValue).then(response => {
+        setPokemonList(response || []);
+        setIsLoading(false);
     });
+    } else {
+      service.getAllPokemons(offset).then(response => {
+        setPokemonList(response || []);
+        setIsLoading(false);
+      });
+    }
   }
 
   useEffect(() => {
@@ -127,10 +137,37 @@ export default function Form(props) {
     setIsOpen(!isOpen);
   }
 
+
+
+  function handleFileImage(e){
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    setSelectedFile(file);
+    reader.onload = () => {
+      setIsSelectedFile(true)
+      setStorePokemon({
+        ...storePokemon,
+        //stores as base64
+        imageUrl: reader.result
+      });
+    };
+  }
+
+  function handleSave(){
+    toggleSideNav()
+    setSelectedFile(null);
+    setIsSelectedFile(false);
+    setStorePokemon(null);
+    service.addPokemon(storePokemon).then(response => {
+      loadPokemonList();
+    });
+  }
+
   return (
     <Container>
       <DeleteModal show={showModal} onClose={() => setShowModal(false)} onDelete={() => deletePokemon(selectedPokemon)}/>
-          <SearchInputField />
+          <SearchInputField  onSearch={e => loadPokemonList()} onChange={e => setSearchValue(e.target.value)} />
           <Row>
               <Label>
                 Resultado de Busca
@@ -146,25 +183,27 @@ export default function Form(props) {
           </PaginationContainer>
           <ResultContainer isLoading={isLoading} onDelete={e => openModal(e)} list={pokemonList}/>
           <SideNav ref={sideNav} onClick={toggleSideNav}>
-          <SideNavContent>
+          <SideNavContent onClick={e => e.stopPropagation()}>
               <div style={{display: 'flex'}}>
                 <img style={{width: '46px', height: '46px', marginRight: '18px'}} src={newCardIcon} />
                 <h1 className="-titulo-h1" >Criar card</h1>
               </div>
               <HSeparator style={{marginTop: 30.71}} />
-              <h2 style={{marginTop: 43.29}}>DIGITE UM NOME PARA O CARD</h2>
-              <input type="text" name="" id="" placeholder="Digite o título"/>
-              <h2 style={{marginTop: 43.29}}>INCLUA UMA IMAGEM PARA APARECER NO CARD</h2>
-              <div>
-                <span>
-                  Nenhum arquivo selecionado
+              <h2 style={{marginTop: 43.29, fontSize: 14, fontWeight: 'bold', }}>DIGITE UM NOME PARA O CARD</h2>
+              <input onChange={e => setStorePokemon(p => ({...p, name: e.target.value}))} style={{marginTop: 12.78, backgroundColor: 'var(--cor-branco)' , width: "100%", border: '1px solid #B9B9B9', borderRadius:'8px', outline:"none", padding: '18px 0 19px 25px'}} type="text" name="" id="" placeholder="Digite o título"/>
+              <h2 style={{marginTop: 43.29, fontSize: 14}}>INCLUA UMA IMAGEM PARA APARECER NO CARD</h2>
+              <div style={{display: 'flex', marginTop: 12.78, justifyContent:"space-between", width: "100%", border: '1px solid #B9B9B9', borderRadius:'8px', outline:"none", padding: ''}}>
+                <span style={{margin: '18px 0 19px 25px' }}>
+                  {isSelectedFile ? selectedFile.name : 'Nenhum arquivo selecionado'}
                 </span>
-                <label htmlFor="files">Escolher arquivo</label>
-                <input type="file" id="files" style={{"display": "none"}}/>
+                <div style={{display: "flex", alignItems:"center", padding:"12px 42px 13px 40px", marginRight: 8, height: 48,marginTop: 6.22, backgroundColor: "var(--cor-branco)", border: '1px solid var(--cor-destaque)', boxShadow: '0px 3px 6px #E763162E', borderRadius: 8}}>
+                  <label style={{verticalAlign:"middle", fontSize: 18, fontWeight: 'bold', color: "var(--cor-destaque)"}} htmlFor="files">Escolher arquivo</label>
+                  <input onChange={handleFileImage} accept=".png" type="file" id="files" style={{"display": "none"}}/>
+                </div>
               </div>
               <HSeparator style={{marginTop: 51.22}} />
               <div style={{display: 'flex', justifyContent:"end"}}>
-                <Button style={{marginTop: 26}}>Criar card</Button>
+                <Button onClick={handleSave} style={{marginTop: 26}}>Criar card</Button>
               </div>
           </SideNavContent>
           </SideNav>

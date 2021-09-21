@@ -36,11 +36,11 @@ const Magnifier = styled.img`
     cursor: pointer;
 `;
 
-export default function SearchInputField(props) {
+export default function SearchInputField({onChange,onSearch}) {
     return (
         <div>
-            <InputField className="-titulo-h2" type="text" placeholder="Digite aqui sua busca..." onChange={null}/>
-            <Magnifier src={lupa} alt="magnifier" />
+            <InputField className="-titulo-h2" type="text" placeholder="Digite aqui sua busca..." onChange={onChange}/>
+            <Magnifier src={lupa} alt="magnifier" onClick={onSearch}/>
         </div>
     )
 }

@@ -18,7 +18,7 @@ class PokemonService {
         this.count  = 0;
         //load the count
         this.api.get('/pokemon/').then(res => {
-            this.count = res.data.count;
+            this.count = res.data.count + this._addPokemons.length;
         });
     }
 
@@ -30,14 +30,14 @@ class PokemonService {
     }
 
     async addPokemon(pokemon) {
+        this.count++;
         this._addPokemons.push(
             {
-                id: this.count + 1,
+                id: this.count,
                 name: pokemon.name,
                 image: pokemon.imageUrl
             }  
         );
-        this.count++;
         await this.saveChanges();
     }
 
@@ -48,6 +48,13 @@ class PokemonService {
         }
         this._deletePokemons.push(id);
         await this.saveChanges();
+    }
+
+    async searchPokemon(name) {
+        // use the get all pokemons and filter pokemons contains the text
+        const pokemons = await this.getAllPokemons();
+        // that begins with the text
+        return pokemons.filter(pokemon => pokemon.name.toLowerCase().search(name.toLowerCase()) >=0);
     }
 
 
@@ -63,7 +70,7 @@ class PokemonService {
             }  
         }));
 
-        return d.filter(pokemon => !this._deletePokemons.includes(pokemon.id));
+        return d.filter(pokemon => !this._deletePokemons.includes(pokemon.id)).concat(this._addPokemons);
     }
 
 
