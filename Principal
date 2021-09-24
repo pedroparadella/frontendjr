@@ -1,0 +1,181 @@
+/*
+import React, { useState } from 'react'
+
+import {
+  Principal,
+  Container,
+  Header,
+  Content,
+  ContentTopo,
+  ContentCards,
+  ContentGeral,
+  ContentGeralCard,
+  Cards,
+  CardsTopo,
+  CardsNew,
+  ImageCard,
+  TextCard,
+  ButtonsCard,
+} from "./styles";
+
+import Logo from "../../images/logo-teste.svg";
+import Lupa from "../../images/lupa.svg";
+import Icon from "../../images/icone.svg";
+import Trash from "../../images/Icon-trash.svg";
+import Edit from "../../images/Icon-edit.svg";
+
+const data = require('../../data/dados.json')
+
+const PrincipalDiv = () => {
+  const [cards, setCards] = useState(data);
+  const [cardSearch, setCardSearch] = useState(null)
+
+  const searchCard = (cardTitle) => {
+    const card = data.find(elm => elm.title === cardTitle)
+
+    if (card && !card.length) {
+      setCardSearch(card)
+      setCards(null)
+    }
+  }
+
+  const handleInput = (event) => {
+    if (event.key === 'Enter') {
+      if (event.target.value.length > 2) {
+        searchCard(event.target.value)
+      } else {
+        alert("Preencha com no minimo 2 caracteres")
+      }
+    }
+  }
+
+  const clearSearch = (event) => {
+    setCards(data)
+    setCardSearch('')
+    document.getElementById('input-search').value = ''
+  }
+
+  // Modelo
+  // return (
+  //   <Principal>
+  //     <Contaniner>
+  //       <Header />
+  //       <Search />
+  //       {card ? <CardCreated /> : null}
+  //       {cardSearch ? <CardSearch clear="clearSearch"/> null}
+  //     </Container>
+  //   </Principal>
+  // )
+
+  return (
+    <Principal>
+      <Container></Container>
+        <Header>
+          <img src={Logo} alt="" />
+        </Header>
+
+        <Content>
+          <ContentTopo>
+            <ContentGeral>
+              <div style={{ width: "100%"}}>
+                <input
+                  className="search"
+                  type="text"
+                  name="input-search"
+                  id="input-search"
+                  placeholder="Digite aqui sua busca.."
+                  style={{
+                    paddingRight: "20px",
+                    paddingLeft: "20px",
+                    borderRadius: "30px"
+                  }}
+                  onKeyPress={handleInput}
+                />
+              </div>
+            </ContentGeral>
+          </ContentTopo>
+
+          {cards ? (
+            <>
+              <ContentCards>
+                <ContentGeralCard>
+                  <CardsTopo>
+                    <h1>Cards cadastrados</h1>
+                    <button>Novo card</button>
+                  </CardsTopo>
+
+                  <Cards>
+                    {cards.map(card => {
+                      return (
+                        <>
+                          <CardsNew>
+                            <ImageCard>
+                              <img src={card.image ? card.image : Icon } alt="" />
+                            </ImageCard>
+                            <TextCard>
+                              <h3>{card.title}</h3>
+                            </TextCard>
+                            <ButtonsCard>
+                              <button className="button-edit">
+                                {" "}
+                                <img src={Trash} alt="" /> Excluir
+                              </button>
+                              <button className="button-delete">
+                                {" "}
+                                <img src={Edit} alt="" /> Editar
+                              </button>
+                            </ButtonsCard>
+                          </CardsNew>
+                        </>
+                      )
+                    })}
+                  </Cards>
+                </ContentGeralCard>
+              </ContentCards>
+            </>
+          ) : null }
+
+          {cardSearch ? (
+            <>
+              <ContentCards>
+                <ContentGeralCard>
+                  <CardsTopo>
+                    <h1>Resultado de Busca</h1>
+                    <button onClick={clearSearch}>Limpar pesquisa</button>
+                  </CardsTopo>
+
+                  <Cards>
+                    <CardsNew>
+                      <ImageCard>
+                        <img src={Icon} alt="" />
+                      </ImageCard>
+                      <TextCard>
+                        <h3>{cardSearch.title}</h3>
+                      </TextCard>
+                      <ButtonsCard>
+                        <button className="button-edit">
+                          {" "}
+                          <img src={Trash} alt="" /> Excluir
+                        </button>
+                        <button className="button-delete">
+                          {" "}
+                          <img src={Edit} alt="" /> Editar
+                        </button>
+                      </ButtonsCard>
+                    </CardsNew>
+                  </Cards>
+                </ContentGeralCard>
+              </ContentCards>
+            </>
+          ): null}
+        </Content>
+      </Container>
+    </Principal>
+  )
+}
+
+
+
+export default PrincipalDiv
+
+ */
