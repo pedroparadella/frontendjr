@@ -1,0 +1,48 @@
+ [
+    {
+        "id": 1,
+        "title": "ReactJS",
+        "image": "https://diegomariano.com/wp-content/uploads/2021/06/react-logo.png"
+    },
+    {
+        "id": 2,
+        "title": "NodeJS",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+    },
+    {
+        "id": 3,
+        "title": "HTML",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+    },
+
+    {
+        "id": 3,
+        "title": "CSS",
+        "image": "https://cdn-icons-png.flaticon.com/512/919/919826.png"
+    },
+    {
+        "id": 4,
+        "title": "Angular",
+        "image": "http://assets.stickpng.com/images/5847ea22cef1014c0b5e4833.png"
+    },
+
+    {
+        "id": 5,
+        "title": "Typescript",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png"
+    },
+
+    {
+        "id": 6,
+        "title": "VueJS",
+        "image": "https://img2.gratispng.com/20180718/cbh/kisspng-vue-js-javascript-library-angularjs-react-vue-js-5b4ebe1bc45884.1915769815318871318042.jpg"
+    },
+
+    {
+        "id": 7,
+        "title": "NextJS",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/1024px-Nextjs-logo.svg.png"
+    }
+  
+   
+]
