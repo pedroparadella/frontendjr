@@ -1,10 +1,11 @@
 import react from 'react'
 import Logo from '../../assets/logo-teste.svg'
+import * as S from '../../style/header.js'
 
 export default function Header(){
   return(
-    <>
-      <img src={Logo}/>
-    </>
+    <S.header>
+      <S.image src={Logo}/>
+    </S.header>
   )
 }
