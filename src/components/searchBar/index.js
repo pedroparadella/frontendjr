@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { api } from '../../services/goat-api';
 
 
-export default function searchBar(){
+export default function SearchBar(){
+  const [searched, setSearched] = useState();
   const [characterName, setCharacterName] = useState("");
-  const [searched, setSearched] = useState(initialState);
   const getCharacterName = event => setCharacterName(event.target.value);
 
-  function searchCharacter(){
-    const response = await api.get('character');
+  async function searchCharacter(){
+    const response = await api.get(`?name=${characterName}`);
     setSearched(response.data)
   }
 
@@ -16,8 +16,11 @@ export default function searchBar(){
     <>
       <input type="text" value={characterName} onChange={getCharacterName}/>
       <button onClick={searchCharacter}>get</button>
-
-      <h1>{searched.results.name}</h1>
+    {searched &&(
+      searched.results.map(character => (
+        <h1>{character.name}</h1>
+      )))
+    }
     </>
   )
 }
