@@ -8,7 +8,7 @@ export default function SearchBar(){
   const getCharacterName = event => setCharacterName(event.target.value);
 
   async function searchCharacter(){
-    const response = await api.get(`?name=${characterName}`);
+    const response = await api.get(`character/?name=${characterName}`);
     setSearched(response.data)
   }
 
