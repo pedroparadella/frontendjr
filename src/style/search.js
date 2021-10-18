@@ -84,11 +84,16 @@ export const Section = styled.section`
   margin-right: 14.125rem;
 `;
 
+export const CardsSection = styled.section`
+
+`
+
 export const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 2.3125rem;
-  margin-bottom: 20px;
+  gap: 33px;
+  justify-content: flex-start;
+
 `;
 
 export const Card = styled.div`
@@ -101,6 +106,9 @@ export const Card = styled.div`
   box-shadow: 0px 1px 1px #e5e5e5;
   border-radius: 8px;
   border: 0.0625rem #e4e4e4;
+
+  width: 214px;
+  margin-bottom: 10px;
 `;
 
 export const Image = styled.img`
@@ -137,7 +145,7 @@ export const Content = styled.div`
   text-align: center;
 
   padding-top: 1.75rem;
-  width: 14.625rem;
+  width: 214px;
   height: 13rem;
 
   border-radius: 8px 8px 0 0;
@@ -147,19 +155,26 @@ export const Content = styled.div`
 
 export const Options = styled.div`
   display: flex;
+  align-self: flex-start;
   align-items: center;
-  padding: 0 29.94px;
+
   border: 1px solid #e4e4e4;
   margin: 0;
 
+  width: 214px;
   height: 43px;
   border-radius: 0 0 8px 8px;
 `;
 
-export const Icons = styled.img`
-  padding-bottom: 5px;
+export const Option = styled.div`
+  display: flex;
+  align-items: center;
   cursor: pointer;
-`;
+`
+
+export const Trash = styled.img`
+  padding-left: 1rem;
+`
 
 export const POptions = styled.h2`
   color: #263238;
@@ -169,12 +184,13 @@ export const POptions = styled.h2`
   margin: 0 0 0 10px;
   line-height: 0;
   height: 0;
-  cursor: pointer;
+
 `;
 
 export const OHr = styled.hr`
   height: 22.27px;
   border-left: 1px solid #f0eff0;
   border-top: 0;
+  margin: 0 18px;
 `;
 
