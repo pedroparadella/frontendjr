@@ -39,21 +39,21 @@ export default function SearchMechanism() {
           {searched &&
             searched.results.map((character, i) => (
               i <= 10 ?
-
-                <S.Card>
-                  <S.Image src={character.image} alt="" />
-                  <S.HR/>
-                  <S.H2>{character.name}</S.H2>
-                  <S.P>{character.location.name}</S.P>
-                  <S.Options>
-                    <img src={trash} alt="" />
-                    <p>Excluir</p>
-                    <hr />
-                    <img src={edit} alt="" />
-                    <p>Editar</p>
-                  </S.Options>
-                </S.Card>
-
+              <S.Card>
+                <S.Content>
+                    <S.Image src={character.image} alt="" />
+                    <S.Hr/>
+                    <S.H2>{character.name}</S.H2>
+                    <S.P>{character.location.name}</S.P>
+                </S.Content>
+                <S.Options>
+                  <S.Icons src={trash} alt="" />
+                  <S.POptions>Excluir</S.POptions>
+                  <S.OHr />
+                  <S.Icons src={edit} alt="" />
+                  <S.POptions>Editar</S.POptions>
+                </S.Options>
+              </S.Card>
               :
 
                 <></>
