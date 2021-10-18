@@ -5,7 +5,7 @@ import * as S from '../../style/header.js'
 export default function Header(){
   return(
     <S.Header>
-      <S.Image src={Logo}/>
+      <S.Image src={Logo} alt="Logo 'Teste Ímpar'"/>
     </S.Header>
   )
 }

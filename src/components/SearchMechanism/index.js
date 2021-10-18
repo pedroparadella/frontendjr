@@ -1,10 +1,10 @@
-import React, { cloneElement, useState } from "react";
+import React, { useState } from "react";
 import { api } from "../../services/goat-api";
 import Lottie from "react-lottie";
 import animationData from "../../animations/x.json";
 import * as S from "../../style/search";
 import * as M from "../../style/modal";
-import lupa from "../../assets/lupa.svg";
+import magnifier from "../../assets/lupa.svg";
 import trash from "../../assets/Icon-trash.svg";
 import edit from "../../assets/Icon-edit.svg";
 
@@ -17,7 +17,7 @@ export default function SearchMechanism() {
     isPaused: false,
   });
 
-  const defaultOptions = {
+  const animationsDefaultOptions = {
     loop: false,
     autoplay: true,
     animationData: animationData,
@@ -33,10 +33,9 @@ export default function SearchMechanism() {
   async function searchCharacter() {
     const response = await api.get(`character/?name=${characterName}`);
     setSearched(response.data);
-    console.log(response.data);
   }
 
-  function handleClick() {
+  function openModal() {
     setOpen(true);
   }
 
@@ -50,7 +49,7 @@ export default function SearchMechanism() {
         <M.Modal onClick={closeModal}>
           <M.Card>
             <Lottie
-              options={defaultOptions}
+              options={animationsDefaultOptions}
               height={100}
               width={100}
               isStopped={setAnimationState.isStopped}
@@ -71,13 +70,13 @@ export default function SearchMechanism() {
           placeholder="Digite aqui sua busca"
         />
         <S.Button onLoad={searchCharacter} onClick={searchCharacter}>
-          <S.Magnifier src={lupa} alt="lupa" />
+          <S.Magnifier src={magnifier} alt="lupa" />
         </S.Button>
       </S.Background>
       <S.Section>
         <S.PreCardsLine>
           <S.H1>Resultados de busca</S.H1>
-          <S.NewCardButton onClick={handleClick}>Novo Card</S.NewCardButton>
+          <S.NewCardButton onClick={openModal}>Novo Card</S.NewCardButton>
         </S.PreCardsLine>
         <S.Cards>
           {searched &&
@@ -85,26 +84,24 @@ export default function SearchMechanism() {
               i < 12 ? (
                 <S.Card>
                   <S.Content>
-                    <S.Image src={character.image} alt="" />
+                    <S.Image src={character.image} alt="Foto do Personagem" />
                     <S.Hr />
                     <S.H2>{character.name}</S.H2>
                     <S.P>{character.location.name}</S.P>
                   </S.Content>
                   <S.Options>
-                    <S.Option onClick={handleClick}>
-                      <S.Trash src={trash} alt="" />
+                    <S.Option onClick={openModal}>
+                      <S.Trash src={trash} alt="Lixeira" />
                       <S.POptions>Excluir</S.POptions>
                     </S.Option>
                     <S.OHr />
-                    <S.Option onClick={handleClick}>
-                      <img src={edit} alt="" />
+                    <S.Option onClick={openModal}>
+                      <img src={edit} alt="Lápis" />
                       <S.POptions>Editar</S.POptions>
                     </S.Option>
                   </S.Options>
                 </S.Card>
-              ) : (
-                <></>
-              )
+              ) : null
             )}
         </S.Cards>
       </S.Section>

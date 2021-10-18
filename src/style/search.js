@@ -6,7 +6,7 @@ export const Background = styled.div`
   background-position: 100%;
   background-position-y: 12%;
   background-size: cover;
-  filter: drop-shadow(0rem 0.25rem 0.3125rem rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 0.25rem 0.3125rem rgba(0, 0, 0, 0.1));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +21,7 @@ export const Input = styled.input`
   outline-style: none;
   border: 0;
   border-radius: 0.5rem;
-  filter: drop-shadow(0rem 0.25rem 0.3125rem rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 0.25rem 0.3125rem rgba(0, 0, 0, 0.25));
   font-family: muli, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -73,7 +73,7 @@ export const NewCardButton = styled.button`
   font-family: muli, sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
-  box-shadow: 0rem 0.1875rem 0.375rem #92207242;
+  box-shadow: 0 0.1875rem 0.375rem #92207242;
 `;
 
 export const Section = styled.section`
@@ -84,14 +84,10 @@ export const Section = styled.section`
   margin-right: 14.125rem;
 `;
 
-export const CardsSection = styled.section`
-
-`
-
 export const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 33px;
+  gap: 2.0625rem;
   justify-content: flex-start;
 
 `;
@@ -103,26 +99,26 @@ export const Card = styled.div`
   background-color: #ffffff;
   color: #263238;
 
-  box-shadow: 0px 1px 1px #e5e5e5;
-  border-radius: 8px;
+  box-shadow: 0 0.0625rem 0.0625rem #e5e5e5;
+  border-radius: 0.5rem;
   border: 0.0625rem #e4e4e4;
 
-  width: 214px;
-  margin-bottom: 10px;
+  width: 13.375rem;
+  margin-bottom: 0.625rem;
 `;
 
 export const Image = styled.img`
   width: 5.9375rem;
   height: 5.9375rem;
   border-radius: 100%;
-  border: 1px solid #e4e4e4;
+  border: 0.0625rem solid #e4e4e4;
 `;
 
 export const Hr = styled.hr`
   width: 10.5769rem;
   color: #f0eff0;
-  border-top: 1px;
-  margin-top: 22.06px;
+  border-top: 0.0625rem;
+  margin-top: 1.3787rem;
 `;
 
 export const H2 = styled.h2`
@@ -145,12 +141,12 @@ export const Content = styled.div`
   text-align: center;
 
   padding-top: 1.75rem;
-  width: 214px;
+  width: 13.375rem;
   height: 13rem;
 
-  border-radius: 8px 8px 0 0;
-  border: 0.7px solid #e4e4e4;
-  box-shadow: 0px 3px 5px #f4efef;
+  border-radius: 0.5rem 0.5rem 0 0;
+  border: 0.0437rem solid #e4e4e4;
+  box-shadow: 0 0.1875rem 0.3125rem #f4efef;
 `;
 
 export const Options = styled.div`
@@ -158,12 +154,12 @@ export const Options = styled.div`
   align-self: flex-start;
   align-items: center;
 
-  border: 1px solid #e4e4e4;
+  border: 0.0625rem solid #e4e4e4;
   margin: 0;
 
-  width: 214px;
-  height: 43px;
-  border-radius: 0 0 8px 8px;
+  width: 13.375rem;
+  height: 2.6875rem;
+  border-radius: 0 0 0.5rem 0.5rem;
 `;
 
 export const Option = styled.div`
@@ -178,19 +174,19 @@ export const Trash = styled.img`
 
 export const POptions = styled.h2`
   color: #263238;
-  font-size: 16px;
+  font-size: 1rem;
   opacity: 0.52;
   font-family: muli, sans-serif;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 0.625rem;
   line-height: 0;
   height: 0;
 
 `;
 
 export const OHr = styled.hr`
-  height: 22.27px;
-  border-left: 1px solid #f0eff0;
+  height: 1.3919rem;
+  border-left: 0.0625rem solid #f0eff0;
   border-top: 0;
-  margin: 0 18px;
+  margin: 0 1.125rem;
 `;
 
