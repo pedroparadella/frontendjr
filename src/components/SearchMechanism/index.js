@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { api } from "../../services/goat-api";
+import { api } from "../../services/rick-and-morty-api";
 import Lottie from "react-lottie";
 import animationData from "../../animations/x.json";
 import * as S from "../../style/search";
@@ -27,20 +27,20 @@ export default function SearchMechanism() {
   };
 
   function getCharacterName(event) {
-    setCharacterName(event.target.value);
+    return setCharacterName(event.target.value);
   }
 
   async function searchCharacter() {
     const response = await api.get(`character/?name=${characterName}`);
-    setSearched(response.data);
+    return setSearched(response.data);
   }
 
   function openModal() {
-    setOpen(true);
+    return setOpen(true);
   }
 
   function closeModal() {
-    setOpen(false);
+    return setOpen(false);
   }
 
   return (
