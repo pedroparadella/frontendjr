@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Avaliação Junior
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Olá! Essa é a minha resolução do teste para a vaga de Estágio da Ímpar.
+Vou explicar um pouco sobre a forma que pensei nesta solução e sobre como fazer o código rodar.
 
-## Available Scripts
+Clique nos links abaixo para navegar por esse documento:
 
-In the project directory, you can run:
+- [A solução;](##:bulb:A Solução)
 
-### `yarn start`
+- [Como fazer o código rodar em sua máquina.](##:desktop_computer: Como fazer o código rodar em sua máquina:)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## :bulb: A Solução:
 
-### `yarn test`
+A proposta era produzir uma barra de pesquisa, capaz de buscar e exibir itens conforme aquilo que foi digitado, utilizando como base o layout do link fornecido e exibir alertas para as funções ainda não implementadas no projeto. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Utilizei React para a criação da interface, styled-components para a estilização e a biblioteca Axios para consumir a API usada para a exibição dos dados.
 
-### `yarn build`
+Em busca de uma API gratuita e sem chaves, que pudesse me fornecer não somente dados escritos mas também imagens para preencher os campos dos cards, encontrei a [API da animação Rick and Morty](https://rickandmortyapi.com/documentation). Trouxe da API escolhida a imagem dos personagens, o nome e sua respectiva localização. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para o alerta, criei uma modal com o aviso de funcionalidade não implementada e utilizei a biblioteca Lottie Files para trazer uma animação simples de erro. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para complementar o tema dos cards, modifiquei a imagem de fundo do campo de busca.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :desktop_computer: Como fazer meu código rodar em sua máquina:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Baixando o código:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   É possível fazer o download de duas formas:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   - **Clicando em *Code > Download ZIP*, no topo desta página.**
 
-## Learn More
+     Dessa forma, você irá baixar um arquivo ZIP e extrair em uma pasta de sua escolha.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+     
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   - **Utilizando o terminal do git.**
 
-### Code Splitting
+     Tendo o git instalado em sua máquina ([caso não tenha, clique aqui para ir a página de download](https://git-scm.com/downloads)), no terminal escreva:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+     ```git
+     git clone https://github.com/eduardapalm/frontendjr.git
+     ```
 
-### Analyzing the Bundle Size
+     Dessa forma o projeto será clonado e baixado na sua máquina.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+     
 
-### Making a Progressive Web App
+2. **Preparando ambiente:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   Para a execução do código, será necessário ter o Node instalado em sua máquina. Portanto, caso você não o tenha instalado, siga esse [link](https://nodejs.org/pt-br/download/) para fazer a instalação.
 
-### Advanced Configuration
+   Com o Node instalado, abra em seu terminal na pasta onde o projeto está localizado e escreva o comando abaixo para instalar as dependências necessárias para a execução:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```
+   npm install
+   ```
 
-### Deployment
+   
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. **Execução do Projeto:**
 
-### `yarn build` fails to minify
+   Agora que seu ambiente está pronto para executar o projeto, é só digitar o seguinte comando no terminal: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```
+   npm start
+   ```
+
