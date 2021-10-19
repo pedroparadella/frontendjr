@@ -5,13 +5,12 @@ Vou explicar um pouco sobre a forma que pensei nesta solução e sobre como faze
 
 Clique nos links abaixo para navegar por esse documento:
 
-- [A solução;](A/README.md)
+- [A Solução;](#Solucao)
 
-- [Como fazer o código rodar em sua máquina.](Como/README.md)
+- [Como fazer o código rodar em sua máquina.](#Passos)
 
 
-
-## A Solução:
+## 💡 <a id="Solucao">A Solução:</a>
 
 A proposta era produzir uma barra de pesquisa, capaz de buscar e exibir itens conforme aquilo que foi digitado, utilizando como base o layout do link fornecido e exibir alertas para as funções ainda não implementadas no projeto.
 
@@ -25,7 +24,7 @@ Para complementar o tema dos cards, modifiquei a imagem de fundo do campo de bus
 
 
 
-## Como fazer meu código rodar em sua máquina:
+## 🖥️ <a id="Passos">Como fazer meu código rodar em sua máquina:</a>
 
 1. **Baixando o código:**
 
