@@ -1,0 +1,195 @@
+body {
+    font: normal normal normal 16px/20px Mulish;
+    background-color: #F6F4F6;
+    margin: 0;
+    position: relative;
+}
+
+header {
+    background: transparent linear-gradient(272deg, #AE276F 0%, #5F1478 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    height: 64px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+header :first-child {
+    margin-left: 20px;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.vr {
+    width: 1px;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    background: #F6F4F6;
+}
+
+.hand {
+    background-image: url('../img/icone.svg');
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 60px;
+    height: 60px;
+}
+
+.delete {
+    background-image: url('../img/Icon-trash.svg');
+}
+
+.search {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    background-image: url('../img/fundo-busca.png');
+    width: 100%;
+    height: 258px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.resultado {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 13%;
+    height: 100%;
+}
+
+.resultado-heading {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.resultado-heading h2 {
+    color: #5F1478;
+    font-size: 32px;
+}
+
+.btncard {
+    background: #E76316 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #92207242;
+    border-radius: 8px;
+    width: 173px;
+    height: 48px;
+    font: normal normal bold 18px Mulish;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btncard:hover {
+    background: #e0773a;
+}
+
+.card {
+    width: 234px;
+    height: 267px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #E5E5E5;
+    border: 1px solid #E4E4E4;
+    border-radius: 8px;
+}
+
+.card .card-body {
+    height: calc(100% - 43px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .card-body .icon-hand-background {
+    width: 95px;
+    height: 95px;
+    background: #F6F4F6 0% 0% no-repeat padding-box;
+    border: 1px solid #E4E4E4;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .card-body .card-body-text {
+    max-width: 169px;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #263238;
+}
+
+.card .card-body .card-body-text hr {
+    border-color: #F0EFF0;
+    width: 100%;
+    height: 0px;
+}
+
+.card .card-footer {
+    height: 43px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: inset 0px 3px 6px #0000000F;
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card .card-footer .card-footer-button {
+    cursor: pointer;
+}
+
+.card .card-footer .card-footer-button+hr {
+    height: 22px;
+}
+
+.card .card-footer .card-footer-button span {
+    opacity: 0.48;
+}
+
+.resultado-cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 37px;
+    margin: auto;
+}
+
+.search-txt {
+    margin-bottom: 39px;
+    text-align: left;
+    font: normal normal 300 24px/30px 'Mulish';
+    letter-spacing: 0px;
+    color: #757575;
+    height: 75px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.527);
+    width: 70%;
+    padding: 0 28px;
+    background-image: url('../img/lupa.svg');
+    background-position: 95% 15px;
+    background-repeat: no-repeat;
+}
+
+footer {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-style: italic;
+}

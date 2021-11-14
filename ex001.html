@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste - Ímpar</title>
+        <link rel="stylesheet" href="src/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="src/img/logo-teste.png" alt="Logo Ímpar" />
+        </header>
+        <section class="search">
+            <input onchange="searchCards(event)" type="text" class="search-txt" placeholder="Digite aqui sua busca..." />
+        </section>
+        <section class="resultado">
+            <div class="resultado-heading">
+                <h2>Resultado de Busca</h2>
+                <button onclick="alert('Esta função não foi implementada ainda.')" class="btncard">
+                    Novo Card
+                </button>
+            </div>
+            <div class="resultado-cards">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="icon-hand-background"><i class="hand"></i></div>
+                        <div class="card-body-text">
+                            <hr />
+                            <span>Teste 1</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="js-card-footer-button-delete card-footer-button">
+                            <img src="src/img/Icon-trash.svg" alt="Excluir card" />
+                            <span>Excluir</span>
+                        </div>
+                        <hr class="vr" />
+                        <div class="js-card-footer-button-edit card-footer-button">
+                            <img src="src/img/Icon-edit.svg" alt="Editar card" />
+                            <span>Editar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="icon-hand-background"><i class="hand"></i></div>
+                        <div class="card-body-text">
+                            <hr />
+                            <span>Teste 2</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="js-card-footer-button-delete card-footer-button">
+                            <img src="src/img/Icon-trash.svg" alt="Excluir card" />
+                            <span>Excluir</span>
+                        </div>
+                        <hr class="vr" />
+                        <div class="js-card-footer-button-edit card-footer-button">
+                            <img src="src/img/Icon-edit.svg" alt="Editar card" />
+                            <span>Editar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="icon-hand-background"><i class="hand"></i></div>
+                        <div class="card-body-text">
+                            <hr />
+                            <span>Teste 3</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="js-card-footer-button-delete card-footer-button">
+                            <img src="src/img/Icon-trash.svg" alt="Excluir card" />
+                            <span>Excluir</span>
+                        </div>
+                        <hr class="vr" />
+                        <div class="js-card-footer-button-edit card-footer-button">
+                            <img src="src/img/Icon-edit.svg" alt="Editar card" />
+                            <span>Editar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="icon-hand-background"><i class="hand"></i></div>
+                        <div class="card-body-text">
+                            <hr />
+                            <span>Teste 123</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="js-card-footer-button-delete card-footer-button">
+                            <img src="src/img/Icon-trash.svg" alt="Excluir card" />
+                            <span>Excluir</span>
+                        </div>
+                        <hr class="vr" />
+                        <div class="js-card-footer-button-edit card-footer-button">
+                            <img src="src/img/Icon-edit.svg" alt="Editar card" />
+                            <span>Editar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="icon-hand-background"><i class="hand"></i></div>
+                        <div class="card-body-text">
+                            <hr />
+                            <span>Teste 4</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="js-card-footer-button-delete card-footer-button">
+                            <img src="src/img/Icon-trash.svg" alt="Excluir card" />
+                            <span>Excluir</span>
+                        </div>
+                        <hr class="vr" />
+                        <div class="js-card-footer-button-edit card-footer-button">
+                            <img src="src/img/Icon-edit.svg" alt="Editar card" />
+                            <span>Editar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="icon-hand-background"><i class="hand"></i></div>
+                        <div class="card-body-text">
+                            <hr />
+                            <span>Teste 5</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="js-card-footer-button-delete card-footer-button">
+                            <img src="src/img/Icon-trash.svg" alt="Excluir card" />
+                            <span>Excluir</span>
+                        </div>
+                        <hr class="vr" />
+                        <div class="js-card-footer-button-edit card-footer-button">
+                            <img src="src/img/Icon-edit.svg" alt="Editar card" />
+                            <span>Editar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="icon-hand-background"><i class="hand"></i></div>
+                        <div class="card-body-text">
+                            <hr />
+                            <span>Teste 6</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="js-card-footer-button-delete card-footer-button">
+                            <img src="src/img/Icon-trash.svg" alt="Excluir card" />
+                            <span>Excluir</span>
+                        </div>
+                        <hr class="vr" />
+                        <div class="js-card-footer-button-edit card-footer-button">
+                            <img src="src/img/Icon-edit.svg" alt="Editar card" />
+                            <span>Editar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="icon-hand-background"><i class="hand"></i></div>
+                        <div class="card-body-text">
+                            <hr />
+                            <span>Teste 7</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="js-card-footer-button-delete card-footer-button">
+                            <img src="src/img/Icon-trash.svg" alt="Excluir card" />
+                            <span>Excluir</span>
+                        </div>
+                        <hr class="vr" />
+                        <div class="js-card-footer-button-edit card-footer-button">
+                            <img src="src/img/Icon-edit.svg" alt="Editar card" />
+                            <span>Editar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="icon-hand-background"><i class="hand"></i></div>
+                        <div class="card-body-text">
+                            <hr />
+                            <span>Teste 8</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="js-card-footer-button-delete card-footer-button">
+                            <img src="src/img/Icon-trash.svg" alt="Excluir card" />
+                            <span>Excluir</span>
+                        </div>
+                        <hr class="vr" />
+                        <div class="js-card-footer-button-edit card-footer-button">
+                            <img src="src/img/Icon-edit.svg" alt="Editar card" />
+                            <span>Editar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; Bruno Nogueira</p>
+        </footer>
+        <script type="text/javascript" src="src/index.js"></script>
+    </body>
+</html>
