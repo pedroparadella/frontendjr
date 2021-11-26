@@ -1,0 +1,51 @@
+.rounded-circle {
+  background-color: #db25250f;
+  width: 100px;
+  height: 100px;
+  padding: 28px 10px;
+}
+
+.card {
+  padding: 20px -10px;
+  margin: 140px 540px;
+}
+.card-body {
+  padding-left: 3;
+}
+
+.card-title {
+  color: #db2525;
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
+  padding: 0px 90px;
+  margin-left: 10px;
+}
+.card-text {
+  color: #454545;
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
+  padding: 1px 0px 10px 30px;
+}
+hr {
+  margin: 10px 10px;
+}
+
+.img-icone {
+  background-color: #db25250f;
+  margin-left: 80px;
+}
+.excluir {
+  margin: 15px;
+  width: 104px;
+}
+.cancelar {
+  width: 104px;
+}
+.bi {
+  background-color: #e76316;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 200px;
+  margin: -400px 20px 250px;
+}
