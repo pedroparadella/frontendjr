@@ -9,37 +9,6 @@
 body {
   background: #f6f4f6 0% 0% no-repeat padding-box;
 }
-/*
-  header {
-  background: hsla(316, 100%, 14%, 1);
-  background: linear-gradient(
-  0deg,
-  hsla(316, 100%, 14%, 1) 0%,
-  hsla(325, 60%, 52%, 1) 75%,
-  hsla(322, 70%, 60%, 1) 89%,
-  hsla(322, 82%, 63%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-  0deg,
-  hsla(316, 100%, 14%, 1) 0%,
-  hsla(325, 60%, 52%, 1) 75%,
-  hsla(322, 70%, 60%, 1) 89%,
-  hsla(322, 82%, 63%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-  0deg,
-  hsla(316, 100%, 14%, 1) 0%,
-  hsla(325, 60%, 52%, 1) 75%,
-  hsla(322, 70%, 60%, 1) 89%,
-  hsla(322, 82%, 63%, 1) 100%
-  );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#460033", endColorstr="#CD3A90", GradientType=1 );
-  width: 100%;
-  height: 100%;
-  padding: 25px;
-  color: white;
-  }
-  */
 
 li {
   display: inline-block;
@@ -63,7 +32,6 @@ header {
   box-shadow: 0px 3px 6px #00000029;
   opacity: 1;
   color: white;
-  position: fixed;
 }
 .obj {
   justify-content: space-between;
@@ -77,6 +45,7 @@ header {
   background: transparent url("../../assets/images/fundo-busca.png") 0% 0%
     no-repeat padding-box;
   opacity: 1;
+  margin-bottom: -20px;
 }
 #divBusca {
   height: 100px;
@@ -90,15 +59,18 @@ header {
   top: 160px;
   left: 1140px;
   width: 40px;
-  height: 50px;
+  height: 40px;
+  padding-top: 20px;
+  padding-left: 99px;
   background: transparent url("../../assets/images/lupa.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
+  margin: 1px -10px 50px;
 }
 #txtBusca {
-  width: 90%;
+  width: 1080px;
   height: 55px;
   border-radius: 8px;
   margin-top: 40px;
@@ -107,7 +79,8 @@ header {
   border-radius: 8px;
   opacity: 1;
 }
-.Card {
+
+.MuiCard-root {
   text-align: center;
   top: 377px;
   left: 168px;
@@ -131,8 +104,8 @@ header {
   box-sizing: border-box;
 }
 i {
-  background: white;
-  border-radius: 20px;
+  background: lightgray;
+  align-items: center;
   font-size: 25px;
   text-align: center;
   margin-right: 10px;
@@ -151,7 +124,149 @@ img {
   left: 237px;
   width: 95px;
   height: 95px;
-  background: #f6f4f6 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #e4e4e4;
   opacity: 1;
+  border-radius: 50px;
+}
+
+.button {
+  top: 293px;
+  left: 1041px;
+  width: 173px;
+  height: 48px;
+  background: var(---cor-destaque) 0% 0% no-repeat padding-box;
+  background: #e76316 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #92207242;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+p {
+  top: 301px;
+  left: 168px;
+  width: 291px;
+  height: 40px;
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-32) /
+    var(--unnamed-line-spacing-40) var(--unnamed-font-family-muli);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(---cor-primaria);
+  text-align: left;
+  font: normal normal normal 32px/40px Muli;
+  letter-spacing: 0px;
+  color: #5f1478;
+  opacity: 1;
+}
+
+p {
+  margin-top: 30px;
+  margin-left: 30px;
+  padding-top: 20px;
+}
+
+span .button {
+  margin-top: -50px;
+  margin-left: 70rem;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: bolder;
+}
+
+#personName {
+  text-align: center;
+  padding: 0px 30px;
+}
+
+#propsPerson {
+  text-align: center;
+  padding: 0px 30px;
+}
+
+details {
+  margin-top: 20px;
+  align-content: left;
+}
+
+summary {
+  margin-top: 20px;
+  margin-right: 180px;
+  align-content: left;
+}
+
+.atribute {
+  top: 532px;
+  left: 189px;
+  width: 191px;
+  height: 40px;
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) 16px / var(--unnamed-line-spacing-20)
+    var(--unnamed-font-family-muli);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-263238);
+  text-align: center;
+  font: normal normal normal 16px/20px Muli;
+  letter-spacing: 0px;
+  color: #263238;
+  opacity: 1;
+  padding-right: 10px;
+  margin-top: -10px;
+}
+
+.imgHand {
+  height: 50%;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+  border-radius: 100%;
+
+  top: 423px;
+  left: 252px;
+  width: 64px;
+  height: 63px;
+  background: transparent url("../../assets/images/icone.svg") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+}
+
+hr {
+  border-radius: 10%;
+  margin-top: 10px;
+  padding-top: 2px;
+  box-shadow: #263238;
+  box-sizing: border-box;
+}
+
+#trash {
+  cursor: pointer;
+}
+
+.tituloDialogo {
+  text-align: center;
+  background-color: orange;
+  align-items: center;
+  font-size: bolder;
+}
+
+.tipografia {
+  width: 300px;
+  height: 200px;
+}
+
+.titulo {
+  text-align: center;
+  align-items: center;
+  height: 10px;
+}
+
+.tipog {
+  height: 120px;
+}
+
+.lupa {
+  cursor: pointer;
 }
