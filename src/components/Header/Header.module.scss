@@ -1,0 +1,37 @@
+header{
+  height: 16.3rem;
+  background: transparent url(../../assets/img/fundo-busca.png) 0% 0% no-repeat padding-box;
+  background-repeat: no-repeat;
+  opacity: 1;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 2rem;
+}
+  .divPurple{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: transparent linear-gradient(272deg, #AE276F 0%, #5F1478 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(272deg, #AE276F 0%, #5F1478 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    
+    img{
+      background: transparent;
+      margin-left: 1rem;
+      width: 11rem;
+      height: 2.2rem;
+      opacity: 1;
+    }
+  }
+
+  .backgroundSearch{
+    height: 13.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    
+  }
+

@@ -1,0 +1,54 @@
+.container{
+  font: normal 32px/40px 'Mulish';
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #5F1478;
+  opacity: 1;
+  
+  .newCard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span{
+      font-size: 2rem;
+    }
+
+    button{
+      font: normal 'Mulish';
+      font-size: 1.12rem;
+      width: 10.8rem;
+      height: 3rem;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      
+      background: #E76316 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #92207242;
+      border: none;
+      border-radius: 8px;
+      opacity: 1;
+    }
+  }
+
+  .notFound{
+    font-size: 2rem;
+    margin-top: 2.5rem;
+  }
+  
+  .cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+  }
+  
+  @media screen and (max-width:540px){
+    .newCard{
+      flex-direction: column;
+    }
+    
+  }
+}
