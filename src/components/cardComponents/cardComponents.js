@@ -64,8 +64,8 @@ export default function Home(props) {
                   Excluir
                 </Button>
               </li>
-              <li>
-                <img src={iconeEdit} alt=" " />
+              <li id="iconeEdit">
+                <img src={iconeEdit} alt=" " onClick={handleClickOpen} />
               </li>
               <li>
                 <Button className="btn" onClick={handleClickOpen} size="small">

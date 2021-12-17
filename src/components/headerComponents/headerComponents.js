@@ -7,7 +7,9 @@ export default () => (
   <React.Fragment>
     <header>
       <div className='obj'>
-        <img src={logo} alt="Teste de Verificação de Habilidade" />
+        <span id="logoTeste">
+          <a href=" http://localhost:3000" content="3"><img src={logo} alt="Teste de Verificação de Habilidade" /></a>
+        </span>
       </div>
     </header>
   </React.Fragment>

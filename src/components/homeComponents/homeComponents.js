@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../headerComponents/headerComponents'
+import Footer from '../footerComponents/footerComponents'
 import './style.css'
 import API from "../../services/api"
 import PropTypes from "prop-types";
@@ -69,7 +70,7 @@ export default function Home() {
         handleClickOpen("Erro ao fazer a consulta, verifique se o valor digitado está correto.");
       });
     } else {
-      handleClickOpen("Para fazer a pesquisa é necessário entrar com um valor");
+      handleClickOpen("Para fazer a pesquisa é necessário entrar com um valor.");
     }
   };
 
@@ -103,6 +104,7 @@ export default function Home() {
         </main>
         <SimpleDialog open={open} message={message} onClose={handleClose} answer={answer} />
       </div>
+      <Footer></Footer>
     </div>
   );
 }
