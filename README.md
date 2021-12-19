@@ -20,5 +20,11 @@ Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor es
 ## Quais tecnologias usar
 * Deixaremos a seu critério qual tecnologia utilizar no entanto você terá mais pontos conosco se utilizar React para criação da interface e também o uso de pré-processadores/styled-components para o CSS.
 
-## Desafios se você se sentir confiante
-* Usar alguma API na internet, tipo https://pokeapi.co/, para trazer os dados que vão aparecer nos cards da tela.
+# Como rodar
+
+- Abra a pasta do projeto no vscode
+- Abra o terminal no vscode
+- Digite `npm install` para instalar as dependências 
+- Dentro da pasta raíz digite `npm start`
+- Ira abrir um localhost:3000 através do seu navegador e assim conseguira ver a soluçao
+
