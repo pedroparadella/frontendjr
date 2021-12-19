@@ -3,10 +3,6 @@ Hello, Ímpar!  :smiley:
 
 Abaixo estarão listados o modo de execução de código, sobre <u>como preparar o ambiente para a execução do mesmo, e a proposta de solução do projeto teste</u> para a vaga de **Estágio na Ímpar!**
 
-## Sumário
-
-[TOC]
-
 ## Solução do Projeto :rotating_light:
 A proposta de solução do projeto, utilizando como base o layout de orientação, foi implementar uma barra de pesquisa, onde, após o usuário inserir o nome de um Pokemon, a web aplicação retorne alguns Cards com o nome do Pokemon e com os atributos relacionados ao mesmo. 
 
