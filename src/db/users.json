@@ -1,0 +1,59 @@
+[
+    {
+        "nome": "Rodrigo",
+        "idade": "35",
+        "bairro": "Ipanema",
+        "foto": "https://www.pngitem.com/pimgs/m/78-786293_1240-x-1240-0-avatar-profile-icon-png.png"
+    },
+    {
+        "nome": "Fernanda",
+        "idade": "55",
+        "bairro": "Tijuca",
+        "foto":"https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png"
+    },
+    {
+        "nome": "Elias",
+        "idade": "21",
+        "bairro": "Ipanema",
+        "foto": "https://www.pngitem.com/pimgs/m/78-786293_1240-x-1240-0-avatar-profile-icon-png.png"        
+    },
+
+    {
+        "nome": "Vanesa",
+        "idade": "23",
+        "bairro": "Taquara",
+        "foto":"https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png"
+    },
+    {
+        "nome": "Renan",
+        "idade": "43",
+        "bairro": "Copacabana",
+        "foto": "https://www.pngitem.com/pimgs/m/78-786293_1240-x-1240-0-avatar-profile-icon-png.png"
+    },
+    {
+        "nome": "Gabriel",
+        "idade": "27",
+        "bairro": "Barra",
+        "foto": "https://www.pngitem.com/pimgs/m/78-786293_1240-x-1240-0-avatar-profile-icon-png.png"
+    },
+    {
+        "nome": "Renato",
+        "idade": "25",
+        "bairro": "Madureira",
+        "foto": "https://www.pngitem.com/pimgs/m/78-786293_1240-x-1240-0-avatar-profile-icon-png.png"
+    },
+    {
+        "nome": "Miguel",
+        "idade": "35",
+        "bairro": "Meier",
+        "foto": "https://www.pngitem.com/pimgs/m/78-786293_1240-x-1240-0-avatar-profile-icon-png.png"
+    },
+    {
+        "nome": "Alexandre",
+        "idade": "76",
+        "bairro": "Vila da Penha",
+        "foto": "https://www.pngitem.com/pimgs/m/78-786293_1240-x-1240-0-avatar-profile-icon-png.png"
+    }
+
+
+]
