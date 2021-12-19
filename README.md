@@ -3,6 +3,10 @@ Hello, Ímpar!  :smiley:
 
 Abaixo estarão listados o modo de execução de código, sobre <u>como preparar o ambiente para a execução do mesmo, e a proposta de solução do projeto teste</u> para a vaga de **Estágio na Ímpar!**
 
+## Sumário
+
+[TOC]
+
 ## Solução do Projeto :rotating_light:
 A proposta de solução do projeto, utilizando como base o layout de orientação, foi implementar uma barra de pesquisa, onde, após o usuário inserir o nome de um Pokemon, a web aplicação retorne alguns Cards com o nome do Pokemon e com os atributos relacionados ao mesmo. 
 
@@ -35,13 +39,21 @@ Ou
    git clone https://github.com/EletherioAlexandre/frontendjr
    ```
 
-   ![image-20211218205842742](C:\Users\Zoommy\AppData\Roaming\Typora\typora-user-images\image-20211218205842742.png)
+   Após digitar o comando orientado, deverá ser exibida uma série de caracteres semelhantes ao do bloco abaixo. Caso retorne algo diferente disso, por favor, realize o passo-a-passo novamente e atente-se para os possíveis detalhes.
 
+   ```html
+   $ git clone https://github.com/EletherioAlexandre/frontendjr
+   Cloning into 'frontendjr'...
+   remote: Enumerating objects: 102, done.
+   remote: Counting objects: 100% (102/102), done.
+   remote: Compressing objects: 100% (78/78), done.
+   remote: Total 102 (delta 23), reused 68 (delta 12), pack-reused 0
+   Receiving objects: 100% (102/102), 4.15 MiB | 2.85 MiB/s, done.
+   Resolving deltas: 100% (23/23), done.
+   ```
+   
    Desse modo, o projeto será clonado e baixado dentro de sua máquina e pronto para realizar qualquer tipo de alteração na codificação, caso tenha interesse.
-
-   Após digitar o comando orientado, deverá ser exibida uma série de caracteres semelhantes ao da imagem. Caso retorne algo diferente disso, por favor, realize o passo-a-passo novamente e atente-se para os possíveis detalhes.
-
-
+   
 
 ## Preparando o Ambiente de Execução :desktop_computer:
 
@@ -69,9 +81,42 @@ Neste momento, após a finalização do processo de instalação do *npm install
 npm start
 ```
 
-![image-20211218211624571](C:\Users\Zoommy\AppData\Roaming\Typora\typora-user-images\image-20211218211624571.png)
+Após digitar este comando e apertar a tecla ENTER, ele vai processar o comando e, logo após, deverá aparecer uma série de caracteres semelhantes aos do bloco abaixo:
 
-Deverá ser exibido o código acima após o *npm start* e o código já estará em funcionamento. 
+```html
+$ npm start
+
+my-react-app@0.1.0 start
+react-scripts start
+
+Starting the development server...
+
+Compiled successfully!
+
+You can now view my-react-app in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.1.12:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+assets by path static/ 3.05 MiB
+  assets by path static/media/*.svg 3.31 KiB
+    asset static/media/icone.ae3bec440ee8b70870dd.svg 2.33 KiB [emitted] [immutable] [from: src/assets/images/icone.svg] (auxiliary name: main)
+    asset static/media/Icon-trash.042f9538940733c6ee71eb4670ae3618.svg 645 bytes [emitted] (auxiliary name: main)
+    asset static/media/Icon-edit.17ec8bd462949f7de1727268833b1f40.svg 368 bytes [emitted] (auxiliary name: main)
+  asset static/js/bundle.js 2.3 MiB [emitted] (name: main) 1 related asset
+  asset static/media/fundo-busca.12ff68cfdfeaa530f641.png 765 KiB [emitted] [immutable] [from: src/assets/images/fundo-busca.png] (auxiliary name: main)
+asset index.html 2 KiB [emitted]
+asset asset-manifest.json 556 bytes [emitted]
+cached modules 2.25 MiB (javascript) 768 KiB (asset) 28.3 KiB (runtime) [cached] 508 modules
+webpack 5.65.0 compiled successfully in 24859 ms
+```
+
+
+
+Após a aparição deste código, o projeto já estará rodando no seu localhost. Não finalize a Command Line deixe-a executando minimizada. 
 
 Abra o seu browser e acesse o http://localhost:3000 para visualizar o projeto.
 
