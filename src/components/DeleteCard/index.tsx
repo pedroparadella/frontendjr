@@ -1,13 +1,15 @@
 import Modal from 'react-modal';
 import trash from '../../assets/img/Icon-trash.svg';
-import style from './DeleteCard.module.scss'
+import style from './DeleteCard.module.scss';
+import {ToastContainer, toast} from 'react-toastify';
 
 interface DeleteCardProps{
   isOpen: boolean;
   onRequestClose: () => void;
 }
-// : tenho que estilizar esse modal. Colocar que a função nao foi implementada e criar o outro panel
+
 export function DeleteCard({isOpen, onRequestClose}: DeleteCardProps){
+  const notify = () => toast.error('Funcionalidade ainda não implementada!');
   
   return(
     <Modal 
@@ -29,13 +31,19 @@ export function DeleteCard({isOpen, onRequestClose}: DeleteCardProps){
     <h2 className={style.phrase}>Certeza que deseja excluir?</h2>
     <div className={style.horizontalLine}/>
     <div className={style.buttons}>
-      <button className={style.deleteButton}>Excluir</button>
+      <button 
+        className={style.deleteButton}
+        onClick={notify}
+      >
+        Excluir
+      </button>
       <button 
         className={style.cancelButton}
         onClick={onRequestClose}
       >
         Cancelar
       </button>
+      <ToastContainer/>
     </div>
 
   </Modal>

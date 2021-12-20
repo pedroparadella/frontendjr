@@ -50,14 +50,6 @@
   .vermelho {
     background-color: red;
   }
-  @media screen and (max-width:426px){
-   .icons{
-     padding-top: 0;
-   } 
-   .name{
-     margin: 0.5rem 0;
-   }
-  }
   
   .verticalLine{
     height:2rem;
@@ -67,4 +59,26 @@
     opacity: 1;
   }
   
+  @media screen and (max-width:375px){
+    .image{
+      img{
+        margin-top: 1rem;
+        
+      }
+    } 
+    .name{
+      margin: 0.5rem 0;
+    }
+  }
+
+  @media screen and (max-width:720px){
+   .icons{
+     padding-top: 0;
+   } 
+   .name{
+     margin: 0.5rem 0;
+   }
+  }
+
+
 }

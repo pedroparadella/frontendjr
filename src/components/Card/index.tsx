@@ -5,21 +5,19 @@ import style from './Card.module.scss';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Initial } from "../../interfaces/IInitial";
-import { IPokemonInfo } from '../../interfaces/IPokemonInfo';
 import firstLetterToUpperCase from '../../utils/firstLetterToUpperCase';
-import { useSearch } from '../../hooks/useSearch';
-import { ISprites } from '../../interfaces/ISprites';
 
 interface CardProps{
   name: string | undefined;
   front_default: string | undefined;
-  handleOpenModal: () => void;
+  handleOpenDeleteModal: () => void;
+  handleOpenNewCardModal: () => void;
 }
 
-export function Card({name, front_default, handleOpenModal}: CardProps) {
+export function Card({name, front_default, handleOpenDeleteModal, handleOpenNewCardModal}: CardProps) {
 
   const [initials, setInitials] = useState<Initial>();
-  const {title, setTitle} = useSearch(); //CONTEXTO
+  // const {title, setTitle} = useSearch(); //CONTEXTO
 
   async function getInitialPokemons(){
     const {data} = await axios.get<Initial>('https://pokeapi.co/api/v2/pokemon/');
@@ -52,10 +50,6 @@ export function Card({name, front_default, handleOpenModal}: CardProps) {
     counter++;
   })
 
-
-  // console.log(numbers)
-
-
   if(name === undefined){
     console.log('INDEFINIDO')
   
@@ -80,14 +74,14 @@ export function Card({name, front_default, handleOpenModal}: CardProps) {
                   color={"red"} 
                   name="Excluir" 
                   icon={trash} 
-                  isModalOpen={handleOpenModal}
+                  isModalOpen={handleOpenDeleteModal}
                 />
                 <div className={style.verticalLine}/>
                 <Change 
                   color={"orange"} 
                   name="Editar" 
                   icon={edit}
-                  isModalOpen={handleOpenModal}
+                  isModalOpen={handleOpenNewCardModal}
                 />
               </div>
             </div>
@@ -114,14 +108,14 @@ export function Card({name, front_default, handleOpenModal}: CardProps) {
               color={"#DB2525"} 
               name="Excluir" 
               icon={trash}
-              isModalOpen={handleOpenModal}
+              isModalOpen={handleOpenDeleteModal}
             />
             <div className={style.verticalLine}/>
             <Change 
               color={"#E76316"} 
               name="Editar" 
               icon={edit}
-              isModalOpen={handleOpenModal}
+              isModalOpen={handleOpenNewCardModal}
             />
           </div>
         </div>

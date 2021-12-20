@@ -9,9 +9,10 @@ import { Change } from '../Change';
 
 interface DashboardProps{
   onOpenDeleteCardModal: () => void;
+  onOpenNewCardModal: () => void
 }
 
-export function Dashboard({onOpenDeleteCardModal}: DashboardProps){
+export function Dashboard({onOpenDeleteCardModal, onOpenNewCardModal}: DashboardProps){
   const[searches, setSearches] = useState('');
   const [pokemon, setPokemon] = useState<IPokemonInfo>();
   const {title, setTitle} = useSearch();
@@ -43,8 +44,8 @@ export function Dashboard({onOpenDeleteCardModal}: DashboardProps){
         <Search setPesquisas={setSearches}/>
         <main className={style.container}>
           <div className={style.newCard}>
-            <span>Resultado de busca</span>
-            <button onClick={onOpenDeleteCardModal}>Novo card</button>
+            <span >Resultado de busca</span>
+            <button onClick={onOpenNewCardModal}>Novo card</button>
           </div>
           <div className={style.notFound}>
             <span>Pokemon não encontrado!</span>   
@@ -59,14 +60,15 @@ export function Dashboard({onOpenDeleteCardModal}: DashboardProps){
         <main className={style.container}>
           <div className={style.newCard}>
             <span>Resultado de busca</span>
-            <button >Novo card</button>
+            <button onClick={onOpenNewCardModal}>Novo card</button>
           </div>
           
             <div className={style.cards}>
               <Card 
                 name={pokemon?.name} 
                 front_default={pokemon?.sprites?.front_default} 
-                handleOpenModal={onOpenDeleteCardModal} 
+                handleOpenDeleteModal={onOpenDeleteCardModal} 
+                handleOpenNewCardModal={onOpenNewCardModal}
               />
             </div>
           

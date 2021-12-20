@@ -1,0 +1,146 @@
+.reactModalOverlay{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(246, 244, 246, 0.8);
+ 
+  display: flex;
+  align-items: center;
+  justify-content: right;
+ }
+
+ .reactModalContent{
+  width: 42%;
+  height: 100%;
+  position: relative;
+  padding: 2rem;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  opacity: 1;
+
+  &:focus{
+    outline: none;
+  }
+
+}
+@media screen and (max-width: 426px){
+  .reactModalOverlay{
+    justify-content: center;
+  }
+  .reactModalContent{
+    width: 95%;
+    height: 65%;
+  }
+  .btnArchive{
+    font-size: 0.77rem;
+  }
+}
+
+button{
+  cursor: pointer;
+}
+
+.topIcon{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 0rem 0 1.5rem 0;
+
+  img{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+  }
+
+  h2{
+    font: normal normal bold 1.7rem 'Mulish';
+    letter-spacing: 0px;
+    color: #5F1478;
+    opacity: 1;
+  }
+}
+
+
+.horizontalLine{
+  height:0px;
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align:center;
+  border: 0.5px solid #f0eff0;
+  opacity: 1;
+}
+
+.content{
+  h2{
+    font: normal normal bold 0.8rem 'Mulish';
+    margin-top: 2rem;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #454545;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    opacity: 1;
+  }
+  
+  .inputInfos{
+    height: 3rem;
+    border: 1px solid #B9B9B9;
+    margin-bottom: 2.5rem;
+    border-radius: 8px;
+    opacity: 1;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    input{
+      height: 100%;
+      width: 95%;
+      margin: 0 1rem;
+      border: none;
+      
+      &:focus{
+        outline: none;
+      }
+    }
+    
+    .btnArchive{
+      width: 45%;
+      height: 85%;
+      margin: 0.3rem;
+      color: #E76316;
+      background: #FFFFFF;
+      box-shadow: 0px 3px 6px #E763162E;
+      border: 1px solid #E76316;
+      border-radius: 8px;
+      opacity: 1;
+    }
+  }
+  
+  .btnCreate{
+    margin-right: 0.4rem;
+    margin-top: -0.5rem;
+    text-align: right;
+    button{
+      font: normal normal bold 1.12rem 'Mulish';
+      width: 9.25rem;
+      height: 2.75rem;
+      padding: 0 1rem;
+      background: #E76316;
+      box-shadow: 0px 3px 6px #92207242;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      border-radius: 8px;
+      border: none;
+      opacity: 1;
+  
+    }
+  }
+}
+
+@media screen and (max-width:865px){
+  input{
+    font-size: 0.77rem;
+  }
+}
