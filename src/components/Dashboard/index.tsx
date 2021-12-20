@@ -5,8 +5,13 @@ import style from './Dashboard.module.scss';
 import axios from 'axios';
 import { IPokemonInfo } from '../../interfaces/IPokemonInfo';
 import { useSearch } from '../../hooks/useSearch';
+import { Change } from '../Change';
 
-export function Dashboard(){
+interface DashboardProps{
+  onOpenDeleteCardModal: () => void;
+}
+
+export function Dashboard({onOpenDeleteCardModal}: DashboardProps){
   const[searches, setSearches] = useState('');
   const [pokemon, setPokemon] = useState<IPokemonInfo>();
   const {title, setTitle} = useSearch();
@@ -39,7 +44,7 @@ export function Dashboard(){
         <main className={style.container}>
           <div className={style.newCard}>
             <span>Resultado de busca</span>
-            <button>Novo card</button>
+            <button onClick={onOpenDeleteCardModal}>Novo card</button>
           </div>
           <div className={style.notFound}>
             <span>Pokemon não encontrado!</span>   
@@ -54,11 +59,15 @@ export function Dashboard(){
         <main className={style.container}>
           <div className={style.newCard}>
             <span>Resultado de busca</span>
-            <button>Novo card</button>
+            <button >Novo card</button>
           </div>
           
             <div className={style.cards}>
-              <Card name={pokemon?.name} sprites={pokemon?.sprites} ></Card>
+              <Card 
+                name={pokemon?.name} 
+                front_default={pokemon?.sprites?.front_default} 
+                handleOpenModal={onOpenDeleteCardModal} 
+              />
             </div>
           
         </main>

@@ -14,5 +14,16 @@
     margin-right: 0.7rem;
   }
 
-  
+  &:hover{
+    color: color;
+    cursor: pointer;
+    
+    .red{
+      color: #DB2525;
+    }
+    
+    .orange{
+      color: #E76316;
+    }
+  }
 }

@@ -8,8 +8,15 @@ import { Initial } from "../../interfaces/IInitial";
 import { IPokemonInfo } from '../../interfaces/IPokemonInfo';
 import firstLetterToUpperCase from '../../utils/firstLetterToUpperCase';
 import { useSearch } from '../../hooks/useSearch';
+import { ISprites } from '../../interfaces/ISprites';
 
-export function Card(pokemon: IPokemonInfo){
+interface CardProps{
+  name: string | undefined;
+  front_default: string | undefined;
+  handleOpenModal: () => void;
+}
+
+export function Card({name, front_default, handleOpenModal}: CardProps) {
 
   const [initials, setInitials] = useState<Initial>();
   const {title, setTitle} = useSearch(); //CONTEXTO
@@ -26,7 +33,7 @@ export function Card(pokemon: IPokemonInfo){
   
   // console.log(initials);
 
-  console.log(pokemon)
+  console.log(name)
 
   //Pega o número dos pokemons para encontrar a imagem
   let image = [''];
@@ -49,7 +56,7 @@ export function Card(pokemon: IPokemonInfo){
   // console.log(numbers)
 
 
-  if(pokemon.name === undefined){
+  if(name === undefined){
     console.log('INDEFINIDO')
   
     return(
@@ -69,9 +76,19 @@ export function Card(pokemon: IPokemonInfo){
                 <p>{firstLetterToUpperCase(initial.name)}</p>
               </div>
               <div className={style.icons}>
-                <Change name="Excluir" icon={trash}/>
+                <Change 
+                  color={"red"} 
+                  name="Excluir" 
+                  icon={trash} 
+                  isModalOpen={handleOpenModal}
+                />
                 <div className={style.verticalLine}/>
-                <Change name="Editar" icon={edit}/>
+                <Change 
+                  color={"orange"} 
+                  name="Editar" 
+                  icon={edit}
+                  isModalOpen={handleOpenModal}
+                />
               </div>
             </div>
           )
@@ -85,17 +102,27 @@ export function Card(pokemon: IPokemonInfo){
         <div className={style.card}>
           <div className={style.image}>
             <img 
-            src={pokemon.sprites?.front_default} 
+            src={front_default} 
             alt="" />
           </div>
           <div className={style.horizontalLine}/>
           <div className={style.name}>
-            <p>{firstLetterToUpperCase(pokemon.name)}</p>
+            <p>{firstLetterToUpperCase(name)}</p>
           </div>
           <div className={style.icons}>
-            <Change name="Excluir" icon={trash}/>
+            <Change 
+              color={"#DB2525"} 
+              name="Excluir" 
+              icon={trash}
+              isModalOpen={handleOpenModal}
+            />
             <div className={style.verticalLine}/>
-            <Change name="Editar" icon={edit}/>
+            <Change 
+              color={"#E76316"} 
+              name="Editar" 
+              icon={edit}
+              isModalOpen={handleOpenModal}
+            />
           </div>
         </div>
       )

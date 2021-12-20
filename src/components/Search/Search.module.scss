@@ -32,8 +32,7 @@
     }
 
     &::-webkit-search-cancel-button{
-      position:relative;
-      right:20px;  
+      appearance: none;
     }
   }
 
