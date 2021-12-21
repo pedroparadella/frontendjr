@@ -1,0 +1,84 @@
+.card{
+  font: normal 1rem/2rem 'Mulish';
+  height: 16.6rem;
+  width: 14.6rem;
+  margin-top: 2rem;
+  text-align: center;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  border: 1px solid #E4E4E4;
+  box-shadow: 0px 3px 6px #E5E5E5;
+  opacity: 1;
+
+  .image{
+    img{
+      margin: 2rem 0 1rem 0;
+      border-radius: 50%;
+      background-color: #F6F4F6;
+      border: 1px solid #E4E4E4;
+      opacity: 1;
+    }
+  }
+
+  .horizontalLine{
+    height:0px;
+    width: 75%;
+    margin: 0 auto;
+    text-align:center;
+    border: 0.5px solid #f0eff0;
+    opacity: 1;
+  }
+
+  .name{
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    padding-top: 0.5rem;
+    margin-bottom: 0;
+
+  }
+
+  .laranja {
+    background-color: orange;
+  }
+
+  .vermelho {
+    background-color: red;
+  }
+  
+  .verticalLine{
+    height:2rem;
+    width: 0;
+    padding-top: 0.5rem;
+    border: 1px solid #F6F4F6;
+    opacity: 1;
+  }
+  
+  @media screen and (max-width:375px){
+    .image{
+      img{
+        margin-top: 1rem;
+        
+      }
+    } 
+    .name{
+      margin: 0.5rem 0;
+    }
+  }
+
+  @media screen and (max-width:720px){
+   .icons{
+     padding-top: 0;
+   } 
+   .name{
+     margin: 0.5rem 0;
+   }
+  }
+
+
+}
