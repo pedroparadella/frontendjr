@@ -1,23 +1,15 @@
-import trash from '../../assets/img/Icon-trash.svg';
-import edit from '../../assets/img/Icon-edit.svg';
 import { Change } from '../Change';
-import style from './Card.module.scss';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Initial } from "../../interfaces/IInitial";
+import {ICardProps} from '../../interfaces/ICardProps';
+import trash from '../../assets/img/Icon-trash.svg';
+import edit from '../../assets/img/Icon-edit.svg';
+import style from './Card.module.scss';
+import axios from 'axios';
 import firstLetterToUpperCase from '../../utils/firstLetterToUpperCase';
 
-interface CardProps{
-  name: string | undefined;
-  front_default: string | undefined;
-  handleOpenDeleteModal: () => void;
-  handleOpenNewCardModal: () => void;
-}
-
-export function Card({name, front_default, handleOpenDeleteModal, handleOpenNewCardModal}: CardProps) {
-
+export function Card({name, front_default, handleOpenDeleteModal, handleOpenNewCardModal}: ICardProps) {
   const [initials, setInitials] = useState<Initial>();
-  // const {title, setTitle} = useSearch(); //CONTEXTO
 
   async function getInitialPokemons(){
     const {data} = await axios.get<Initial>('https://pokeapi.co/api/v2/pokemon/');
@@ -26,12 +18,7 @@ export function Card({name, front_default, handleOpenDeleteModal, handleOpenNewC
   
   useEffect(() => {
     getInitialPokemons();
-    console.log('ENTROU USE EFFECT');
   },[]);
-  
-  // console.log(initials);
-
-  console.log(name)
 
   //Pega o número dos pokemons para encontrar a imagem
   let image = [''];
@@ -40,10 +27,6 @@ export function Card({name, front_default, handleOpenDeleteModal, handleOpenNewC
   initials?.results.map((initial) => {
     if(counter<9){
       image[counter] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + initial.url.substring(34,35) + ".png";
-      // initial = {...initial, url: image[counter]}
-      // console.log(image[counter], initial.name);
-      // counter++;
-      // return initial
     }else{
       image[counter] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + initial.url.substring(34,36) + ".png";
     }
@@ -51,14 +34,10 @@ export function Card({name, front_default, handleOpenDeleteModal, handleOpenNewC
   })
 
   if(name === undefined){
-    console.log('INDEFINIDO')
-  
     return(
         <>
         {initials?.results.map((initial, index = 0) => {
-          
           return(
-            
             <div className={style.card} key={initial.name}>
               <div className={style.image}>
                 <img 
@@ -92,7 +71,6 @@ export function Card({name, front_default, handleOpenDeleteModal, handleOpenNewC
       )
   }else{
       return(
-    
         <div className={style.card}>
           <div className={style.image}>
             <img 
@@ -105,14 +83,14 @@ export function Card({name, front_default, handleOpenDeleteModal, handleOpenNewC
           </div>
           <div className={style.icons}>
             <Change 
-              color={"#DB2525"} 
+              color={"red"} 
               name="Excluir" 
               icon={trash}
               isModalOpen={handleOpenDeleteModal}
             />
             <div className={style.verticalLine}/>
             <Change 
-              color={"#E76316"} 
+              color={"orange"} 
               name="Editar" 
               icon={edit}
               isModalOpen={handleOpenNewCardModal}
@@ -122,24 +100,3 @@ export function Card({name, front_default, handleOpenDeleteModal, handleOpenNewC
       )
     }  
 }
-
-// {initials?.results.map((initial, index) => {
-//   return(
-
-//     <div className={style.card} key={initial.name}>
-//       <div className={style.image}>
-//         <img src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png'} alt="" />
-//       </div>
-//       <div className={style.horizontalLine}/>
-//       <div className={style.name}>
-//         <p>{initial.name}</p>
-//       </div>
-//       <div className={style.icons}>
-//         <Change name="Excluir" icon={trash}/>
-//         <div className={style.verticalLine}/>
-//         <Change name="Editar" icon={edit}/>
-//       </div>
-//     </div>
-
-//   )
-// })}

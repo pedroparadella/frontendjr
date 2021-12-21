@@ -13,7 +13,7 @@ export const SearchContext = createContext({} as Pokemon);
 
 export const SearchProvider = ({children}: {children: ReactNode}) => {
   const [title, setTitle] = useState({
-    pokename: 'Teste',
+    pokename: '',
   });
 
   return(

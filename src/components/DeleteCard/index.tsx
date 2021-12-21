@@ -2,13 +2,9 @@ import Modal from 'react-modal';
 import trash from '../../assets/img/Icon-trash.svg';
 import style from './DeleteCard.module.scss';
 import {ToastContainer, toast} from 'react-toastify';
+import { IDeleteCardProps } from '../../interfaces/IDeleteCardProps';
 
-interface DeleteCardProps{
-  isOpen: boolean;
-  onRequestClose: () => void;
-}
-
-export function DeleteCard({isOpen, onRequestClose}: DeleteCardProps){
+export function DeleteCard({isOpen, onRequestClose}: IDeleteCardProps){
   const notify = () => toast.error('Funcionalidade ainda não implementada!');
   
   return(

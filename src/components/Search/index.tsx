@@ -1,37 +1,25 @@
-import React, { useEffect,  useState } from 'react';
-import lupa from '../../assets/img/lupa.svg';
+import { useEffect,  useState } from 'react';
 import { useSearch } from '../../hooks/useSearch';
+import { ISearchProps } from '../../interfaces/ISearchProps';
+import lupa from '../../assets/img/lupa.svg';
 import style from './Search.module.scss'
 
-interface Props{
-  setPesquisas: React.Dispatch<React.SetStateAction<string>>
-}
-
-export function Search({setPesquisas}: Props){
-  const [pesquisa, setPesquisa] = useState<string>('');
-
-  const {title, setTitle} = useSearch();
-
-  // function attPesquisa(event: React.FormEvent<HTMLFormElement>){
-  //   event.preventDefault();
-  // }
+export function Search({setSearches}: ISearchProps){
+  const [search, setSearch] = useState<string>('');
+  const {setTitle} = useSearch();
   
   useEffect(() =>{
-    setPesquisas(pesquisa.toLowerCase()); //SEARCH **********
-    setTitle({pokename: pesquisa.toLowerCase()}); //CONTEXTO
-  }, [pesquisa])
-
-  
-
+    setSearches(search.toLowerCase());
+    setTitle({pokename: search.toLowerCase()});
+  }, [search])
 
   return(
     <div className={style.container}>
       <div className={style.search}>
         <input 
-          className={style.teste}
           type="search" 
-          onChange={event => setPesquisa(event.target.value)}
-          value={pesquisa}
+          onChange={event => setSearch(event.target.value)}
+          value={search}
           placeholder="Digite aqui sua busca..." 
         /> 
         <img 

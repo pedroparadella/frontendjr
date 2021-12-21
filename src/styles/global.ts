@@ -11,12 +11,11 @@ export const GlobalStyle = createGlobalStyle`
   body{
     background: #F6F4F6;
   }
-  
 
   //1 rem = 16px
   html{
     @media(max-width: 1080px){
-      font-size: 93.75%; //equilave a 15px em relação a 16
+      font-size: 93.75%; //equilave a 15px em relação a 16x
     }
 
     @media(max-width: 720px){

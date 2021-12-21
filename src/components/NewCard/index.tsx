@@ -2,13 +2,9 @@ import Modal from "react-modal";
 import style from './NewCard.module.scss';
 import createIcon from '../../assets/img/icone_criar.svg'
 import {ToastContainer, toast } from "react-toastify";
+import {INewCardModal} from '../../interfaces/INewCardModal';
 
-interface NewCardModal{
-  isOpen: boolean;
-  onRequestClose: () => void;
-}
-
-export function NewCard({isOpen, onRequestClose}: NewCardModal){
+export function NewCard({isOpen, onRequestClose}: INewCardModal){
   const notify = () => toast.error('Funcionalidade ainda não implementada!');
 
   return(

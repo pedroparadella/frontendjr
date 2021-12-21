@@ -1,4 +1,4 @@
-export interface PropsChanges{
+export interface IChangesProps{
   isModalOpen: () => void;
   color: string;
   name: string;

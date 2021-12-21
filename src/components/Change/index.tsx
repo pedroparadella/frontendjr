@@ -1,7 +1,7 @@
-import { PropsChanges } from '../../interfaces/IChanges';
+import { IChangesProps } from '../../interfaces/IChangesProps';
 import style from './Change.module.scss';
 
-export function Change({color, name, icon, isModalOpen }: PropsChanges): JSX.Element {
+export function Change({color, name, icon, isModalOpen }: IChangesProps): JSX.Element {
   return(
     <div className={style.icons} onClick={isModalOpen}>
       <img src={icon} alt="" />
