@@ -4,14 +4,9 @@ import React, { useState } from "react";
 
 import { ReactComponent as IconCreateCard } from "../assets/icon-create-card.svg";
 
-const CreateCard = ({}) => {
-  const [show, setShow] = useState(false);
+const CreateCard = ({ show, setShow }) => {
   return (
     <>
-      <Button variant="primary" onClick={() => setShow(true)}>
-        Custom Width Modal
-      </Button>
-
       <Modal
         show={show}
         onHide={() => setShow(false)}

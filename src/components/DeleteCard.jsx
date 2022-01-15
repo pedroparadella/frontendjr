@@ -2,15 +2,9 @@ import { Button } from "react-bootstrap";
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
 
-const DeleteCard = () => {
-  const [show, setShow] = useState(false);
-
+const DeleteCard = ({ show, setShow }) => {
   return (
     <>
-      <Button variant="primary" onClick={() => setShow(true)}>
-        Custom Width Modal
-      </Button>
-
       <Modal
         show={show}
         onHide={() => setShow(false)}
