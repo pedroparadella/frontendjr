@@ -15,6 +15,7 @@ const DeleteCard = () => {
         show={show}
         onHide={() => setShow(false)}
         className="d-flex justify-content-end delete-card-modal"
+        contentClassName="modal-content-delete-card"
       >
         <Modal.Body>
           <div className="text-center mb-3">

@@ -1,10 +1,21 @@
-import Row from "react-bootstrap/Row";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
+import React, { useState } from "react";
+
+import { Row } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 
 import ACard from "./ACard";
 
-const SearchResult = () => {
+const SearchResult = ({ search }) => {
+  // Como funciona:
+  // Realiza uma pesquisa nos objetos do "card-list.json"
+  // Usando como parâmetro o valor de 'search' passado pelo <App/>
+  // A pesquisa retorna os valores que CONTÉM o valor de 'search'
+  const [cardList, setCardList] = useState(() => require("../card-list.json"));
+  let searchList = cardList.filter((cardList) =>
+    cardList.text.includes(search)
+  );
+
   return (
     <>
       <Row className="justify-content-center py-4 bg-light-gray">
@@ -18,11 +29,9 @@ const SearchResult = () => {
             </Col>
           </Row>
           <Row className="py-3">
-            <ACard />
-            <ACard />
-            <ACard />
-            <ACard />
-            <ACard />
+            {searchList.map((e) => (
+              <ACard key={e.id.toString()} text={e.text} imgPath={e.imgPath} />
+            ))}
           </Row>
         </Col>
       </Row>

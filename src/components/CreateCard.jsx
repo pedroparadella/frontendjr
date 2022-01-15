@@ -1,11 +1,11 @@
 import { Button } from "react-bootstrap";
 import { Modal } from "react-bootstrap";
-import { useState } from "react";
-import ModalDialog from "react-bootstrap/ModalDialog";
+import React, { useState } from "react";
 
-const CreateCard = () => {
+import { ReactComponent as IconCreateCard } from "../assets/icon-create-card.svg";
+
+const CreateCard = ({}) => {
   const [show, setShow] = useState(false);
-
   return (
     <>
       <Button variant="primary" onClick={() => setShow(true)}>
@@ -15,35 +15,47 @@ const CreateCard = () => {
       <Modal
         show={show}
         onHide={() => setShow(false)}
-        className="create-card-modal d-flex justify-content-end"
+        className="d-flex justify-content-end p-0"
+        size="xl"
+        dialogClassName="modal-dialog-create-card"
+        contentClassName="modal-content-create-card"
       >
-        <Modal.Header>
-          <Modal.Title className="text-primary">Criar card</Modal.Title>
+        <Modal.Header className="d-flex justify-content-start">
+          <IconCreateCard />
+          <Modal.Title className="text-primary ms-3">Criar card</Modal.Title>
         </Modal.Header>
 
-        <Modal.Body>
-          <label for="ipt-card-title" class="form-label fw-bold fs-7">
+        <Modal.Body className="py-5 modal-body-create-card">
+          <label htmlFor="ipt-card-text" className="form-label fw-bold fs-7 ">
             DIGITE UM NOME PARA O CARD
           </label>
-          <input
-            type="text"
-            class="form-control"
-            id="ipt-card-title"
-            placeholder="Digite o título"
-          />
-
-          <label for="ipt-card-img" class="form-label fw-bold fs-7 mt-5">
-            INCLUA UMA IMAGEM PAR APARECER NO CARD
-          </label>
-          <div class="input-group">
+          <div className="input-group input-group-lg border-muted">
             <input
               type="text"
-              class="form-control"
+              className="form-control fw-light"
+              id="ipt-card-text"
+              placeholder="Digite o título"
+            />
+          </div>
+
+          <label
+            htmlFor="ipt-card-img"
+            className="form-label fw-bold fs-7 mt-5"
+          >
+            INCLUA UMA IMAGEM PAR APARECER NO CARD
+          </label>
+          <div className="input-group input-group-lg border border-muted rounded pe-2">
+            <input
+              type="text"
+              className="form-control border-white fw-light"
               id="ipt-card-img"
               placeholder="Nenhum arquivo selecionado"
             />
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button">
+            <div className="input-group-append m-auto">
+              <button
+                className="btn btn-outline-secondary fw-bold px-4"
+                type="button"
+              >
                 Escolher arquivo
               </button>
             </div>

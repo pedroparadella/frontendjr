@@ -2,12 +2,11 @@ import { Col } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Card } from "react-bootstrap";
-import useState from "react";
 import { ReactComponent as IconBin } from "../../src/assets/icon-bin.svg";
 import { ReactComponent as IconEdit } from "../../src/assets/icon-edit.svg";
 
-const ACard = () => {
-  const imgPath = require("../../src/assets/img-place-holder-2.jpg");
+const ACard = ({ text, imgPath }) => {
+  //const imgPath = require("../../src/assets/img-place-holder-2.jpg");
 
   return (
     <Col md={3}>
@@ -18,9 +17,7 @@ const ACard = () => {
           </Card.Header>
 
           <Card.Body>
-            <Card.Text className="text-dark">
-              Card text card text card text
-            </Card.Text>
+            <Card.Text className="text-dark">{text}</Card.Text>
           </Card.Body>
         </div>
         <Card.Footer className="bg-white text-primary">
