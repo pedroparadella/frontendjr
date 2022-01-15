@@ -6,6 +6,10 @@ import { ReactComponent as IconBin } from "../../src/assets/icon-bin.svg";
 import { ReactComponent as IconEdit } from "../../src/assets/icon-edit.svg";
 
 const ACard = ({ text, imgPath, setShowDeleteCard }) => {
+  // Como funciona: o componente é renderizado usando dados
+  // de uma lista de 'Cards' que se encontra num arquivo .json
+  // essa lista é renderizada no <SearchResult/>
+
   return (
     <Col md={3}>
       <Card className="my-3 shadow rounded d-flex justify-content-center ">

@@ -2,6 +2,11 @@ import { Button } from "react-bootstrap";
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
 
+// . . . Componente DeleteCard . . .
+// Como funciona: componente completamente visual
+// que é chamado ao clicar no ícone de lixeira. Não tem
+// utilidade lógica implementada ainda.
+
 const DeleteCard = ({ show, setShow }) => {
   return (
     <>

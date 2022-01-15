@@ -6,7 +6,14 @@ import { Col } from "react-bootstrap";
 
 import ACard from "./ACard";
 
+// . . . Componente SearchResult . . .
+// Como funciona: usando um filtro (explicado abaixo)
+// com valores dum input para pesquisa, retorna um conjunto de
+// elementos filtrados com base na pesquisa e renderiza um conjunto
+// de elementos <ACard/> baseado no resultado da pesquisa
+
 const SearchResult = ({ search, setShowCreateCard, setShowDeleteCard }) => {
+  // . . . Lógica da função de pesquisa . . .
   // Como funciona:
   // Realiza uma pesquisa nos objetos do "card-list.json"
   // Usando como parâmetro o valor de 'search' passado pelo <App/>
@@ -17,6 +24,7 @@ const SearchResult = ({ search, setShowCreateCard, setShowDeleteCard }) => {
     cardList.text.includes(search)
   );
 
+  // Componente visual
   return (
     <>
       <Row className="justify-content-center py-4 bg-light-gray">

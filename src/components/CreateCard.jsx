@@ -4,6 +4,11 @@ import React, { useState } from "react";
 
 import { ReactComponent as IconCreateCard } from "../assets/icon-create-card.svg";
 
+// . . . Componente CreateCard . . .
+// Como funciona: componente completamente visual
+// que é chamado ao clicar em "Novo card". Não tem
+// utilidade lógica implementada ainda.
+
 const CreateCard = ({ show, setShow }) => {
   return (
     <>

@@ -9,6 +9,10 @@ import ACard from "./ACard";
 
 import Container from "react-bootstrap/Container";
 
+// . . . Componente App . . .
+// Centro da aplicação, a maioria dos states são
+// "lifted up" para cá.
+
 const App = () => {
   // *State "lifted up" de: <Search/>
   // *O que faz: É o estado com valor da barra de pesquisa de cards.
