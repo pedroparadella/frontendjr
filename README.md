@@ -1,24 +1,75 @@
-# Avaliação Junior
-Olá desenvolvedor!\
-Tudo bem?! 😊\
-\
-Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor estilo de programar e resolver problemas.
+<p align="center">
+<h1>
+ FrontEnd Jr 
+ <img width="110" style="border-radius: 10px" height="30" src="https://github.com/JuanCampbsi/frontendjr/blob/02d23696b4eba860c1c633b359351911e6c11c80/src/assets/Impar_fivicon.png" alt="Intro"> 
+</h1>
+</p>
 
-## O que fazer
-1. Fazer um fork desse repositório e trabalhar no seu ambiente.
-2. Replicar o layout do link abaixo, pode usar dados de um JSON local:\
-[Link para o layout](https://xd.adobe.com/view/c715f110-fbd4-4323-be0c-0e453c1450db-9246)
-2. Fazer a funcionalidade de busca funcionar.
-3. Os cliques nos botões de editar/excluir/criar card podem exibir uma mensagem pro usuário de que a funcionalidade não foi implementada.
-4. Ao finalizar a avaliação modifique esse README com as instruções de como podemos fazer o seu código rodar na nossa máquina. Ou seja, passo a passo do que instalar e de quais comandos rodar para podermos visualizar o seu trabalho!
-5. Realizar um Pull Request para o nosso repositório e mandar um e-mail para pedro.paradella@impar.com.br com o assunto "Avaliação Junior", informando que finalizou a avaliação e colocando o link do Pull Request. 
+### 🛠  Descrição   
 
-## Dicas
-* Não foi definido limite de linhas e colunas, portanto fique à vontade para tal escolha.
-* Gostamos de interfaces limpas e elegantes.
+</br>
 
-## Quais tecnologias usar
-* Deixaremos a seu critério qual tecnologia utilizar no entanto você terá mais pontos conosco se utilizar React para criação da interface e também o uso de pré-processadores/styled-components para o CSS.
+O projeto tem como o objetivo consumir informações de uma api como `pokeapi` e visualizar em forma de cards. Além disso o usuário pode cadastrar, excluir e editar novos cards.
 
-## Desafios se você se sentir confiante
-* Usar alguma API na internet, tipo https://pokeapi.co/, para trazer os dados que vão aparecer nos cards da tela.
+
+## Preview 📱
+Interface do usuário.
+</br>
+
+<p align="center">
+  <kbd>
+ <img width="850" style="border-radius: 10px" height="550" src="https://github.com/JuanCampbsi/frontendjr/blob/40e64ae040c647c2f8e843fa59a3f64862f4b8a8/src/assets/systempreview.gif" alt="Intro"> 
+  </kbd>
+  </br>
+</p>
+
+</br>
+
+## Test com Jest 🧪
+ Testes unitários de componentes e páginas da aplicação, utilizando a ferramenta jest.
+ </br>
+<p align="center">
+  <kbd>
+ <img width="850" style="border-radius: 10px" height="550" src="https://github.com/JuanCampbsi/frontendjr/blob/e6e9a6f6e3ec3ba8c528a916c97a1ee60cadd8e8/src/assets/testpreview.gif" alt="Intro"> 
+  </kbd>
+  </br>
+</p>
+
+</br>
+
+### ⌨ Instalação
+Para a utilização é preciso clonar o repositório, instalar as depedências e rodar o projeto.
+
+```bash
+# Abra o terminal/cmd e em seguida Clone este repositório
+$ git clone https://github.com/JuanCampbsi/frontendjr.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd frontendjr
+
+# Instale as dependências
+$ yarn install ou apenas yarn
+
+# Execute a aplicação em modo de desenvolvimento
+$ yarn start
+
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+
+```
+
+</br>
+
+### ⌨ Pilha de tecnologias e bibliotecas
+
+-   [React](https://github.com/facebook/react)
+-   [Typescript](https://www.typescriptlang.org/)
+-   [Styled Components](https://www.styled-components.com/) 
+-   [React Query](https://react-query.tanstack.com/reference/QueryClient) (Ferramenta de gerenciamento de estado)
+-   [Jest](https://jestjs.io/pt-BR/docs/tutorial-react) (Ferramenta de testes unitários)
+
+</br>
+
+👨‍💻 **Author** 💻
+
+Developed by [_Juan Campos_](https://www.linkedin.com/in/juancampos-ferreira/)
+
