@@ -1,0 +1,14 @@
+<svg width="125" height="125" viewBox="0 0 125 125" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<circle cx="62.5" cy="62.5" r="60" fill="url(#pattern0)" stroke="#E4E4E4" stroke-width="5"/>
+<path d="M37 45.4032H86.4035" stroke="#DB2525" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M50.7256 45.4032V39.6834C50.7256 38.176 51.302 36.7305 52.3281 35.6646C53.3542 34.5988 54.7459 34 56.1971 34H67.1908C68.6419 34 70.0336 34.5988 71.0597 35.6646C72.0858 36.7305 72.6623 38.176 72.6623 39.6834V45.3667M80.9164 45.4032V85.3166C80.9164 86.824 80.3399 88.2695 79.3138 89.3354C78.2877 90.4012 76.8961 91 75.4449 91H47.9625C46.5114 91 45.1197 90.4012 44.0936 89.3354C43.0675 88.2695 42.491 86.824 42.491 85.3166V45.4032H80.9164Z" stroke="#DB2525" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M53.8421 56.8V79.6" stroke="#DB2525" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M62.8246 56.8V79.6" stroke="#DB2525" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M70.6842 56.8V79.6" stroke="#DB2525" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_3_14" transform="translate(-0.277778) scale(0.111111)"/>
+</pattern>
+<image id="image0_3_14" width="14" height="9" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAJCAYAAAACTR1pAAAAHElEQVQoFWP4++nTf3IwAzmaQHpGNeIJcfoHDgBRTuhQ4NEolwAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>

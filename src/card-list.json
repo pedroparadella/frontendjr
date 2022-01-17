@@ -1,0 +1,37 @@
+[
+  {
+    "id": 0,
+    "text": "Estudar Visual Component",
+    "imgPath": "https://thumbs.dreamstime.com/b/business-to-do-list-flat-icon-modern-style-task-list-business-to-do-list-flat-icon-modern-style-any-purposes-perfect-web-138650221.jpg"
+  },
+  {
+    "id": 1,
+    "text": "Fazer a daily",
+    "imgPath": "https://thumbs.dreamstime.com/b/business-to-do-list-flat-icon-modern-style-task-list-business-to-do-list-flat-icon-modern-style-any-purposes-perfect-web-138650221.jpg"
+  },
+  {
+    "id": 2,
+    "text": "Estudar Node.JS",
+    "imgPath": "https://cdn2.iconfinder.com/data/icons/education-icons-set-2/256/Student_Studying-512.png"
+  },
+  {
+    "id": 3,
+    "text": "Fazer debugging",
+    "imgPath": "https://thumbs.dreamstime.com/b/business-to-do-list-flat-icon-modern-style-task-list-business-to-do-list-flat-icon-modern-style-any-purposes-perfect-web-138650221.jpg"
+  },
+  {
+    "id": 4,
+    "text": "Estudar normalização de banco de dados",
+    "imgPath": "https://cdn2.iconfinder.com/data/icons/education-icons-set-2/256/Student_Studying-512.png"
+  },
+  {
+    "id": 5,
+    "text": "Contratar aquele programador legal (o Vini)",
+    "imgPath": "https://thumbs.dreamstime.com/b/handshake-icon-flat-design-business-concept-handshake-icon-flat-design-business-concept-communication-teamwork-round-123384173.jpg"
+  },
+  {
+    "id": 6,
+    "text": "Ir pra casa",
+    "imgPath": "https://thumbs.dreamstime.com/b/bus-icon-isolated-white-background-black-vector-185767060.jpg"
+  }
+]

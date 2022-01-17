@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;700&display=swap");
+
+body {
+  font-family: "Mulish", sans-serif;
+  color: #263238;
+}
+
+.vh-25 {
+  height: 25vh;
+}
+
+.bg-image-bg-search {
+  background: url("assets/bg-search.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-light-gray {
+  background-color: #f6f4f6;
+}
+
+.test {
+  height: 267px;
+}
+
+.fs-7 {
+  font-size: 0.9em;
+}
+
+.circle-mask {
+  clip-path: circle(40%);
+}
+
+.input-mag-glass {
+  background: url(assets/icon-mag-glass.svg);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin: content-box;
+}
+
+.bg-gradient-header {
+  background: transparent linear-gradient(272deg, #ae276f 0%, #5f1478 100%);
+}
