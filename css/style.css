@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+body{
+    font-family: 'Mulish', sans-serif;
+}
+
+/*NAVBAR*/
+
+#navbar{
+    height: 60px;
+    background-image: linear-gradient(to right, #5F1478, #AE276F);
+}
+
+#navbar .row .col-4 img{
+    transform: translate(10px, 30%);
+}
+
+/* HOME */
+
+.home{
+    height:250px;
+    background: url(../img/fundo-busca@2x.png) no-repeat center;
+}
+
+.home .row .col-8 input{
+    width: 90%;
+    height: 65px;
+    font-style: italic;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transform: translate(0, 130px);
+}
+
+.home .row .col-8 button{
+    background: none;
+    border: none;
+    transform: translate(-60px, 124px);
+}
+
+.home .row .col-8 button img{
+    height: 30px;
+}
+
+/* CARDS BUSCA */
+
+.cards-busca{
+    background: #F6F4F6;
+    height: auto;
+}
+
+.cards-busca .row .col-3 b{
+    color: #5F1478;
+    font-size: 27px;
+}
+
+.cards-busca .row .col-2 .novo-card{
+    margin-top: 30px;
+    background-color: #E76316;
+    color: #FFFFFF;
+    padding-left: 35px;
+    padding-right: 35px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 13px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transform: translate(35px,0);
+}
+
+#filmes p{
+    text-align: center;
+}
+
+#filmes .thumbnail{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 20px;
+    width: 350px;
+    height: 380px;
+}
+
+#filmes .thumbnail .img-thumbnail{
+    cursor:pointer;
+    width: 250px;
+    height: 250px;
+    transform: translate(50px,20px);
+    border-radius: 10px;
+    border: 2px solid #E4E4E4;
+}
+
+#filmes .thumbnail p{
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    transform: translate(0,20px);
+}
+
+#filmes .thumbnail p button{
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 4px;
+    margin-right: 80px;
+    border: none;
+    outline: none;
+    background: none;
+    transform: translate(50%,-30px);
+}
+
+#filmes .thumbnail p button img{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* FOOTER */
+
+.footer{
+    height: 100px;
+    background-image: linear-gradient(to right, #5F1478, #AE276F);
+    text-align: center;
+}
+
+.footer .col-12 p{
+    margin-top: 20px;
+    color: white;
+}
+
+.footer .col-12 p a{
+    cursor: pointer;
+    color: #f77d37;
+    font-weight: 500;
+    transition: all 0.4s ease;
+}
+
+.footer .col-12 p a:hover{
+    color: #f89b64;
+}
+
+#row-icons{
+    font-size: 25px;
+    text-align: center;
+    transform: translate(0, -15px);
+}
+
+.footer .col-4 i{
+    margin-right: 20px;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.footer .col-4 i:hover{
+    color: #E76316;
+}
