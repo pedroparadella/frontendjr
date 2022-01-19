@@ -1,24 +1,39 @@
-# Avaliação Junior
-Olá desenvolvedor!\
-Tudo bem?! 😊\
-\
-Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor estilo de programar e resolver problemas.
+Olá, Ímpar! (:
 
-## O que fazer
-1. Fazer um fork desse repositório e trabalhar no seu ambiente.
-2. Replicar o layout do link abaixo, pode usar dados de um JSON local:\
-[Link para o layout](https://xd.adobe.com/view/c715f110-fbd4-4323-be0c-0e453c1450db-9246)
-2. Fazer a funcionalidade de busca funcionar.
-3. Os cliques nos botões de editar/excluir/criar card podem exibir uma mensagem pro usuário de que a funcionalidade não foi implementada.
-4. Ao finalizar a avaliação modifique esse README com as instruções de como podemos fazer o seu código rodar na nossa máquina. Ou seja, passo a passo do que instalar e de quais comandos rodar para podermos visualizar o seu trabalho!
-5. Realizar um Pull Request para o nosso repositório e mandar um e-mail para pedro.paradella@impar.com.br com o assunto "Avaliação Junior", informando que finalizou a avaliação e colocando o link do Pull Request. 
+Estarei listando abaixo o modo para trazer o projeto desenvolvido por mim para a sua máquina local e como executá-lo.
 
-## Dicas
-* Não foi definido limite de linhas e colunas, portanto fique à vontade para tal escolha.
-* Gostamos de interfaces limpas e elegantes.
+Como o projeto foi desenvolvido:
 
-## Quais tecnologias usar
-* Deixaremos a seu critério qual tecnologia utilizar no entanto você terá mais pontos conosco se utilizar React para criação da interface e também o uso de pré-processadores/styled-components para o CSS.
+    - Foi desenvolvido uma aplicação de busca de filmes, onde foi inserido uma barra de busca na home do site onde é possível escolher o filme desejado (em inglês, ex: Spider-man) e será retornado os cards do filme com o poster e título do filme;
 
-## Desafios se você se sentir confiante
-* Usar alguma API na internet, tipo https://pokeapi.co/, para trazer os dados que vão aparecer nos cards da tela.
+    - Utilizei o Axios para retornar as informações da API de filmes da http://www.omdbapi.com/;
+
+    - Utilizei o bootstrap, https://getbootstrap.com/, para fazer toda a estrutura do site e parte das funcionalidades de script;
+
+    Estilização do site feita com CSS.
+
+Como fazer o projeto rodar na sua máquina local:
+
+    1. Clonando o repositório com o git:
+
+        1.1. Será preciso utilizar o Git para clonar este repositório para a sua máquina local. Caso não tenha git, será preciso fazer o download do mesmo em https://git-scm.com/downloads.
+
+        1.2. Feito o download e a instalação, abra o command-line, vá até a pasta desejada para receber o repositório contendo os arquivos do código do projeto.
+
+        1.3. Dentro da pasta, com o command-line, digite o seguinte código: git clone https://github.com/luanfreire25/frontendjr.git 
+
+        1.4. Pronto! se o repositório do projeto foi clonado para sua pasta, deu tudo certo.
+
+    2. Abrindo e visualizando o projeto.
+
+        2.1. Dentro da pasta 'frontendjr' procure pelo arquivo 'index.html'.
+
+        2.2. Achado o arquivo, clique com o botão direito e abra-o utilizando o seu navegador de preferência ou arraste esse arquivo até a aba do seu navegador, irá abrir da mesma forma.
+
+        2.3. Pronto! O projeto está aberto pronto para receber consultas de filmes! :) 
+
+
+Agradecimentos:
+
+    Venho por meio desta documentação agradecer pela oportunidade proposta a mim para me tornar estagiário de desenvolvimento na Ímpar! É o meu primeiro processo e teste para concorrer uma função na área da programação, área que estou estudando e me desenvolvendo há 6 meses, fiquei muito feliz em ter recebido a proposta. Vejo essa oportunidade como uma forma de adquirir muita experiência e conhecimento na área, visando meu crescimento profissional na área e se me permitirem, na Ímpar! :)
+
