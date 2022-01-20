@@ -171,7 +171,7 @@ const Home = props => {
                     <LoadingAnimation/>
                   </LoadingContent>
                 }                
-            {!filteredData.length > 0 ?
+            {filteredData.length > 1 ?
             <Footer>
                 <PreviousPageButton disabled={!nextAndPreviousPage.previous} onClick={previousPage}>Anterior</PreviousPageButton>
                 <NextPageButton onClick={nextPage}>Próxima</NextPageButton>
