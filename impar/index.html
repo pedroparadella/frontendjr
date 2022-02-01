@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <!-- Icone navegador -->
+    <link rel="icon" href="img/logo-browser.png">
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Estilo -->
+    <link rel="stylesheet" href="estilo.css">
+
+
+
+    <script>
+        function alerta() {
+            window.alert("Barra de Pesquisa desativada.");
+        }
+    </script>
+
+
+
+
+    <title>Ímpar</title>
+</head>
+
+<body class="container-fluid">
+
+    <!-- NAV BAR -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-2" id="nav-grad">
+        <div class="container d-flex">
+
+            <!-- LOGO -->
+            <a class="navbar-brand" href="#">
+                <img src="img/logo_nav.png" width="60" height="60" alt="logo Impar">
+                <span class="fs-4 mx-3 text-light text-uppercase"
+                    style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                    Ímpar
+                </span>
+            </a>
+
+
+            <!-- BTN Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                style="background-color: #571663;">
+
+                <!-- Icone Toggler-->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu Toggler -->
+            <div class="collapse navbar-collapse text-center" id="navbarNav">
+                <div class="mx-auto"></div>
+
+                <!-- Menus -->
+                <ul class="navbar-nav fs-5">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-light " href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-light" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-light" href="#">Local</a>
+                    </li>
+                </ul>
+            </div><!-- Fim NAV BAR COLLAPSE -->
+
+        </div><!-- Fim NAVBAR container -->
+    </nav><!-- NAV Bar -->
+
+
+
+    <main>
+
+        <!-- d-flex justify-content-start Centralizar horizontalmente-->
+        <!-- align-items-end Centralizar verticalmente-->
+
+
+        <!-- BANNER -->
+        <div class="row" style="height: 450px">
+
+            <!-- Centralizar div -->
+            <div class=" text-center bg-image">
+                <div class="d-flex justify-content-center align-items-end h-100">
+
+
+                    <!-- Barra de pesquisa -->
+                    <div class="container pesquisa col-11 rounded-2 mb-5 bg-white">
+
+                        <!-- Caixa pesquisa -->
+                        <input type="search" id="pesquisa" class="pesquisa-input text-start px-4 col-11"
+                            onclick="alerta()" placeholder="Pesquisar" name="pesquisa">
+
+
+                        <!-- BTN Lupa -->
+                        <button class="btn btn-lupa text-end mx-3 col-2" onclick="alerta()">
+                            <a href="#"> <i class="bi bi-search text-muted" style="font-size: 20px;"></i></a>
+                        </button>
+
+                    </div>
+
+                </div>
+            </div><!-- fim DIV centralizadora -->
+        </div><!-- fim Row -->
+
+
+        <!-- Main header -->
+        <div class="container my-4">
+
+            <!-- Conteúdo ESQUERDA -->
+            <div class="row d-flex justify-content-end">
+
+                <div class="col-md-6 text-md-start text-sm-center">
+                    <p class="text text-busca"> Resultado da busca </p>
+                </div>
+
+                <!-- Btn NOVO CARD -->
+                <div class="col-md-6 text-end my-sm-4 my-md-0">
+                    <button class="col-sm-12 col-md-4 btn btn-card shadow" data-bs-toggle="modal"
+                        data-bs-target="#modalEditar" style="font-weight: 700!important;">Novo Card</button>
+                </div>
+            </div>
+
+        </div><!-- FIM Container Header -->
+
+
+        <!-- Main cards -->
+        <div class="container">
+
+
+            <div class="row">
+
+                <!-- Card GRID 1
+                =================================== -->
+                <div class="col-sm-6 col-md-3 mb-5">
+
+                    <!-- Card body -->
+                    <div class="card-main-border mx-1 bg-white shadow">
+
+                        <!-- Card IMG -->
+                        <div class="mx-4">
+                            <div class="text-center my-2 py-3 border-bottom ">
+                                <img class="card-img-border img-fluid" src="img/card.jpg" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <!-- Card MAIN -->
+                        <div>
+                            <div class="text-center my-3">
+                                <h5 class="card-title">Api nome</h5>
+                                <p class="card-text">Api info</p>
+                            </div>
+                        </div>
+
+                        <!-- BTN BG STYLE -->
+                        <div class="border-top bg-light card-border-bottom">
+
+                            <!-- BTN CARD -->
+                            <div class="col-12 d-flex">
+
+                                <!-- BTN 1 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalDelete"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2  bi bi-trash"
+                                                style="color: rgba(248, 38, 38, 0.6);"></i>Excluir
+                                        </button>
+                                    </a>
+                                </div>
+
+                                <!-- BTN 2 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalEditar"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2 bi bi-pencil" style="color: rgba(248, 38, 38, 0.6);"></i>
+                                            Editar
+                                        </button>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div><!-- FIM BTN 1-->
+
+                    </div><!-- FIM CARD BODY 1 -->
+                </div><!-- FIM CARD GRID 1-->
+
+
+                <!-- CARD 2
+                ========================= -->
+                <div class="col-sm-6 col-md-3" style="margin-bottom: 50px;">
+
+                    <!-- Card body 2-->
+                    <div class="card-main-border mx-1 bg-white shadow">
+
+                        <!-- Card IMG 2-->
+                        <div class="mx-4">
+                            <div class="text-center my-2 py-3 border-bottom ">
+                                <img class="card-img-border img-fluid" src="img/card.jpg" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <!-- Card MAIN 2-->
+                        <div>
+                            <div class="text-center my-3">
+                                <h5 class="card-title">Api nome</h5>
+                                <p class="card-text">Api info</p>
+                            </div>
+                        </div>
+
+                        <!-- BTN BG STYLE 2-->
+                        <div class="border-top bg-light card-border-bottom">
+
+                            <!-- BTN CARD 2-->
+                            <div class="col-12 d-flex">
+
+                                <!-- BTN 1 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalDelete"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2 bi bi-trash"
+                                                style="color: rgba(248, 38, 38, 0.6);"></i>Excluir
+                                        </button>
+                                    </a>
+                                </div>
+
+                                <!-- BTN 2 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalEditar"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2 bi bi-pencil"
+                                                style="color: rgba(248, 38, 38, 0.6);"></i>Editar
+                                        </button>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div><!-- FIM BTN 2-->
+
+                    </div><!-- FIM CARD BODY 2 -->
+                </div><!-- FIM CARD GRID 2-->
+
+
+                <!-- CARD 3
+                ========================== -->
+                <div class="col-sm-6 col-md-3" style="margin-bottom: 50px;">
+
+                    <!-- Card body 3-->
+                    <div class="card-main-border mx-1 bg-white shadow">
+
+                        <!-- Card IMG 3-->
+                        <div class="mx-4">
+                            <div class="text-center my-2 py-3 border-bottom ">
+                                <img class="card-img-border img-fluid" src="img/card.jpg" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <!-- Card MAIN 3-->
+                        <div>
+                            <div class="text-center my-3">
+                                <h5 class="card-title">Api nome</h5>
+                                <p class="card-text">Api info</p>
+                            </div>
+                        </div>
+
+                        <!-- BTN BG STYLE 3-->
+                        <div class="border-top bg-light card-border-bottom">
+
+                            <!-- BTN CARD 3-->
+                            <div class="col-12 d-flex">
+
+                                <!-- BTN 1 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalDelete"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2 bi bi-trash"
+                                                style="color: rgba(248, 38, 38, 0.6);"></i>Excluir
+                                        </button>
+                                    </a>
+                                </div>
+
+                                <!-- BTN 3 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalEditar"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2 bi bi-pencil"
+                                                style="color: rgba(248, 38, 38, 0.6);"></i>Editar
+                                        </button>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div><!-- FIM BTN 3 -->
+
+                    </div><!-- FIM CARD BODY 3 -->
+                </div><!-- FIM CARD GRID 3-->
+
+
+                <!-- CARD 4
+                ======================================= -->
+                <div class="col-sm-6 col-md-3" style="margin-bottom: 50px;">
+
+                    <!-- Card body 4-->
+                    <div class="card-main-border mx-1 bg-white shadow">
+
+                        <!-- Card IMG 4-->
+                        <div class="mx-4">
+                            <div class="text-center my-2 py-3 border-bottom ">
+                                <img class="card-img-border img-fluid" src="img/card.jpg" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <!-- Card MAIN 4-->
+                        <div>
+                            <div class="text-center my-3">
+                                <h5 class="card-title">Api nome</h5>
+                                <p class="card-text">Api info</p>
+                            </div>
+                        </div>
+
+                        <!-- BTN BG STYLE 4-->
+                        <div class="border-top bg-light card-border-bottom">
+
+                            <!-- BTN CARD 4-->
+                            <div class="col-12 d-flex">
+
+                                <!-- BTN 1 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalDelete"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2 bi bi-trash"
+                                                style="color: rgba(248, 38, 38, 0.6);"></i>Excluir
+                                        </button>
+                                    </a>
+                                </div>
+
+                                <!-- BTN 4 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalEditar"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2 bi bi-pencil"
+                                                style="color: rgba(248, 38, 38, 0.6);"></i>Editar
+                                        </button>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div><!-- FIM BTN 4 -->
+
+                    </div><!-- FIM CARD BODY 4 -->
+                </div><!-- FIM CARD GRID 4-->
+
+
+
+                <!-- CARD 5
+                ============================ -->
+                <div class="col-sm-6 col-md-3" style="margin-bottom: 50px;">
+
+                    <!-- Card body 5-->
+                    <div class="card-main-border mx-1 bg-white shadow">
+
+                        <!-- Card IMG 5-->
+                        <div class="mx-4">
+                            <div class="text-center my-2 py-3 border-bottom ">
+                                <img class="card-img-border img-fluid" src="img/card.jpg" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <!-- Card MAIN 5-->
+                        <div>
+                            <div class="text-center my-3">
+                                <h5 class="card-title">Api nome</h5>
+                                <p class="card-text">Api info</p>
+                            </div>
+                        </div>
+
+                        <!-- BTN BG STYLE 5-->
+                        <div class="border-top bg-light card-border-bottom">
+
+                            <!-- BTN CARD 5-->
+                            <div class="col-12 d-flex">
+
+                                <!-- BTN 1 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalDelete"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2 bi bi-trash"
+                                                style="color: rgba(248, 38, 38, 0.6);"></i>Excluir
+                                        </button>
+                                    </a>
+                                </div>
+
+                                <!-- BTN 5 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalEditar"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2 bi bi-pencil"
+                                                style="color: rgba(248, 38, 38, 0.6);"></i>Editar
+                                        </button>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div><!-- FIM BTN 5 -->
+
+                    </div><!-- FIM CARD BODY 5 -->
+                </div><!-- FIM CARD GRID 5-->
+
+
+                <!-- CARD 6 -->
+                <div class="col-sm-6 col-md-3 mb-5">
+
+                    <!-- Card body 6-->
+                    <div class="card-main-border mx-1 bg-white shadow">
+
+                        <!-- Card IMG 6 -->
+                        <div class="mx-4">
+                            <div class="text-center my-2 py-3 border-bottom ">
+                                <img class="card-img-border img-fluid" src="img/card.jpg" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <!-- Card MAIN 6 -->
+                        <div>
+                            <div class="text-center my-3">
+                                <h5 class="card-title">Api nome</h5>
+                                <p class="card-text">Api info</p>
+                            </div>
+                        </div>
+
+                        <!-- BTN BG STYLE 6 -->
+                        <div class="border-top bg-light card-border-bottom">
+
+                            <!-- BTN CARD 6 -->
+                            <div class="col-12 d-flex">
+
+                                <!-- BTN 1 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalDelete"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2  bi bi-trash"
+                                                style="color: rgba(248, 38, 38, 0.6);"></i>Excluir
+                                        </button>
+                                    </a>
+                                </div>
+
+                                <!-- BTN 2 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalEditar"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2 bi bi-pencil" style="color: rgba(248, 38, 38, 0.6);"></i>
+                                            Editar
+                                        </button>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div><!-- FIM BTN 6-->
+
+                    </div><!-- FIM CARD BODY 6 -->
+                </div><!-- FIM CARD GRID 6-->
+
+                <div class="col-sm-6 col-md-3 mb-5">
+
+                    <!-- Card body 7-->
+                    <div class="card-main-border mx-1 bg-white shadow">
+
+                        <!-- Card IMG 7-->
+                        <div class="mx-4">
+                            <div class="text-center my-2 py-3 border-bottom ">
+                                <img class="card-img-border img-fluid" src="img/card.jpg" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <!-- Card MAIN 7-->
+                        <div>
+                            <div class="text-center my-3">
+                                <h5 class="card-title">Api nome</h5>
+                                <p class="card-text">Api info</p>
+                            </div>
+                        </div>
+
+                        <!-- BTN BG STYLE 7-->
+                        <div class="border-top bg-light card-border-bottom">
+
+                            <!-- BTN CARD 7 -->
+                            <div class="col-12 d-flex">
+
+                                <!-- BTN 1 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalDelete"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2  bi bi-trash"
+                                                style="color: rgba(248, 38, 38, 0.6);"></i>Excluir
+                                        </button>
+                                    </a>
+                                </div>
+
+                                <!-- BTN 2 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalEditar"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2 bi bi-pencil" style="color: rgba(248, 38, 38, 0.6);"></i>
+                                            Editar
+                                        </button>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div><!-- FIM BTN 7-->
+
+                    </div><!-- FIM CARD BODY 7 -->
+                </div><!-- FIM CARD GRID 7-->
+
+
+                <!-- MAIN CARD 8 -->
+                <div class="col-sm-6 col-md-3 mb-5">
+
+                    <!-- Card body 8 -->
+                    <div class="card-main-border mx-1 bg-white shadow">
+
+                        <!-- Card IMG 8-->
+                        <div class="mx-4">
+                            <div class="text-center my-2 py-3 border-bottom ">
+                                <img class="card-img-border img-fluid" src="img/card.jpg" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <!-- Card MAIN 8-->
+                        <div>
+                            <div class="text-center my-3">
+                                <h5 class="card-title">Api nome</h5>
+                                <p class="card-text">Api info</p>
+                            </div>
+                        </div>
+
+                        <!-- BTN BG STYLE 8-->
+                        <div class="border-top bg-light card-border-bottom">
+
+                            <!-- BTN CARD 8-->
+                            <div class="col-12 d-flex">
+
+                                <!-- BTN 1 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalDelete"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2  bi bi-trash"
+                                                style="color: rgba(248, 38, 38, 0.6);"></i>Excluir
+                                        </button>
+                                    </a>
+                                </div>
+
+                                <!-- BTN 2 -->
+                                <div class="col-6">
+                                    <a class="btn-link" href="#">
+                                        <button class="col-12 text-muted btn btn-main-card-border border-end"
+                                            data-bs-toggle="modal" data-bs-target="#modalEditar"
+                                            style="padding: 10px 0px;">
+                                            <i class="mx-2 bi bi-pencil" style="color: rgba(248, 38, 38, 0.6);"></i>
+                                            Editar
+                                        </button>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div><!-- FIM BTN 8-->
+
+                    </div><!-- FIM CARD BODY 8 -->
+                </div><!-- FIM CARD GRID 8-->
+
+
+            </div> <!-- Fim ROW -->
+        </div><!-- Container ALL CARDS -->
+
+    </main>
+
+
+
+
+    <!-- Modal Excluir
+    ================================================ -->
+    <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="modalDelete" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="width: 80%;">
+
+                <div class="modal-header  border-0">
+                    <button type="button" class="btn-close-style" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row ">
+                        <!-- GRID ICONE LIXEIRA -->
+                        <div class="col-12 mx-auto d-flex justify-content-center">
+                            <div class="text-center ">
+
+                                <div>
+                                    <!-- border LIXEIRA -->
+                                    <div class="" style="width: 10rem;
+                                    height: 10rem;">
+
+                                        <!-- icone LIXEIRA -->
+                                        <div class="border-lixeira">
+
+                                            <div class="bg-lixeira">
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="70" fill="currentColor"
+                                                    class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                </svg>
+                                            </div><!-- Fim BG ICONE -->
+
+                                        </div><!-- Fim BORDER -->
+                                    </div><!-- Fim tamanho BORDER LIXEIRA -->
+                                </div>
+
+                            </div><!-- Fim Texto centralizado  -->
+                        </div><!-- Fim Coluna -->
+                    </div><!-- Fim Row  -->
+
+                    <!-- TEXTO MODAL -->
+                    <div class="row">
+                        <div class="col-10 text-center mx-auto justify-content-center border-bottom">
+
+                            <h2 class="text-danger my-3" style="font-family:Arial, Helvetica, sans-serif;
+                            font-weight: 600;">Excluir</h2>
+                            <p class="text-uppercase text-confirmar-excluir">Certeza que deseja excluir?</p>
+                        </div>
+                    </div>
+
+                </div><!-- FIM MODAL BODY -->
+
+
+                <div class="modal-footer border-0 mb-4 row" style="justify-content: unset!important;">
+
+                    <!-- DIV tamanho BTNs -->
+                    <div class="col-12 d-flex justify-content-evenly">
+                        <button type="button" class="btn btn-modal-exluir rounded-3 col-4">Excluir</button>
+                        <button type="button" class="btn btn-secondary btn-modal-cancelar col-4"
+                            data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Modal Editar
+    =================================================== -->
+
+
+    <!-- Modal -->
+    <div class="modal fade modal-direita" id="modalEditar" tabindex="-1" aria-labelledby="modalEditar"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Head modal editar -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color:#571663;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size: 23px;
+                    font-weight: bold;">Criar Card</h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Body editar -->
+                <div class="modal-body">
+
+                    <!-- Nome card -->
+                    <div class="row d-flex justify-content-center">
+
+                        <div class="col-11">
+
+                            <label for="card-nome" class="text-muted my-2">Digite um nome para o Card</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control card-nome" id="card-nome"
+                                    aria-describedby="basic-addon3" placeholder="Digite o título">
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-11">
+
+                            <label for="card-nome" class="text-muted my-2">Inclua uma imagem no Card</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control card-nome" id="card-nome"
+                                    aria-describedby="basic-addon3" placeholder="Selecione um arquivo">
+
+                                <button type="button" class="btn btn-secondary btn-modal-cancelar" style="color: #e67700;
+                                border: 1px solid #e67700;">Escolher
+                                    arquivo
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="modal-footer">
+
+                    <button class="btn btn-card shadow" data-bs-toggle="modal" data-bs-target="#modalEditar"
+                        style="padding: 10px 20px!important;">Novo Card
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Bootstrap Bundle with Popper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>

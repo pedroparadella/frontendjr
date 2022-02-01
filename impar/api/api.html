@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Api Impar</title>
+
+    <link rel="stylesheet" href="api-css.css" />
+
+
+    <!-- Icone navegador -->
+    <link rel="icon" href="img/logo-browser.png">
+
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+
+
+
+
+    <script>
+        function alerta() {
+            window.alert("Barra de Pesquisa desativada.");
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Pokedex</h1>
+
+        <div class="search-box">
+            <form>
+                <input type="search" id="barra-pesquisa" onclick="alerta()" placeholder="Pesquise pelo Pokemon">
+
+                <div class="container-lupa">
+
+                    <buttom class="btn-pesquisar" id="btn-pesquisar" onclick="alerta()">
+                        <img class="lupa" src="img/search.png" alt="lupa">
+                    </buttom>
+                </div>
+
+            </form>
+        </div>
+
+        <ul data-js="pokedex" class="pokedex" id="pokedex"></ul>
+    </div>
+
+
+
+
+    
+    <script src="script.js"></script>
+
+</body>
+
+</html>

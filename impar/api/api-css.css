@@ -1,0 +1,284 @@
+body {
+	background: #EFEFBB;
+	background: linear-gradient(to right, rgb(197, 230, 236), rgb(239, 187, 230));
+	color: white;
+	margin: 0;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+	padding: 40px;
+	margin: 0 auto;
+}
+
+
+h1 {
+	text-align: center;
+	font-size: 54px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+
+html {
+	background-color: #ccc;
+}
+
+.search-box {
+	width: 80%;
+	margin-bottom: 50px;
+	background-color: white;
+	margin: 0 auto;
+}
+
+.container-lupa {
+	width: auto;
+	display: flex;
+	align-items: center;
+}
+
+.lupa {
+	width: auto;
+	height: 2em;
+	opacity: .7;
+	display: flex;
+	margin: 0 auto;
+}
+
+
+
+
+.btn-pesquisar {
+	width: 100%;
+	padding: .5rem 2rem;
+}
+
+
+form {
+	width: 100%;
+	display: flex;
+	margin: 0 auto;
+}
+
+input[type=search] {
+	width: 90%;
+	border: solid 3px #fff;
+	border-radius: 15px;
+	font-size: 1em;
+	letter-spacing: 1px;
+	padding: .6em;
+	display: flex;
+}
+
+
+
+.pokedex {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 20px;
+	padding-inline-start: 0;
+}
+
+.card {
+	list-style: none;
+	padding: 40px;
+	color: #222;
+	text-align: center;
+	border-radius: 20px;
+	position: relative;
+}
+
+.card::after {
+	content: "";
+	display: block;
+	width: 50%;
+	height: 45%;
+	border-radius: 100%;
+	border: 3px solid rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+	opacity: .7;
+	position: absolute;
+	top: 15%;
+	left: 25%;
+}
+
+.steel {
+	background-color: #f4f4f4;
+}
+
+.fire {
+	background-color: #FDDFDF;
+	border: 3px solid rgba(255, 0, 0, 0.3);
+}
+
+.grass {
+	background-color: #DEFDE0;
+	border: 3px solid rgba(59, 170, 15, 0.459);
+}
+
+.electric {
+	background-color: #FCF7DE;
+	border: 3px solid rgba(230, 226, 35, 0.651);
+}
+
+.water,
+.ice {
+	background-color: #DEF3FD;
+	border: 3px solid rgba(35, 80, 177, 0.651);
+}
+
+.ground {
+	background-color: #f4e7da;
+	border: 3px solid rgba(212, 164, 59, 0.651);
+}
+
+.rock {
+	background-color: #d5d5d4;
+	border: 3px solid rgba(109, 111, 114, 0.651);
+}
+
+.fairy {
+	background-color: #fceaff;
+	border: 3px solid rgba(179, 47, 139, 0.651);
+}
+
+.poison {
+	background-color: #98d7a5;
+	border: 3px solid rgba(60, 167, 50, 0.651);
+}
+
+.bug {
+	background-color: #f8d5a3;
+	border: 3px solid rgba(60, 167, 50, 0.651);
+}
+
+.dragon {
+	background-color: #97b3e6;
+	border: 3px solid rgba(187, 100, 29, 0.651);
+}
+
+.psychic {
+	background-color: #eaeda1;
+	border: 3px solid rgba(128, 143, 60, 0.651);
+}
+
+.flying {
+	background-color: #F5F5F5;
+	border: 3px solid rgba(179, 187, 178, 0.651);
+}
+
+.ghost {
+	background-color: #F5F5F5;
+	border: 3px solid rgba(116, 43, 126, 0.651);
+}
+
+.fighting {
+	background-color: #E6E0D4;
+	border: 3px solid rgba(156, 129, 78, 0.651);
+}
+
+.normal {
+	background-color: #F5F5F5;
+	border: 3px solid rgba(99, 104, 99, 0.651);
+}
+
+.card:hover {
+	animation: bounce 0.5s linear;
+}
+
+.card-title {
+	text-transform: capitalize;
+	margin-bottom: 0px;
+	font-size: 32px;
+	font-weight: normal;
+	position: relative;
+	z-index: 2;
+}
+
+.card-subtitle {
+	margin-top: 5px;
+	color: #666;
+	font-weight: lighter;
+	position: relative;
+	z-index: 2;
+}
+
+.card-image {
+	height: 180px;
+	position: relative;
+	z-index: 2;
+}
+
+@keyframes bounce {
+	20% {
+		transform: translateY(-6px);
+	}
+
+	40% {
+		transform: translateY(0px);
+	}
+
+	80% {
+		transform: translateY(-2px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+
+.btn-excluir {
+	display: inline-block;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	background-color: transparent;
+	border: 1px solid gray;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	border-radius: .25rem;
+}
+
+.btn-excluir:hover {
+	box-shadow: 0px 0px 2px rgb(41, 39, 39, 0.5);
+	background-color: #ffffff21;
+	color: #571663 !important;
+}
+
+
+.btn-editar {
+	display: inline-block;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	background-color: transparent;
+	border: 1px solid gray;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	border-radius: .25rem;
+}
+
+.btn-editar:hover {
+	box-shadow: 0px 0px 2px rgb(41, 39, 39, 0.5);
+	background-color: #ffffff21;
+	color: #571663 !important;
+}
