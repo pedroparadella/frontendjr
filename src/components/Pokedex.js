@@ -7,15 +7,15 @@ const Pokedex = (props) => {
     const { pokemons } = props;
 
     return (
-            <div className="page">
-                <div className="cards">
-                    {pokemons.map((pokemon, idx) => {
-                        return (
-                            <Pokemon pokemon={pokemon} key={pokemon.name} />
-                        )
-                    })}
-                </div>
+        <div className="page">
+            <div className="cards">
+                {pokemons.map((pokemon, idx) => {
+                    return (
+                        <Pokemon pokemon={pokemon} key={pokemon.name} />
+                    )
+                })}
             </div>
+        </div>
     )
 }
 

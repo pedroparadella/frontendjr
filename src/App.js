@@ -9,17 +9,17 @@ const { useState, useEffect } = React;
 
 export default function App() {
   const [pokemons, setPokemons] = useState([]);
-  const [notFound, setNotFound] = useState(false)
+  const [notFound, setNotFound] = useState(false);
 
   const fetchPokemons = async () => {
     try {
       const data = await catchPokemons();
       const promises = data.results.map(async (pokemon) => {
-        return await catchPokemonData(pokemon.url)
+        return await catchPokemonData(pokemon.url);
       })
-      const results = await Promise.all(promises)
-      setPokemons(results)
-      setNotFound(false)
+      const results = await Promise.all(promises);
+      setPokemons(results);
+      setNotFound(false);
     } catch (err) { }
   };
 
@@ -28,15 +28,15 @@ export default function App() {
   }, []);
 
   const onSearch = async (pokemon) => {
-    if(!pokemon) {
+    if (!pokemon) {
       return fetchPokemons();
     }
     setNotFound(false)
     const result = await searchPokemon(pokemon);
     if (!result) {
-      setNotFound(true)
+      setNotFound(true);
     } else {
-      setPokemons([result])
+      setPokemons([result]);
     }
   }
 
@@ -58,6 +58,3 @@ export default function App() {
     </div>
   )
 }
-
-
-

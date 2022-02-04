@@ -14,15 +14,15 @@ const Pokemon = (props) => {
             timer: 3000,
             timerProgressBar: true,
             didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
+                toast.addEventListener('mouseenter', Swal.stopTimer);
+                toast.addEventListener('mouseleave', Swal.resumeTimer);
             }
-          })
-          
-          Toast.fire({
+        })
+
+        Toast.fire({
             icon: 'info',
             title: 'Esta funcionalidade <br>encontra-se desabilitada!'
-          })
+        })
     }
 
     return (
