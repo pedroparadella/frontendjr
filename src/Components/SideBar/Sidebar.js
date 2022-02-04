@@ -39,7 +39,7 @@ const Sidebar = ({show,active}) =>{
                     </UploadImg>
                 </FormCard>
                 <ButtonSubmit>
-                    <ButtonCreate color={"btn_warning"}>Criar Card</ButtonCreate>
+                    <ButtonCreate color={"btn_warning"} onClick={() => {alert('Não Implementado!')}}>Criar Card</ButtonCreate>
                 </ButtonSubmit>
             </SidebarCard>
         </ContainerSidebar >

@@ -9,11 +9,12 @@ export const Container = styled.div`
     justify-content:center;
     flex-wrap: wrap;
     background: #F6F4F6;
-    @media(max-width: 1100px) {
+    @media(max-width: 1440px) {
         div{
            background-size: 1440px auto;
            background-position:50%;
         }
+    @media(max-width: 1100px) {
         input{
             width:80vw;
         }
@@ -49,7 +50,7 @@ export const ContainerSearch = styled.div`
     padding:0;
     background-image: url(${Banner});
     background-repeat: no-repeat; 
-    background-size: 1440px auto;
+    background-size: 100% auto;
 `
 export const Search = styled.form`
     padding-bottom:39px;
