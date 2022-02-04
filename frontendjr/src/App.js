@@ -1,9 +1,9 @@
 import React from "react";
 import './App.css';
 import pokedexLogo from "./assets/logo.svg";
-import BarraDeBusca from "./components/BarraDeBusca";
+import SearchBar from "./components/SearchBar";
 import Pokedex from "./components/Pokedex";
-import { buscarPokemon, catchPokemonData, catchPokemons } from "./api";
+import { searchPokemon, catchPokemonData, catchPokemons } from "./Api";
 
 const { useState, useEffect } = React;
 
@@ -32,7 +32,7 @@ export default function App() {
       return fetchPokemons();
     }
     setNotFound(false)
-    const result = await buscarPokemon(pokemon);
+    const result = await searchPokemon(pokemon);
     if (!result) {
       setNotFound(true)
     } else {
@@ -45,8 +45,8 @@ export default function App() {
       <div className="menu">
         <img className="pokedexLogo" src={pokedexLogo} alt="logo" />
       </div>
-      <div className="barraIntro" >
-        <BarraDeBusca onSearch={onSearch} />
+      <div className="introBar" >
+        <SearchBar onSearch={onSearch} />
       </div>
       {notFound ? (
         <div> Pokemon não encontrado</div>

@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 const Pokemon = (props) => {
     const { pokemon } = props;
 
-    const mensagemOnClick = (e) => {
+    const messageOnClick = (e) => {
         const Toast = Swal.mixin({
             toast: true,
             position: 'top-end',
@@ -21,7 +21,7 @@ const Pokemon = (props) => {
           
           Toast.fire({
             icon: 'info',
-            title: 'Esta funcionalidade <br> não foi implementada!'
+            title: 'Esta funcionalidade <br>encontra-se desabilitada!'
           })
     }
 
@@ -36,11 +36,11 @@ const Pokemon = (props) => {
                 #{pokemon.id}
             </div>
             <div className="buttonCards">
-                <button onClick={mensagemOnClick} >
+                <button onClick={messageOnClick} >
                     <img src={Trash} alt="deletar" />
                     <p>Excluir</p>
                 </button>
-                <button onClick={mensagemOnClick} >
+                <button onClick={messageOnClick} >
                     <img src={Edit} alt="editar" />
                     <p>Editar</p>
                 </button>
