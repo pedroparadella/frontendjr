@@ -9,17 +9,18 @@ export const Container = styled.div`
     justify-content:center;
     flex-wrap: wrap;
     background: #F6F4F6;
-    @media(max-width: 450px) {
+    @media(max-width: 1100px) {
         div{
            background-size: 1440px auto;
+           background-position:50%;
         }
         input{
-            width:240px;
+            width:80vw;
         }
-        button {
-         margin-left: 0px;
-         margin-top: 10px;
+        h1{
+            margin-left:15px;
         }
+       
       }
 `
 export const ContainerHeader = styled.div`
@@ -52,12 +53,8 @@ export const ContainerSearch = styled.div`
 `
 export const Search = styled.form`
     padding-bottom:39px;
-    @media(max-width: 990px) {
-        input{
-            width:240px;
-        }
+    @media(max-width: 1100px) {
         
-      }
 `
 export const InputSearch = styled.input`
     display:flex;
@@ -79,6 +76,11 @@ export const ContainerTitle = styled.div`
     width:1046px;
     margin-top:32px;
     margin-bottom:px;
+    @media(max-width: 1100px) {
+        button{
+            margin:15px;
+        }
+    }
 `
 export const Title = styled.h1`
     color: #5F1478;

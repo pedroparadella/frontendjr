@@ -39,7 +39,7 @@ export default function App() {
   //Request API Pokedex
   const [pokemons,setPokemons] = useState([])
   useEffect(() =>{
-    api.get(`?offset=20&limit=20`)
+    api.get(`?offset=20&limit=40`)
     .then(response =>{
       setPokemons(response.data.results)
     }).catch(error =>{

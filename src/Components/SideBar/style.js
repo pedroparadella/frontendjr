@@ -19,7 +19,7 @@ export const ContainerSidebar = styled.div`
         opacity:1;
         right:0;
     }
-    @media(max-width: 690px) {
+    @media(max-width: 710px) {
         div{
            width:90%;
         }
