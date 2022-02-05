@@ -3,8 +3,6 @@ Teste Impar!\
 Luiz Felipe Teixeira Farias\
 
 ## O que fazer para o projeto Rodar 
-Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor estilo de programar e resolver problemas.
-
 1. Instalando o Chocolatey, execute o powershell como administrador e execute o comando para verificar se você possui permissões para instalar dependêcias com terminal. Comando: <strong>Get-ExecutionPolicy</strong>
 2. Caso o retorno desse comando seja diferente de "Restricted" pule para o próximo passo. Porém, se o retorno for “Restricted”, execute o seguinte comando em seu terminal: <strong>Set-ExecutionPolicy AllSigned</strong>
 3. Agora, execute o seguinte comando para instalar o Chocolatey: <strong>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))</strong>
