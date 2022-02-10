@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Roboto:wght@300&family=Shadows+Into+Light&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(230, 230, 255)
+}
+
+
