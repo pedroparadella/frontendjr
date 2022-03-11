@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const StyledCabecalho = styled.nav`
-  background: transparent linear-gradient(272deg, var(---cor-secundaria) 0%, var(--cor-primaria) 100%) 0% 0% no-repeat padding-box;
-  background: transparent linear-gradient(272deg, #AE276F 0%, #5F1478 100%) 0% 0% no-repeat padding-box;
+  background: transparent
+    linear-gradient(272deg, var(---cor-secundaria) 0%, var(--cor-primaria) 100%)
+    0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(272deg, #ae276f 0%, #5f1478 100%) 0%
+    0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   opacity: 1;
 
@@ -14,9 +17,11 @@ export const StyledCabecalho = styled.nav`
 `;
 
 export const Logo = styled.img`
- margin-top: 14px;
- margin-left: 24px;
- height: 37px;
- width: 192px;
+  margin-top: 14px;
+  margin-left: 24px;
+  
+  height: 37px;
+  width: 192px;
+  background: transparent 0% 0% no-repeat padding-box;
+  opacity: 1;
 `;
-

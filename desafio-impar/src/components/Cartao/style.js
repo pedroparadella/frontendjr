@@ -7,9 +7,9 @@ export const Texto = styled.p`
   width: 191px;
   height: 40px;
 
-  margin-top: 36px;
+  margin-top: 10px;
   margin-right: 22px;
-  margin-bottom: 71px;
+  margin-bottom: 41px;
   margin-left: 21px;
 
   text-align: center;
@@ -17,7 +17,7 @@ export const Texto = styled.p`
   letter-spacing: 0px;
   opacity: 1;
 `;
-export const Card = styled.div`
+export const Card = styled.li`
     margin-left: 168px;
     margin-top: 36px;
     width: 234px;
@@ -29,6 +29,12 @@ export const Card = styled.div`
     border: 1px solid #E4E4E4;
     border-radius: 8px;
     opacity: 1;
+`;
+export const UL = styled.ul`
+  display: grid;
+  grid-template-columns: 260px 260px 260px 260px;
+  list-style: none;
+  grid-gap: 10px;
 `;
 
 export const Circulo = styled.div`
@@ -87,4 +93,10 @@ export const ImagemIcone = styled.img`
 
   background: transparent url("img/Icon-trash.png") 0% 0% no-repeat padding-box;
   opacity: 1;
+`;
+export const Linha = styled.hr`
+  width: 180px;
+  margin-left: 25px;
+  margin-top: 30px;
+  opacity: 0.2;
 `;

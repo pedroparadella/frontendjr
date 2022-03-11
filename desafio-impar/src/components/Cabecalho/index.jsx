@@ -1,12 +1,12 @@
 import React from "react";
 import {StyledCabecalho, Logo} from "../Cabecalho/style"
-import logoImpar from "../../assets/img/icones/logoImpar.svg"
+import logoTeste from "../../assets/img/icones/logo-teste.png"
 
 
 const Cabecalho = () => {
     return(
         <StyledCabecalho>
-        <Logo src={logoImpar} alt="Logo Impar" />
+        <Logo src={logoTeste} alt="Logo Impar" />
         </StyledCabecalho>
     );
 };

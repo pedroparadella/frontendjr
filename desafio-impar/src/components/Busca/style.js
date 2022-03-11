@@ -22,18 +22,23 @@ export const Input = styled.input`
   opacity: 1;
 
   position: absolute;
-  font: normal normal 300 24px/30px Muli;
+  font-size: 24px;
+  font-weight: 300;
+
   text-align: left;
   color: #757575;
   
+
+  border:none;
+  
 `;
 
-export const Icone = styled.img`
-  height: 49px;
-  width: 49px;
+export const Icone = styled.img` 
+  height: 46px;
+  width: 46px;
   position: absolute;
-  margin-left: 1140px;
-  margin-top: 140px;
+  margin-left: 1120px;
+  margin-top: 143px;
   background: transparent 0% 0% no-repeat padding-box;
   opacity: 1;
 `;

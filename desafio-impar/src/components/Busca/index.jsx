@@ -4,10 +4,13 @@ import fundo_busca from "../../assets/img/fundo_busca.png";
 import lupa from "../../assets/img/icones/lupa.svg";
 
 const Busca = () => {
+
+  
   return (
     <>
       <div>
         <Input type="text" placeholder="    Digite aqui sua busca..." />
+        
         <Botao onClick={console.log("ola mundo")}>
           <Icone src={lupa} alt="Icone lupa" />
         </Botao>

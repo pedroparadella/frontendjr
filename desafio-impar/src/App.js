@@ -6,7 +6,6 @@ import Busca from "./components/Busca";
 import Container from "./components/Container";
 import Cartao from "./components/Cartao";
 
-
 function App() {
   return (
     <>
@@ -14,6 +13,9 @@ function App() {
     <Cabecalho />
     <Busca />
     <Container />
+    <Cartao />
+    <Cartao />
+    <Cartao />
     <Cartao />
     </>
   );
