@@ -2,8 +2,8 @@ import React from "react";
 
 import { GlobalStyle } from "../UI/GlobalStyle"
 import Cabecalho from "../Cabecalho/index"
-import Busca from "../Busca/index"
-// import ModalPoke from "../ListarPokemons/index"
+import Container from "../Container/index"
+
 
 
 function Home() {
@@ -11,8 +11,8 @@ function Home() {
     <>
     <GlobalStyle />
     <Cabecalho />
-    <Busca />
-    {/* <ModalPoke /> */}
+    <Container />
+   
   
     </>
   );
