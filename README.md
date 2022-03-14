@@ -2,7 +2,7 @@
 
 # Desafio Desenvolvedor Júnior!
 
-### Ola ímpar!! 
+### Olá ímpar!! 
 ### Espero que estejam todos bem!
 
 ## Como instalar
