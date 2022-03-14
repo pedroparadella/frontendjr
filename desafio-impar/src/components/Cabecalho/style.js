@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledCabecalho = styled.nav`
   background: transparent
-    linear-gradient(272deg, var(---cor-secundaria) 0%, var(--cor-primaria) 100%)
+    linear-gradient(272deg, 0%, 100%)
     0% 0% no-repeat padding-box;
   background: transparent linear-gradient(272deg, #ae276f 0%, #5f1478 100%) 0%
     0% no-repeat padding-box;
@@ -15,7 +15,6 @@ export const StyledCabecalho = styled.nav`
   height: 64px;
   position: absolute;
 `;
-
 export const Logo = styled.img`
   margin-top: 14px;
   margin-left: 24px;

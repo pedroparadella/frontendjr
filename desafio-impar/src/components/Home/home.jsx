@@ -1,10 +1,7 @@
 import React from "react";
-
 import { GlobalStyle } from "../UI/GlobalStyle"
 import Cabecalho from "../Cabecalho/index"
 import Container from "../Container/index"
-
-
 
 function Home() {
   return (
@@ -12,8 +9,6 @@ function Home() {
     <GlobalStyle />
     <Cabecalho />
     <Container />
-   
-  
     </>
   );
 }

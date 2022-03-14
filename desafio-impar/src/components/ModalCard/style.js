@@ -5,8 +5,7 @@ export const Background = styled.div`
   width: 1440px;
   height: 772px;
 
-  background: #f6f4f6aa;
-  opacity: 0.9;
+  background: rgba(246, 244, 246, 0.1) ;
 
   position: fixed;
   display: flex;
@@ -119,7 +118,6 @@ export const TextoCaixa = styled.p`
   color: #757575;
   opacity: 1;
 `;
-
 export const Button = styled.button`
   color: ${(props) => (props.primary ? "laranja" : corDestaque)};
 
@@ -131,7 +129,6 @@ export const Button = styled.button`
   width: 224px;
   height: 48px;
 
-  border: 1px solid var(---cor-destaque);
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #e763162e;
   border: 1px solid #e76316;
@@ -143,7 +140,6 @@ export const Button = styled.button`
 
   cursor: pointer;
 `;
-
 export const LinhaB = styled.hr`
   width: 571.5px;
 
@@ -154,7 +150,6 @@ export const LinhaB = styled.hr`
   border: 1px solid #d4d4d4;
   opacity: 1;
 `;
-
 export const ButtonCriar = styled.button`
   color: ${(props) => (props.primary ? "branco" : corBranco)};
 

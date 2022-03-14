@@ -1,35 +1,30 @@
 import styled from "styled-components";
-
 import { corExcluir, corTextoExcluir } from "../UI/variaveis";
-
 <link rel="stylesheet" href="https://use.typekit.net/oqy8vpj.css"></link>;
 
 export const Fundo = styled.div`
   width: 1440px;
-  height: 772px;
+  height: 100%;
 
-  background: #f6f4f6cc 0% 0% no-repeat padding-box;
-  opacity: 1;
+  background: rgba(246, 244, 246, 0.1) ;
 
-  position: absolute;
+  position: fixed;
   display: flex;
 
   left: 0px;
   top: 0px;
 `;
-
 export const ModalWrapper = styled.div`
   margin-top: 144px;
   margin-left: 501px;
   width: 438px;
   height: 434px;
 
- background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255);
   opacity: 1;
 `;
-
 export const Circulo = styled.div`
-  margin-top: 50px;
+  margin-top: 35px;
   margin-left: 139px;
 
   width: 159px;
@@ -39,6 +34,22 @@ export const Circulo = styled.div`
   border: 6px solid #e4e4e4;
   border-radius: 100%;
   opacity: 1;
+`;
+export const ButaoSair = styled.button`
+  margin-top: -20px;
+  margin-left: 420px;
+  width: 34px;
+  height: 34px;
+
+  font-size: 20px;
+  
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  opacity: 1;
+
+  color: #FFFFFF;
+  background: #e76316;
 `;
 export const Imagem = styled.img`
   margin-top: 39px;
@@ -79,7 +90,6 @@ export const TextoCerteza = styled.h1`
 
   background: #ffffff;
 `;
-
 export const Linha = styled.hr`
   width: 364.5px;
 

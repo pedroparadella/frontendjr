@@ -23,12 +23,12 @@ import {
   ImagemIcone,
   Linha,
   UL,
+  LinhaHo,
 } from "./style";
 
 const Container = () => {
   // Abre aba novo card.
   const [showModal, setShowModal] = useState(false);
-
   const openModal = () => {
     setShowModal((prev) => !prev);
   };
@@ -41,10 +41,9 @@ const Container = () => {
 
   // Callback API TodosPokemons
   const [TodosPokemons, setTodosPokemons] = useState([]);
-
   useEffect(() => {
     api
-      .get("/pokemon")
+      .get("/pokemon?offset=0&limit=200")
       .then((response) => {
         setTodosPokemons(response.data.results);
       })
@@ -58,7 +57,6 @@ const Container = () => {
   const pokemonFiltro = TodosPokemons.filter((ite) =>
     ite.name.toLocaleLowerCase().includes(busca.toLocaleLowerCase())
   );
-
   return (
     <>
       <form>
@@ -72,15 +70,12 @@ const Container = () => {
           <Icone src={lupa} alt="Icone lupa" />
         </BotaoB>
       </form>
-
       <Fundo src={fundo_busca} alt="Fundo pagina busca" />
 
       {/* Novo Card */}
-
       <Titulo>
         Resultado de busca<Button onClick={openModal}>Novo Card</Button>
       </Titulo>
-
       <Modal showModal={showModal} setShowModal={setShowModal} />
 
       {/* Cartão */}
@@ -95,9 +90,7 @@ const Container = () => {
                 <Imagem src={UrlID} alt={item.name} />
               </Circulo>
               <Linha />
-
               <Texto>{item.name}</Texto>
-
               <Botoes>
                 <ImagemIcone
                   onClick={openModalDeletar}
@@ -105,11 +98,10 @@ const Container = () => {
                   alt="Icone Lixeira"
                 />
                 <Botao onClick={openModalDeletar}>Excluir</Botao>
-
+                <LinhaHo> | </LinhaHo>
                 <ImagemIcone onClick={openModal} src={Edit} alt="Icone Lapis" />
                 <Botao onClick={openModal}>Editar</Botao>
               </Botoes>
-
               <Modal showModal={showModal} setShowModal={setShowModal} />
               <ModalDeletar
                 showModalDeletar={showModalDeletar}
