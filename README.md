@@ -1,24 +1,37 @@
-# Avaliação Junior
-Olá desenvolvedor!\
-Tudo bem?! 😊\
-\
-Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor estilo de programar e resolver problemas.
+![image001](https://user-images.githubusercontent.com/86376508/158091382-0b0db74e-c9d3-4682-b218-cdfe50fb645a.gif)
 
-## O que fazer
-1. Fazer um fork desse repositório e trabalhar no seu ambiente.
-2. Replicar o layout do link abaixo, pode usar dados de um JSON local:\
-[Link para o layout](https://xd.adobe.com/view/c715f110-fbd4-4323-be0c-0e453c1450db-9246)
-2. Fazer a funcionalidade de busca funcionar.
-3. Os cliques nos botões de editar/excluir/criar card podem exibir uma mensagem pro usuário de que a funcionalidade não foi implementada.
-4. Ao finalizar a avaliação modifique esse README com as instruções de como podemos fazer o seu código rodar na nossa máquina. Ou seja, passo a passo do que instalar e de quais comandos rodar para podermos visualizar o seu trabalho!
-5. Realizar um Pull Request para o nosso repositório e mandar um e-mail para pedro.paradella@impar.com.br com o assunto "Avaliação Junior", informando que finalizou a avaliação e colocando o link do Pull Request. 
+# Desafio Desenvolvedor Júnior!
 
-## Dicas
-* Não foi definido limite de linhas e colunas, portanto fique à vontade para tal escolha.
-* Gostamos de interfaces limpas e elegantes.
+### Olá ímpar!! 
+### Espero que estejam todos bem!
 
-## Quais tecnologias usar
-* Deixaremos a seu critério qual tecnologia utilizar no entanto você terá mais pontos conosco se utilizar React para criação da interface e também o uso de pré-processadores/styled-components para o CSS.
+## Como instalar
 
-## Desafios se você se sentir confiante
-* Usar alguma API na internet, tipo https://pokeapi.co/, para trazer os dados que vão aparecer nos cards da tela.
+### Começe clonando este repositorio
+$ git clone <https://github.com/Befrosa/frontendjr.git>
+
+### Acesse a pasta do projeto no terminal/cmd
+$ cd desafio-impar
+
+### Instale as dependências
+$ npm install
+
+### Execute o projeto 
+$ npm start
+
+### Quando abrir no navegador, recomendo ajustar tamanho da pagina para 1440px, como solicitado pelo projeto. 
+
+### <p align="center">🚀 Tecnologia Utilizada</p>
+<h1 align="center">
+    <a href="https://pt-br.reactjs.org/">🔗 React</a>
+</h1>
+
+### Autor
+---
+
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86376508?s=400&u=4065ff4d480dd0ee69db4ac07770953ee3bff11f&v=4" width="100px;" alt="Meu avatar"/>
+<sub><b>Bernardo Furtado da Rosa</b></sub></a> <a href="https://www.linkedin.com/in/bernardo-furtado-da-rosa-709a181b2/" title="Befrosa">🚀</a>
+
+<br>
+<br>
+Feito com ❤️ por Bernardo Furtado da Rosa 👋🏽 Entre em contato!
