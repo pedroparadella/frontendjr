@@ -3,10 +3,13 @@ import { createContext, useState } from "react";
 const FilterContext = createContext(); 
 
 export const FilterProvider = ({children}) => {
-    const [filter, setfilter] = useState('');
+    const [filterSearch, setFilter] = useState("");
+    const handleChange = (e) => {
+        setFilter(e.target.value);
+    }
     
     return (
-        <FilterContext.Provider value={{filter, setfilter}}>
+        <FilterContext.Provider value={{filterSearch, handleChange}}>
             {children}
         </FilterContext.Provider>
     )

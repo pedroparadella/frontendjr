@@ -1,5 +1,10 @@
 import React from 'react';
 import './App.css';
+import Search from './components/Search/Search';
+import NewCard from './components/NewCard/NewCard'; 
+import Navbar from './components/Navbar/Navbar';
+import NewButton from './components/NewButton/NewButton'; 
+import Cards from './components/Cards/Cards'; 
 import {GamesProvider} from "./contexts/GamesContext"; 
 import {FilterProvider} from "./contexts/FilterContext"; 
 
@@ -8,7 +13,7 @@ import {FilterProvider} from "./contexts/FilterContext";
 
 function App() {
   return (
-    <div id="id">
+    <div className="app">
         <GamesProvider>
             <FilterProvider>
                 <NewCard />
