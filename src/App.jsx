@@ -1,15 +1,20 @@
 import React from 'react';
 import './App.css';
+import {GamesProvider} from "./contexts/GamesContext"; 
 
 //App will contain a Navbar, NewButton, Cards, New Card Module and Search;
 
 function App() {
   return (
-    <NewCard />
-    <Navbar />
-    <Search />
-    <NewButton />
-    <Cards />
+    <div id="id">
+        <GamesProvider>
+            <NewCard />
+            <Navbar />
+            <Search />
+            <NewButton />
+            <Cards />
+        </GamesProvider>
+    </div> 
   );
 }
 
