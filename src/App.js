@@ -7,6 +7,8 @@ import NewButton from './components/NewButton/NewButton';
 import Cards from './components/Cards/Cards'; 
 import {GamesProvider} from "./contexts/GamesContext"; 
 import {FilterProvider} from "./contexts/FilterContext"; 
+import {ModalProvider} from "./contexts/ModalContext"; 
+
 
 
 //App will contain a Navbar, NewButton, Cards, New Card Module and Search;
@@ -16,10 +18,12 @@ function App() {
     <div className="app">
         <GamesProvider>
             <FilterProvider>
-                <NewCard />
                 <Navbar />
                 <Search />
-                <NewButton />
+                <ModalProvider>
+                    <NewCard />
+                    <NewButton />
+                </ModalProvider> 
                 <Cards />
             </FilterProvider>     
         </GamesProvider>

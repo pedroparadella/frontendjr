@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import ModalContext from '../../contexts/ModalContext';
+import {useContext} from "react";
 
 const NewButton = () => {
-  return (
-    <div>NewButton</div>
-  )
+    const {handleChange} = useContext(ModalContext); 
+    return (
+        <button onClick={handleChange}>
+            Add Game
+        </button>
+    )
 }
 
-export default NewButton
+export default NewButton;
