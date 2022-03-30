@@ -8,11 +8,10 @@ const Card = (props) => {
 
     return (
         <div className="card">
-            <img src={image? image : "images/default-game.png"} alt={name} />
+            <a href={`https://www.cheapshark.com/redirect?dealID=${deal}`} target="_blank" rel="noopener noreferrer"><img src={image? image : "images/default-game.png"} alt={name} /></a>            
             <p>{name}</p>
             <p>{title}</p>
             <p>{cheapest}</p>
-            <p>{deal}</p>
             <button className="edit">Editar</button>
             <button className="delete" name={name} onClick={handleDeletion}>Excluir</button>
         </div>
