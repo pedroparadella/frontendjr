@@ -3,26 +3,27 @@ import ModalContext from '../../contexts/ModalContext';
 import GamesContext from '../../contexts/GamesContext';
 
 
-//Used to create a new card
+//Used to create a new card or edit existing ones
 
 const NewCard = () => {
-    const {modal, handleClick} = useContext(ModalContext);     
-    const {games, handleCall, handleChange, gameToAdd} = useContext(GamesContext);
+    const {modal, handleModal} = useContext(ModalContext);     
+    const {games, handleAdd, handleChange, gameToAdd, handleEdit} = useContext(GamesContext);
     const [title, imageUrl] = gameToAdd;
-    const handleAll = () => {
+    const handleAll = (e) => {
         if(title !== "" && games.findIndex(game => game[0] === title) === -1){
-            handleClick();
-            handleCall();
-        }
+            modal === "edit"? handleEdit() : handleAdd(); 
+            handleModal(e);
+        } 
     } 
 
     return (
-        <div className={modal? "" : "hidden"}>            
+        <div className={["close", "add"].includes(modal)? "hidden" : ""}>            
             <label htmlFor="add-title">Título do Jogo</label>
             <input type="text" name="add-title" id="add-title" value ={title} placeholder="Batman" onChange={handleChange} />
             <label htmlFor="add-image">Imagem do Jogo</label>
             <input type="text" name="add-image" id="add-image" placeholder="https:..." value={imageUrl} onChange={handleChange} />
-            <button onClick={handleAll}>Adicionar</button>                       
+            <button id="close" onClick={handleModal}>Fechar</button>                       
+            <button id="add" onClick={handleAll}>{modal}</button>
         </div>
     )
 }

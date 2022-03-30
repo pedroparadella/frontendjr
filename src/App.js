@@ -22,9 +22,9 @@ function App() {
                 <Search />
                 <ModalProvider>
                     <NewCard />
-                    <NewButton />
+                    <NewButton />               
+                    <Cards />
                 </ModalProvider> 
-                <Cards />
             </FilterProvider>     
         </GamesProvider>
     </div> 

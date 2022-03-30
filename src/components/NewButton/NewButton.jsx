@@ -3,9 +3,9 @@ import ModalContext from '../../contexts/ModalContext';
 import {useContext} from "react";
 
 const NewButton = () => {
-    const {handleChange} = useContext(ModalContext); 
+    const {handleModal} = useContext(ModalContext); 
     return (
-        <button onClick={handleChange}>
+        <button id="create" onClick={handleModal}>
             Add Game
         </button>
     )

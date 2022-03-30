@@ -7,9 +7,11 @@ const GamesContext = createContext();
 
 export const GamesProvider = ({children}) => {
     const [games, setGames] = useState([]);
-    const [gameToAdd, setGameToAdd] = useState(["", ""]); 
+    const [gameToAdd, setGameToAdd] = useState(["", ""]);
+    const [gameToEdit, setGameToEdit] = useState(""); 
 
-    const handleCall = () => {
+
+    const handleAdd = () => {
         axios.get(`/games?title=${gameToAdd[0]}&limit=1`)
             .then(response => {
                 const {cheapest, cheapestDealID, external} = response.data[0];
@@ -17,7 +19,22 @@ export const GamesProvider = ({children}) => {
             })
             .catch(err => {
                 setGames(prevState => [...prevState, [gameToAdd[0],{cheapest: "", cheapestDealID: "", external: "Jogo Não Encontrado", image: gameToAdd[1]}]]);
-            })        
+            }).then(() => setGameToAdd(["", ""]))        
+    }
+
+    const handleEdit = () => {
+        const index = games.findIndex(game => gameToEdit === game[0]);
+        axios.get(`/games?title=${gameToAdd[0]}&limit=1`)
+            .then(response => {
+                const {cheapest, cheapestDealID, external} = response.data[0];
+                setGames(prevState => [...prevState.slice(0, index), [gameToAdd[0],{cheapest, cheapestDealID, external, image: gameToAdd[1]}], ...prevState.slice(index+1)]);
+            })
+            .catch(err => {
+                setGames(prevState => [...prevState.slice(0, index), [gameToAdd[0],{cheapest: "", cheapestDealID: "", external: "Jogo Não Encontrado", image: gameToAdd[1]}], prevState.slice(index+1)]);
+            }).then(() => {
+                setGameToAdd(["", ""]);
+                setGameToEdit("");
+            }) 
     }
     
     const handleChange = (e) => {
@@ -32,10 +49,12 @@ export const GamesProvider = ({children}) => {
         });
     }
 
-
+    const handleToEdit = (e) => {
+        setGameToEdit(e.target.name);       
+    }
 
     return (
-        <GamesContext.Provider value={{games, handleCall, handleChange, gameToAdd, setGames, handleDeletion}}>
+        <GamesContext.Provider value={{handleEdit, handleToEdit, gameToEdit, games, handleAdd, handleChange, gameToAdd, setGames, handleDeletion}}>
             {children}
         </GamesContext.Provider>
     )
