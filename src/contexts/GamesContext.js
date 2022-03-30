@@ -1,14 +1,21 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import axios from "../utils/axios";
 
 const GamesContext = createContext(); 
 
-//Controls the API call, the list of games and the game to be added
+//Controls the API call, the list of games and the game to be added. Saves and retrieves data from local storage.
 
 export const GamesProvider = ({children}) => {
-    const [games, setGames] = useState([]);
+    const [games, setGames] = useState(() => {
+        const localData = localStorage.getItem("games");
+        return localData? JSON.parse(localData) : [];
+    });
     const [gameToAdd, setGameToAdd] = useState(["", ""]);
     const [gameToEdit, setGameToEdit] = useState(""); 
+
+    useEffect(() => {
+        localStorage.setItem("games", JSON.stringify(games))
+    }, [games]);
 
 
     const handleAdd = () => {
