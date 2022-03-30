@@ -10,31 +10,32 @@ export const GamesProvider = ({children}) => {
     const [gameToAdd, setGameToAdd] = useState(["", ""]); 
 
     const handleCall = () => {
-        let data = new FormData();
-        let config = {
-        method: 'get',
-        url: 'https://www.cheapshark.com/api/1.0/games?title=batman&steamAppID=35140&limit=60&exact=0',
-        headers: {"Access-Control-Allow-Origin": "*"} ,
-        data : data
-        };
-        axios.get('https://www.cheapshark.com/api/1.0/games?title=batman&steamAppID=35140&limit=60&exact=0')
+        axios.get(`/games?title=${gameToAdd[0]}&limit=1`)
             .then(response => {
-                console.log(response);
-                const {cheapest, cheapestDealId, external} = response.data;
-                setGames(prevState => [...prevState, [gameToAdd[0],{cheapest, cheapestDealId, external}]]);
+                const {cheapest, cheapestDealID, external} = response.data[0];
+                setGames(prevState => [...prevState, [gameToAdd[0],{cheapest, cheapestDealID, external, image: gameToAdd[1]}]]);
             })
             .catch(err => {
-                console.log(err);
-            })
-        
+                setGames(prevState => [...prevState, [gameToAdd[0],{cheapest: "", cheapestDealID: "", external: "Jogo Não Encontrado", image: gameToAdd[1]}]]);
+            })        
     }
     
     const handleChange = (e) => {
         setGameToAdd(prevState => e.target.id === "add-title"? [e.target.value, prevState[1]]: [prevState[0], e.target.value]);
     }
 
+    const handleDeletion = (e) => {       
+        setGames(prevState => {
+            const name = e.target.name;
+            const index = prevState.findIndex(game => game[0] === name);           
+            return [...prevState.slice(0, index), ...prevState.slice(index+1)];
+        });
+    }
+
+
+
     return (
-        <GamesContext.Provider value={{games, handleCall, handleChange, gameToAdd}}>
+        <GamesContext.Provider value={{games, handleCall, handleChange, gameToAdd, setGames, handleDeletion}}>
             {children}
         </GamesContext.Provider>
     )

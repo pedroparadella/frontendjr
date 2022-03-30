@@ -13,7 +13,7 @@ const Cards = () => {
 
     return (
         <div className="cards">
-            {games.length > 0 && games.filter((game) => regex.test(game[0])).map((game, index) => <Card name={game[0]} title={game[1].external} cheapest={game[1].cheapest} deal={game[1].cheapestDealId} key={index}/>)}
+            {games.length > 0 && games.filter((game) => regex.test(game[0])).map((game, index) => <Card name={game[0]} title={game[1].external} cheapest={game[1].cheapest} deal={game[1].cheapestDealID} key={index} image={game[1].image}/>)}
         </div>
     )
 }

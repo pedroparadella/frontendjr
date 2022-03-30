@@ -7,10 +7,10 @@ import GamesContext from '../../contexts/GamesContext';
 
 const NewCard = () => {
     const {modal, handleClick} = useContext(ModalContext);     
-    const {handleCall, handleChange, gameToAdd} = useContext(GamesContext);
+    const {games, handleCall, handleChange, gameToAdd} = useContext(GamesContext);
     const [title, imageUrl] = gameToAdd;
     const handleAll = () => {
-        if(title !== ""){
+        if(title !== "" && games.findIndex(game => game[0] === title) === -1){
             handleClick();
             handleCall();
         }
