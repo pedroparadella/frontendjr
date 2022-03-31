@@ -1,7 +1,122 @@
+@use "variables" as *;
+
 .card {
-    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 260px;
+    min-width: 260px;
+    height: 400px;
+    border-radius: 30px;
+    overflow:hidden;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-out;
+
+    
+    .card-texts {
+        position: absolute;
+        top: 240px;
+        
+       
+    }
+
+    .card-buttons {
+        display: flex;
+        height: 120px;
+        width: 100%;
+
+        button {
+            border: none;            
+        }
+    }
+    
+    button, a {
+        cursor: pointer;
+    }
 
     img {
-        width: 100%;
+        z-index: 1;
+        bottom: 200px;
+        position: absolute;
+        transition: all 0.3s ease-out;
+        height: 50%;
+        background-color: $black;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        
     }
+
+    p {
+        margin: 0;
+        text-align: center;
+    }
+
+    .name {
+        font-size: 24px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .edit {
+        @include font-stack (16px, $white, 400);
+        width: 33.3%;
+        background: $primary;
+        transition: all 0.3s ease-out;
+        
+        &:hover {
+            width: 40%;
+            background: $primary-dark;
+            font-size: 20px;
+        }
+    }
+
+    .delete {
+        @include font-stack (16px, $white, 400);
+        width: 33.3%;
+        background: $error;
+        transition: all 0.3s ease-out;
+        &:hover {
+            width: 40%;
+            background: $error-dark;
+            font-size: 20px;
+
+        }
+    }
+
+    .cheapest {
+        @include font-stack (16px, $white, 400);
+        width: 33.3%;
+        background: $secondary;
+        transition: all 0.3s ease-out;
+        &:hover {
+            width: 40%;
+            background: $secondary-dark;
+            font-size: 20px;
+        }
+        
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            color: $white;
+        }
+    }
+    
+    &:hover {
+        width: 268px;
+
+        img {
+            height: 70%;
+            bottom: 0; 
+        }
+    }
+
 }

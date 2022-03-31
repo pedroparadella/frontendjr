@@ -3,6 +3,8 @@ import Card from './Card/Card';
 import FilterContext from '../../contexts/FilterContext';
 import GamesContext from '../../contexts/GamesContext';
 import {useContext} from "react";
+import {AnimatePresence} from 'framer-motion';
+
 
 const Cards = () => {
     const {games} = useContext(GamesContext);
@@ -13,7 +15,9 @@ const Cards = () => {
 
     return (
         <div id="cards">
-            {games.length > 0 && games.filter((game) => regex.test(game[0])).map((game, index) => <Card name={game[0]} title={game[1].external} cheapest={game[1].cheapest} deal={game[1].cheapestDealID} key={index} image={game[1].image}/>)}
+            <AnimatePresence>
+                {games.length > 0 && games.filter((game) => regex.test(game[0])).map((game, index) => <Card name={game[0]} title={game[1].external} cheapest={game[1].cheapest} deal={game[1].cheapestDealID} key={index} image={game[1].image}/>)}
+            </AnimatePresence>           
         </div>
     )
 }

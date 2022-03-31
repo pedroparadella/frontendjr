@@ -5,7 +5,7 @@ import {useContext} from "react";
 const NewButton = () => {
     const {handleModal} = useContext(ModalContext); 
     return (
-        <button id="create" onClick={handleModal}>
+        <button className="create" onClick={handleModal}>
         Adicionar Jogo
         </button>
         

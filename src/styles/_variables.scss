@@ -4,10 +4,17 @@
 $primary: #41a0bf;
 $primary-dark: #31788c;
 $primary-light: #b6e6f6;
-$secondary: #bf6041;
+$secondary: #dc6d48;
+$secondary-dark: #bf6041;
 $white: #fcfcfc;
 $black: #212121;
 $error: #D32F2F;
+$error-dark: #b82828;
 
 //Fonts
-$font-stack: 'Open Sans', sans-serif;
+@mixin font-stack ($size, $color, $weight) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}

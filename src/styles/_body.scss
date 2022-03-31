@@ -1,9 +1,9 @@
 @use 'variables' as *;
 
 body {
+    @include font-stack (16px, $black, 400);
     margin: 0;
     background-color: $white;
-    font-family: $font-stack;
     box-sizing: border-box;
     
 }

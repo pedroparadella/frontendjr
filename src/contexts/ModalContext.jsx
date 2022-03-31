@@ -9,7 +9,7 @@ export const ModalProvider = ({children}) => {
     
 
     const handleModal = (e) => {
-        const id = e.target.id; 
+        const id = e.target.className; 
         setModal(id);
 
     }

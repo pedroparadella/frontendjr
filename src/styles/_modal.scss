@@ -1,15 +1,12 @@
-#modal.hidden{
-    display: none;
-}
-
 #modal {
     position: fixed;
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.1);
     width: 100vw;
-    height: 100vh;
+    height: 100vh;   
 
     #form {
         background: white;
