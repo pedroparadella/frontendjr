@@ -17,13 +17,17 @@ const NewCard = () => {
     } 
 
     return (
-        <div className={["close", "add"].includes(modal)? "hidden" : ""}>            
-            <label htmlFor="add-title">Título do Jogo</label>
-            <input type="text" name="add-title" id="add-title" value ={title} placeholder="Batman" onChange={handleChange} />
-            <label htmlFor="add-image">Imagem do Jogo</label>
-            <input type="text" name="add-image" id="add-image" placeholder="https:..." value={imageUrl} onChange={handleChange} />
-            <button id="close" onClick={handleModal}>Fechar</button>                       
-            <button id="add" onClick={handleAll}>{modal}</button>
+        <div id="modal" className={["close", "add"].includes(modal)? "hidden" : ""}>
+            <div id="form">
+                <label htmlFor="add-title">Título do Jogo</label>
+                <input type="text" name="add-title" id="add-title" value ={title} placeholder="Batman" onChange={handleChange} />
+                <label htmlFor="add-image">Imagem do Jogo</label>
+                <input type="text" name="add-image" id="add-image" placeholder="https:..." value={imageUrl} onChange={handleChange} />
+                <div id="modal-buttons">
+                    <button id="close" onClick={handleModal}>Fechar</button>                       
+                    <button id="add" onClick={handleAll}>{modal}</button>
+                </div>
+            </div>                        
         </div>
     )
 }

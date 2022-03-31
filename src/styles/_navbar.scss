@@ -1,0 +1,53 @@
+@use 'variables' as *;
+
+nav {
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $black;
+    color: $white;
+
+    #create {
+        background: $primary;
+        font-family: $font-stack;
+        font-weight: 400;
+        color: $white;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        height: 36px;
+        padding: 0 12px 0 12px;
+        margin-right: 8vw;
+        &:hover {
+            cursor: pointer;
+            background-color: $primary-dark;
+    
+        }
+    }
+
+    #logo {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        margin-left: 8vw;
+        img {
+            height: 40%;
+            margin-right: 8px;
+            
+        }
+    
+        p {
+            
+            font-size: 24px;
+        }
+    
+        .bold {
+            font-weight: 800;
+        }
+    }
+    
+}

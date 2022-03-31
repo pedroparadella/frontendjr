@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap");
+body {
+  margin: 0;
+  background-color: #fcfcfc;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100vw;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #212121;
+  color: #fcfcfc;
+}
+nav #create {
+  background: #41a0bf;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #fcfcfc;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  height: 36px;
+  padding: 0 12px 0 12px;
+  margin-right: 8vw;
+}
+nav #create:hover {
+  cursor: pointer;
+  background-color: #31788c;
+}
+nav #logo {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-left: 8vw;
+}
+nav #logo img {
+  height: 40%;
+  margin-right: 8px;
+}
+nav #logo p {
+  font-size: 24px;
+}
+nav #logo .bold {
+  font-weight: 800;
+}
+
+#search {
+  height: 248px;
+  width: 100%;
+  background: no-repeat top/auto url("../public/images/hero.jpg"), rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#search input {
+  font-family: "Open Sans", sans-serif;
+  padding: 0 8px 0 24px;
+  font-size: 24px;
+  width: 50%;
+  min-width: 280px;
+  height: 52px;
+  border-radius: 8px;
+  border: none;
+}
+#search input:focus-visible, #search input:hover {
+  outline: none;
+  height: 56px;
+  width: 54%;
+  border: solid 2px #41a0bf;
+}
+
+#modal.hidden {
+  display: none;
+}
+
+#modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+}
+#modal #form {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 10%;
+}
+.card img {
+  width: 100%;
+}
+
+#cards {
+  display: flex;
+  justify-content: space-around;
+}/*# sourceMappingURL=index.css.map */

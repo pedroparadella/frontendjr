@@ -15,9 +15,9 @@ const Card = (props) => {
 
     return (
         <div className="card">
-            <a href={`https://www.cheapshark.com/redirect?dealID=${deal}`} target="_blank" rel="noopener noreferrer"><img src={image? image : "images/default-game.png"} alt={name} /></a>            
-            <h6>{name}</h6>
-            <p className="title">{title}</p>
+            <a href={`https://www.cheapshark.com/redirect?dealID=${deal}`} target="_blank" rel="noopener noreferrer"><img src={image? image : "images/logo.svg"} alt={name} /></a>            
+            <h2>{name}</h2>
+            <h3 className="title">{title}</h3>
             <p className="cheapest">{cheapest}</p>
             <button id="edit" name={name} onClick={handleAll}>Editar</button>
             <button id="delete" name={name} onClick={handleDeletion}>Excluir</button>

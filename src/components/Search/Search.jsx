@@ -6,7 +6,7 @@ const Search = () => {
     const {filter, handleChange} = useContext(FilterContext); 
     return (
         <div id="search">
-            <input type="search" value={filter} onChange={handleChange} />
+            <input type="text" placeholder="Nome do Jogo..." value={filter} onChange={handleChange} />           
         </div>
   );
 }

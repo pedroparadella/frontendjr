@@ -6,8 +6,10 @@ const NewButton = () => {
     const {handleModal} = useContext(ModalContext); 
     return (
         <button id="create" onClick={handleModal}>
-            Add Game
+        Adicionar Jogo
         </button>
+        
+        
     )
 }
 

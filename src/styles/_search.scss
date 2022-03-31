@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+#search {
+    height: 248px;
+    width: 100%;
+    background: no-repeat top/auto url("../public/images/hero.jpg"), rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    input {
+        font-family: $font-stack;
+        padding: 0 8px 0 24px;
+        font-size: 24px;
+        width: 50%;
+        min-width: 280px;
+        height: 52px;
+        border-radius: 8px;
+        border: none;
+        &:focus-visible, &:hover {
+            outline: none;
+            height: 56px;
+            width: 54%;
+            border: solid 2px $primary;
+        }
+    }
+}

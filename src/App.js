@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss';
+import './App.css';
 import Search from './components/Search/Search';
 import NewCard from './components/NewCard/NewCard'; 
 import Navbar from './components/Navbar/Navbar';
@@ -18,11 +18,10 @@ function App() {
     <div className="app">
         <GamesProvider>
             <FilterProvider>
-                <Navbar />
-                <Search />
                 <ModalProvider>
-                    <NewCard />
-                    <NewButton />               
+                    <NewCard />               
+                    <Navbar />                           
+                    <Search />                                                
                     <Cards />
                 </ModalProvider> 
             </FilterProvider>     

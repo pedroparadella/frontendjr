@@ -1,0 +1,21 @@
+#modal.hidden{
+    display: none;
+}
+
+#modal {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.4);
+    width: 100vw;
+    height: 100vh;
+
+    #form {
+        background: white;
+        display: flex;       
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
