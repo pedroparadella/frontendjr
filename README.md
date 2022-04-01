@@ -23,9 +23,6 @@ $ git clone https://github.com/kaneswarann/frontendjr
 # Acesse a pasta do projeto no terminal
 $ cd frontendjr
 
-# Acesse a pasta da aplicação
-$ cd my-app
-
 # Instalar as dependências
 $ yarn install
 
