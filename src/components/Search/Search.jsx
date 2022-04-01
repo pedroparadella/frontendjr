@@ -5,7 +5,7 @@ import {motion} from 'framer-motion';
 
 
 const Search = () => {
-    const {filter, handleChange} = useContext(FilterContext); 
+    const {filterSearch, handleChange, handleClear} = useContext(FilterContext); 
     const slideDown = {
         initial: {
             y: "-100%"
@@ -19,9 +19,19 @@ const Search = () => {
         }
     }
 
+   
+
     return (
-        <motion.div id="search" {...slideDown}>
-            <input type="text" placeholder="Nome do Jogo..." value={filter} onChange={handleChange} />           
+        <motion.div id="hero" {...slideDown}>
+            <div id="search">
+                <input type="text" placeholder="Nome do Jogo..." value={filterSearch} onChange={handleChange} />
+                <button onClick={handleClear}>
+                    <span className="material-icons md-36 md-dark">
+                        clear
+                    </span>
+                </button>  
+            </div>
+                     
         </motion.div>
   );
 }

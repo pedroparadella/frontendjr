@@ -37,7 +37,7 @@ export const GamesProvider = ({children}) => {
                 setGames(prevState => [...prevState.slice(0, index), [gameToAdd[0],{cheapest, cheapestDealID, external, image: gameToAdd[1]}], ...prevState.slice(index+1)]);
             })
             .catch(err => {
-                setGames(prevState => [...prevState.slice(0, index), [gameToAdd[0],{cheapest: "-", cheapestDealID: "", external: "Jogo Não Encontrado", image: gameToAdd[1]}], prevState.slice(index+1)]);
+                setGames(prevState => [...prevState.slice(0, index), [gameToAdd[0],{cheapest: "-", cheapestDealID: "", external: "Jogo Não Encontrado", image: gameToAdd[1]}], ...prevState.slice(index+1)]);
             }).then(() => {
                 setGameToAdd(["", ""]);
                 setGameToEdit("");

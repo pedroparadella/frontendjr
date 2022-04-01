@@ -7,10 +7,9 @@ const ModalContext = createContext();
 export const ModalProvider = ({children}) => {
     const [modal, setModal] = useState("close");
     
-
     const handleModal = (e) => {
-        const id = e.target.className; 
-        setModal(id);
+        const name = e.target.className; 
+        setModal(name);
 
     }
 

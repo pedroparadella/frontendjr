@@ -6,12 +6,17 @@ const FilterContext = createContext();
 
 export const FilterProvider = ({children}) => {
     const [filterSearch, setFilter] = useState("");
+
     const handleChange = (e) => {
         setFilter(e.target.value);
     }
+    const handleClear = () => {
+        setFilter("");
+        
+    }
     
     return (
-        <FilterContext.Provider value={{filterSearch, handleChange}}>
+        <FilterContext.Provider value={{filterSearch, handleChange, handleClear}}>
             {children}
         </FilterContext.Provider>
     )

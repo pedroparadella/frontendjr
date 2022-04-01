@@ -39,25 +39,25 @@ const Card = (props) => {
                 <div className="card-buttons">
                     <div className="cheapest">
                         <a href={deal? `https://www.cheapshark.com/redirect?dealID=${deal}` : 'https://store.steampowered.com/'} target="_blank" rel="noopener noreferrer">
-                        <span class="material-icons md-light md-18">
+                        <span className="material-icons md-light">
                             shopping_cart
                         </span>
-                        <span>${cheapest}</span>
+                        <span className="card-button-text">${cheapest}</span>
                     </a>
                     </div>
                     <button className="edit" name={name} onClick={handleAll}>
-                        <span class="material-icons md-light md-18">
+                        <span className="material-icons md-light">
                             edit
                         </span>
-                        <span>
+                        <span className="card-button-text">
                             Editar
                         </span>
                     </button>
                     <button className="delete" name={name} onClick={handleDeletion}>
-                    <span class="material-icons md-light md-18">
+                        <span className="material-icons md-light">
                             delete
                         </span>
-                        <span>
+                        <span className="card-button-text">
                             Excluir
                         </span>
                     </button>
@@ -70,10 +70,7 @@ const Card = (props) => {
                         <p>{title.length >= 63? title.slice(0, 61) + "..." : title }</p>
                     </div>
                 </div>           
-                
-                
-                
-                
+                                
             </motion.div>
         
     )

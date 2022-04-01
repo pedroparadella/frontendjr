@@ -1,6 +1,20 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+@mixin grow-icons ($color) {
+    &:hover {
+        width: 40%;
+        background: $color;
+        .material-icons {
+            font-size: 28px;
+        }
+        .card-button-text {
+            font-size: 20px;
+        }
+    }
+
+}
+
 .card {
     @include flex (column, flex-start, center, 0);
     position: relative;
@@ -30,6 +44,11 @@
         button {
             border: none;            
         }
+    }
+
+    .card-button-text {
+        transition: all 0.3s ease-out;
+        font-weight: 600;
     }
     
     button, a {
@@ -79,11 +98,7 @@
         background: $primary;
         transition: all 0.3s ease-out;
         
-        &:hover {
-            width: 40%;
-            background: $primary-dark;
-            font-size: 20px;
-        }
+        @include grow-icons ($primary-dark);
     }
 
     .delete {
@@ -92,24 +107,18 @@
         width: 33.4%;
         background: $error;
         transition: all 0.3s ease-out;
-        &:hover {
-            width: 40%;
-            background: $error-dark;
-            font-size: 20px;
-
-        }
+        @include grow-icons ($error-dark);
     }
+
+    
 
     .cheapest {
         @include font-stack (16px, $white, 400);
         width: 33.4%;
         background: $secondary;
         transition: all 0.3s ease-out;
-        &:hover {
-            width: 40%;
-            background: $secondary-dark;
-            font-size: 20px;
-        }
+        
+        @include grow-icons ($secondary-dark);
         
         a{
             @include flex (row, center, center, 0);

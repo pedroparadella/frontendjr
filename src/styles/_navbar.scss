@@ -8,10 +8,11 @@
   };
 
 @mixin shrink($font-button, $height-button, $logo) {
-    nav {
+    nav {   
         .create {
             height: $height-button;
             font-size: $font-button;
+            padding: 8px;
         }
 
         #logo {
@@ -29,6 +30,7 @@
 
 nav {
     width: 100vw;
+    max-width: 100%;
     position: sticky;
     top: 0;
     display: flex;
@@ -42,7 +44,7 @@ nav {
     .create {
         @include flex (row, center, center, 4px);       
         background: $primary;
-        @include font-stack (16px, $white, 400);
+        @include font-stack (16px, $white, 600);
         border: none;
         border-radius: 8px;
         height: 36px;
@@ -80,5 +82,5 @@ nav {
 }
 
 @include screen-max(360px) {
-       @include shrink(12px, 24px, 16px)
+       @include shrink(14px, 28px, 16px)
 }

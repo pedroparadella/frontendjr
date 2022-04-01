@@ -6,10 +6,8 @@ const NewButton = () => {
     const {handleModal} = useContext(ModalContext); 
     return (
         <button className="create" onClick={handleModal}>
-            <span class="material-icons md-light md-18">add</span><span>Adicionar Jogo</span>
-        </button>
-        
-        
+            <span className="material-icons md-light">add</span><span>Adicionar</span>
+        </button>                
     )
 }
 
