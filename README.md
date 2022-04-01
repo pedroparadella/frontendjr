@@ -14,7 +14,7 @@ O projeto foi desenvolvido com as seguintes tecnologias
 - [React](https://reactjs.org/)
 - [Styled Components](https://styled-components.com/)
 
-### Rodando a aplicação
+### 📥 Rodando a aplicação
 
 ```bash
 # Clone este repositório
