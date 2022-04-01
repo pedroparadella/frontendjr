@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use "mixins" as *;
 
 @mixin screen-max($max) { 
     @media (max-width: $max) { 
@@ -39,6 +40,7 @@ nav {
     color: $white;
 
     .create {
+        @include flex (row, center, center, 4px);       
         background: $primary;
         @include font-stack (16px, $white, 400);
         border: none;

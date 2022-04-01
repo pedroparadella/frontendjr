@@ -23,6 +23,11 @@ nav {
   color: #fcfcfc;
 }
 nav .create {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
   background: #41a0bf;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -83,7 +88,6 @@ nav #logo .bold {
   color: #212121;
   font-weight: 400;
   padding: 0 8px 0 24px;
-  font-size: 24px;
   width: 56vw;
   min-width: 236px;
   height: 56px;
@@ -119,19 +123,27 @@ nav #logo .bold {
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  gap: 0;
   position: relative;
   width: 260px;
   min-width: 260px;
   height: 400px;
   border-radius: 30px;
   overflow: hidden;
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-out;
 }
 .card .card-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
   position: absolute;
-  top: 240px;
+  top: 228px;
+  width: 236px;
 }
 .card .card-buttons {
   display: flex;
@@ -155,23 +167,42 @@ nav #logo .bold {
 }
 .card p {
   margin: 0;
-  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  width: 100%;
 }
 .card .name {
+  font-family: "Open Sans", sans-serif;
   font-size: 24px;
+  color: #212121;
   font-weight: 800;
+  text-align: center;
   text-transform: uppercase;
+  width: 100%;
 }
 .card .title {
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
+  color: #212121;
   font-weight: 300;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
 }
 .card .edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #fcfcfc;
   font-weight: 400;
-  width: 33.3%;
+  width: 33.4%;
   background: #41a0bf;
   transition: all 0.3s ease-out;
 }
@@ -185,7 +216,12 @@ nav #logo .bold {
   font-size: 16px;
   color: #fcfcfc;
   font-weight: 400;
-  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 33.4%;
   background: #D32F2F;
   transition: all 0.3s ease-out;
 }
@@ -199,7 +235,7 @@ nav #logo .bold {
   font-size: 16px;
   color: #fcfcfc;
   font-weight: 400;
-  width: 33.3%;
+  width: 33.4%;
   background: #dc6d48;
   transition: all 0.3s ease-out;
 }
@@ -210,8 +246,15 @@ nav #logo .bold {
 }
 .card .cheapest a {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
   height: 100%;
   width: 100%;
   text-decoration: none;
@@ -219,6 +262,7 @@ nav #logo .bold {
 }
 .card:hover {
   width: 268px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
 }
 .card:hover img {
   height: 70%;

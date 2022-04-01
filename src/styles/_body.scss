@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use "mixins" as *;
 
 body {
     @include font-stack (16px, $black, 400);

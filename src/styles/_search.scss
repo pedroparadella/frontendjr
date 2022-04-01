@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use "mixins" as *;
 
 #search {
     height: 248px;
@@ -13,7 +14,6 @@
     input {
         @include font-stack (24px, $black, 400);      
         padding: 0 8px 0 24px;
-        font-size: 24px;
         width: 56vw;
         min-width: 236px;
         height: 56px;

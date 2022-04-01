@@ -38,18 +38,36 @@ const Card = (props) => {
                 <img className="card-image" src={image? image : "images/logo-white.svg"} alt={name} />
                 <div className="card-buttons">
                     <div className="cheapest">
-                        <a href={deal? `https://www.cheapshark.com/redirect?dealID=${deal}` : 'https://store.steampowered.com/'} target="_blank" rel="noopener noreferrer"><span>${cheapest}</span> 
+                        <a href={deal? `https://www.cheapshark.com/redirect?dealID=${deal}` : 'https://store.steampowered.com/'} target="_blank" rel="noopener noreferrer">
+                        <span class="material-icons md-light md-18">
+                            shopping_cart
+                        </span>
+                        <span>${cheapest}</span>
                     </a>
                     </div>
-                    <button className="edit" name={name} onClick={handleAll}>Editar</button>
-                    <button className="delete" name={name} onClick={handleDeletion}>Excluir</button>
+                    <button className="edit" name={name} onClick={handleAll}>
+                        <span class="material-icons md-light md-18">
+                            edit
+                        </span>
+                        <span>
+                            Editar
+                        </span>
+                    </button>
+                    <button className="delete" name={name} onClick={handleDeletion}>
+                    <span class="material-icons md-light md-18">
+                            delete
+                        </span>
+                        <span>
+                            Excluir
+                        </span>
+                    </button>
                 </div>
                 <div className="card-texts">
                     <div className="name">
-                        <p>{name}</p>
+                        <p>{name.length >= 28? name.slice(0, 26) + "..." : name }</p>
                     </div>
                     <div className="title">
-                        <p>{title}</p>
+                        <p>{title.length >= 63? title.slice(0, 61) + "..." : title }</p>
                     </div>
                 </div>           
                 

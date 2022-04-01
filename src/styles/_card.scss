@@ -1,22 +1,23 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex (column, flex-start, center, 0);
     position: relative;
     width: 260px;
     min-width: 260px;
     height: 400px;
     border-radius: 30px;
     overflow:hidden;
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-out;
 
     
     .card-texts {
+        @include flex (column, flex-start, center, 4px);        
         position: absolute;
-        top: 240px;
+        top: 228px;
+        width: 236px;
         
        
     }
@@ -48,23 +49,33 @@
 
     p {
         margin: 0;
-        text-align: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+        width: 100%;
     }
 
     .name {
-        font-size: 24px;
-        font-weight: 800;
+        @include font-stack (24px, $black, 800);
+        text-align: center;
         text-transform: uppercase;
+        width: 100%;
+        
     }
 
     .title {
-        font-size: 20px;
-        font-weight: 300;
+        @include font-stack (20px, $black, 300);
+        overflow: hidden;
+        width: 100%;
+        text-align: center;
+
     }
 
     .edit {
+        @include flex (column, center, center, 4px);
         @include font-stack (16px, $white, 400);
-        width: 33.3%;
+        
+        width: 33.4%;
         background: $primary;
         transition: all 0.3s ease-out;
         
@@ -77,7 +88,8 @@
 
     .delete {
         @include font-stack (16px, $white, 400);
-        width: 33.3%;
+        @include flex (column, center, center, 4px);
+        width: 33.4%;
         background: $error;
         transition: all 0.3s ease-out;
         &:hover {
@@ -90,7 +102,7 @@
 
     .cheapest {
         @include font-stack (16px, $white, 400);
-        width: 33.3%;
+        width: 33.4%;
         background: $secondary;
         transition: all 0.3s ease-out;
         &:hover {
@@ -100,9 +112,8 @@
         }
         
         a{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex (row, center, center, 0);
+            @include flex (column, center, center, 4px);
             height: 100%;
             width: 100%;
             text-decoration: none;
@@ -112,6 +123,7 @@
     
     &:hover {
         width: 268px;
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
 
         img {
             height: 70%;
