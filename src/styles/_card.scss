@@ -1,26 +1,16 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-@mixin grow-icons ($color) {
-    &:hover {
-        width: 40%;
-        background: $color;
-        .material-icons {
-            font-size: 28px;
-        }
-        .card-button-text {
-            font-size: 20px;
-        }
-    }
-
-}
-
+#cards {
+    @include flex (row, center, $gap: 44px 44px, $wrap: wrap);
+    width: 84vw;
+    margin: 40px auto 64px auto;
+}   
 .card {
-    @include flex (column, flex-start, center, 0);
-    position: relative;
+    @include flex (column, flex-start, center);
     width: 260px;
-    min-width: 260px;
     height: 400px;
+    position: relative;
     border-radius: 30px;
     overflow:hidden;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -28,22 +18,16 @@
 
     
     .card-texts {
-        @include flex (column, flex-start, center, 4px);        
-        position: absolute;
-        top: 228px;
-        width: 236px;
-        
-       
+        @include flex (column, flex-start, center, 4px);
+        @include absolute ($top: 228px);        
+        width: 236px;         
     }
 
     .card-buttons {
-        display: flex;
-        height: 120px;
         width: 100%;
-
-        button {
-            border: none;            
-        }
+        height: 120px;
+        display: flex;   
+        
     }
 
     .card-button-text {
@@ -56,13 +40,12 @@
     }
 
     img {
+        @include absolute ($bottom: 200px);
         z-index: 1;
-        bottom: 200px;
-        position: absolute;
-        transition: all 0.3s ease-out;
         height: 50%;
         background-color: $black;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-out;
         
     }
 
@@ -93,12 +76,11 @@
     .edit {
         @include flex (column, center, center, 4px);
         @include font-stack (16px, $white, 400);
-        
+        @include grow-icons ($primary-dark);
         width: 33.4%;
         background: $primary;
         transition: all 0.3s ease-out;
         
-        @include grow-icons ($primary-dark);
     }
 
     .delete {
@@ -121,7 +103,6 @@
         @include grow-icons ($secondary-dark);
         
         a{
-            @include flex (row, center, center, 0);
             @include flex (column, center, center, 4px);
             height: 100%;
             width: 100%;

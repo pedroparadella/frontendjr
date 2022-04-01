@@ -1,3 +1,5 @@
+@use "sass:meta";
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
 
 //Fonts
@@ -9,10 +11,52 @@
 }
 
 //Flex
-@mixin flex ($direction, $justify, $align, $gap) {
+@mixin flex ($direction:row, $justify:flex-start, $align:flex-start, $gap:0, $wrap:nowrap) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
     gap: $gap;
+    flex-wrap: $wrap;
+}
+
+//Size
+@mixin width ($width, $max-w:$width, $min-w:$width) {
+    width: $width;
+    max-width: $max-w;
+    min-width: $min-w;
+}
+
+@mixin height ($height, $max-h: $height) {
+    height: $height;
+    max-height: $max-h;
+}
+
+//Border and shadow
+@mixin border ($border, $shadow, $radius) {
+    border: $border;
+    box-shadow: $shadow;
+    border-radius: $radius;
+}
+
+//Specific for "card"
+@mixin grow-icons ($color) {
+    &:hover {
+        width: 40%;
+        background: $color;
+        .material-icons {
+            font-size: 28px;
+        }
+        .card-button-text {
+            font-size: 20px;
+        }
+    }
+}
+
+//Absolute position
+@mixin absolute ($positions...) {
+    position: absolute;
+    @each $name, $position in meta.keywords($positions) {
+        #{$name}: $position;
+    }
 }

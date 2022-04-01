@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap");
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -9,8 +13,19 @@ body {
   box-sizing: border-box;
 }
 
+input {
+  box-sizing: border-box;
+}
+
 span {
   pointer-events: none;
+}
+
+button {
+  border: none;
+}
+button:hover {
+  cursor: pointer;
 }
 
 .material-icons {
@@ -45,6 +60,7 @@ nav .create {
   justify-content: center;
   align-items: center;
   gap: 4px;
+  flex-wrap: nowrap;
   background: #41a0bf;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -119,7 +135,7 @@ nav #logo .bold {
   font-weight: 400;
   padding: 0 64px 0 24px;
   width: 56vw;
-  min-width: 236px;
+  min-width: 252px;
   height: 56px;
   border-radius: 8px;
   border: none;
@@ -148,19 +164,115 @@ nav #logo .bold {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   width: 100vw;
   height: 100vh;
 }
 #modal #form {
-  background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 36px;
+  flex-wrap: nowrap;
+  width: 320px;
+  height: 450px;
+  border: none;
+  position: relative;
+  background: url("/public/images/form.gif") center center no-repeat rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+  background-size: cover;
+  border-radius: 20px;
 }
-#modal #form button {
-  text-transform: capitalize;
+#modal #form #form-inputs {
+  margin-top: 88px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+#modal #form h2 {
+  font-weight: 400;
+  font-size: 18px;
+  color: #fcfcfc;
+  position: absolute;
+  top: 32px;
+}
+#modal #form input {
+  width: 100%;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 15px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+}
+#modal #form input:focus {
+  border: 1px solid #41a0bf;
+  outline: none;
+  color: #fff;
+}
+#modal #form input::-moz-placeholder {
+  opacity: 0.8;
+  color: #fcfcfc;
+}
+#modal #form input:-ms-input-placeholder {
+  opacity: 0.8;
+  color: #fcfcfc;
+}
+#modal #form input::placeholder {
+  opacity: 0.8;
+  color: #fcfcfc;
+}
+#modal #form #modal-buttons {
+  width: 80%;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+#modal #form #modal-buttons button {
+  height: 100%;
+  color: #fcfcfc;
+  font-size: 15px;
+  font-weight: 600;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 8px;
+  width: 45%;
+  transition: all 0.3s ease-out;
+}
+#modal #form #modal-buttons .close {
+  background: #D32F2F;
+}
+#modal #form #modal-buttons .close:hover {
+  background: #b82828;
+  font-size: 16px;
+}
+#modal #form #modal-buttons .add {
+  background: #41a0bf;
+}
+#modal #form #modal-buttons .add:hover {
+  background: #31788c;
+  font-size: 16px;
+}
+
+#cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 44px 44px;
+  flex-wrap: wrap;
+  width: 84vw;
+  margin: 40px auto 64px auto;
 }
 
 .card {
@@ -169,10 +281,10 @@ nav #logo .bold {
   justify-content: flex-start;
   align-items: center;
   gap: 0;
-  position: relative;
+  flex-wrap: nowrap;
   width: 260px;
-  min-width: 260px;
   height: 400px;
+  position: relative;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -184,17 +296,15 @@ nav #logo .bold {
   justify-content: flex-start;
   align-items: center;
   gap: 4px;
+  flex-wrap: nowrap;
   position: absolute;
   top: 228px;
   width: 236px;
 }
 .card .card-buttons {
-  display: flex;
-  height: 120px;
   width: 100%;
-}
-.card .card-buttons button {
-  border: none;
+  height: 120px;
+  display: flex;
 }
 .card .card-button-text {
   transition: all 0.3s ease-out;
@@ -204,13 +314,13 @@ nav #logo .bold {
   cursor: pointer;
 }
 .card img {
-  z-index: 1;
-  bottom: 200px;
   position: absolute;
-  transition: all 0.3s ease-out;
+  bottom: 200px;
+  z-index: 1;
   height: 50%;
   background-color: #212121;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-out;
 }
 .card p {
   margin: 0;
@@ -245,6 +355,7 @@ nav #logo .bold {
   justify-content: center;
   align-items: center;
   gap: 4px;
+  flex-wrap: nowrap;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #fcfcfc;
@@ -273,6 +384,7 @@ nav #logo .bold {
   justify-content: center;
   align-items: center;
   gap: 4px;
+  flex-wrap: nowrap;
   width: 33.4%;
   background: #D32F2F;
   transition: all 0.3s ease-out;
@@ -308,15 +420,11 @@ nav #logo .bold {
 }
 .card .cheapest a {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4px;
+  flex-wrap: nowrap;
   height: 100%;
   width: 100%;
   text-decoration: none;
@@ -329,13 +437,4 @@ nav #logo .bold {
 .card:hover img {
   height: 70%;
   bottom: 0;
-}
-
-#cards {
-  width: 84vw;
-  display: flex;
-  margin: 64px auto 64px auto;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 44px 44px;
 }/*# sourceMappingURL=index.css.map */

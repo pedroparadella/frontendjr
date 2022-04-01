@@ -1,6 +1,10 @@
 @use 'variables' as *;
 @use "mixins" as *;
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     @include font-stack (16px, $black, 400);
     margin: 0;
@@ -9,8 +13,19 @@ body {
     
 }
 
+input {
+    box-sizing: border-box;
+}
+
 span {
     pointer-events: none;
+}
+
+button {
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .material-icons {

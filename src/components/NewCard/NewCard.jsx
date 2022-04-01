@@ -22,11 +22,11 @@ const NewCard = () => {
         },
         exit: {
             opacity: 0,
-            transition: {duration: 0.5, ease: "easeIn"},
+            transition: {duration: 0.3, ease: "easeOut"},
             
         },
         transition:  {
-            duration: 0.5, 
+            duration: 0.3, 
             ease: "easeOut"
         }
     }
@@ -42,13 +42,14 @@ const NewCard = () => {
         <AnimatePresence>
             {!["close", "add"].includes(modal) && <motion.div {...appear} id="modal">
                 <div id="form">
-                    <label htmlFor="add-title">Título do Jogo</label>
-                    <input type="text" name="add-title" id="add-title" value ={title} placeholder="Batman" onChange={handleChange} />
-                    <label htmlFor="add-image">Imagem do Jogo</label>
-                    <input type="text" name="add-image" id="add-image" placeholder="https:..." value={imageUrl} onChange={handleChange} />
+                    <h2>{modal === "create"? "Adicionar" : "Editar"} Jogo</h2>
+                    <div id="form-inputs">
+                        <input type="text" name="add-title" id="add-title" value ={title} placeholder="Título do jogo..." onChange={handleChange} />
+                        <input type="text" name="add-image" id="add-image" placeholder="URL da imagem..." value={imageUrl} onChange={handleChange} />
+                    </div>                                      
                     <div id="modal-buttons">
-                        <button className="close" onClick={handleModal}>Fechar</button>                       
-                        <button className="add" onClick={handleAll}>{modal}</button>
+                        <button className="close" onClick={handleModal}>Cancelar</button>                       
+                        <button className="add" onClick={handleAll}>{modal === "create"? "Adicionar" : "Editar"}</button>
                     </div>
                 </div>                        
             </motion.div>}
