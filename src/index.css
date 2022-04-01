@@ -1,20 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap");
 * {
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #212121;
   font-weight: 400;
   margin: 0;
   background-color: #fcfcfc;
-  box-sizing: border-box;
-}
-
-input {
-  box-sizing: border-box;
 }
 
 span {
@@ -43,13 +38,16 @@ button:hover {
 nav {
   width: 100vw;
   max-width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  display: flex;
-  height: 60px;
-  align-items: center;
-  justify-content: space-between;
   z-index: 2;
   background-color: #212121;
   color: #fcfcfc;
@@ -61,17 +59,16 @@ nav .create {
   align-items: center;
   gap: 4px;
   flex-wrap: nowrap;
-  background: #41a0bf;
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #fcfcfc;
   font-weight: 600;
+  background: #41a0bf;
   border: none;
   border-radius: 8px;
   height: 36px;
   padding: 0 12px 0 12px;
   margin-right: 8vw;
-  transition: all 0.6s ease;
+  transition: all 0.3s ease-out;
 }
 nav .create:hover {
   cursor: pointer;
@@ -79,8 +76,12 @@ nav .create:hover {
 }
 nav #logo {
   display: flex;
-  height: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  height: 100%;
   margin-left: 8vw;
 }
 nav #logo img {
@@ -108,9 +109,9 @@ nav #logo .bold {
   }
 }
 #hero input:focus-visible, #hero #search:hover input {
-  outline: none;
   height: 60px;
   width: 60vw;
+  outline: none;
   border: solid 2px #41a0bf;
 }
 
@@ -118,36 +119,37 @@ nav #logo .bold {
   height: 248px;
   width: 100vw;
   max-width: 100%;
-  background: no-repeat top/auto url("../public/images/hero.jpg"), rgba(0, 0, 0, 0.3);
-  background-blend-mode: multiply;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  background: no-repeat top/auto url("../public/images/hero.jpg"), rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
 }
 #hero #search {
   position: relative;
 }
 #hero input {
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  height: 56px;
+  width: 56vw;
+  min-width: 252px;
   font-size: 24px;
   color: #212121;
   font-weight: 400;
   padding: 0 64px 0 24px;
-  width: 56vw;
-  min-width: 252px;
-  height: 56px;
   border-radius: 8px;
   border: none;
-  transition: all 0.6s ease;
+  transition: all 0.3s ease-out;
 }
 #hero button {
   position: absolute;
   right: 16px;
+  bottom: 0;
+  top: 0;
   margin-top: auto;
   margin-bottom: auto;
-  top: 0;
-  bottom: 0;
   background: none;
   border: none;
   color: rgba(0, 0, 0, 0.3);
@@ -195,9 +197,9 @@ nav #logo .bold {
   flex-wrap: nowrap;
 }
 #modal #form h2 {
-  font-weight: 400;
   font-size: 18px;
   color: #fcfcfc;
+  font-weight: 400;
   position: absolute;
   top: 32px;
 }
@@ -332,7 +334,6 @@ nav #logo .bold {
   width: 100%;
 }
 .card .name {
-  font-family: "Open Sans", sans-serif;
   font-size: 24px;
   color: #212121;
   font-weight: 800;
@@ -341,7 +342,6 @@ nav #logo .bold {
   width: 100%;
 }
 .card .title {
-  font-family: "Open Sans", sans-serif;
   font-size: 20px;
   color: #212121;
   font-weight: 300;
@@ -356,7 +356,6 @@ nav #logo .bold {
   align-items: center;
   gap: 4px;
   flex-wrap: nowrap;
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #fcfcfc;
   font-weight: 400;
@@ -375,7 +374,6 @@ nav #logo .bold {
   font-size: 20px;
 }
 .card .delete {
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #fcfcfc;
   font-weight: 400;
@@ -400,7 +398,6 @@ nav #logo .bold {
   font-size: 20px;
 }
 .card .cheapest {
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #fcfcfc;
   font-weight: 400;

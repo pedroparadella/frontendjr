@@ -3,19 +3,16 @@
 
 * {
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
     @include font-stack (16px, $black, 400);
     margin: 0;
-    background-color: $white;
-    box-sizing: border-box;
-    
+    background-color: $white;   
 }
 
-input {
-    box-sizing: border-box;
-}
+
 
 span {
     pointer-events: none;

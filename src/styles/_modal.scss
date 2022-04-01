@@ -32,16 +32,12 @@
         
 
         h2 {
-            font-weight: 400;
-            font-size: 18px;
-            color: $white;
-            position:absolute;
-            top: 32px;
+            @include font-stack (18px, $white);
+            @include absolute ($top: 32px);
         }
 
         input {
-            width: 100%;           
-            height: 44px;
+            @include size ($width: 100%, $height: 44px);
             background: rgba(255,255,255,.3);
             border: 1px solid rgba(255,255,255,.1);
             padding: 0 15px;

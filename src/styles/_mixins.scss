@@ -3,8 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
 
 //Fonts
-@mixin font-stack ($size, $color, $weight) {
-    font-family: 'Open Sans', sans-serif;
+@mixin font-stack ($size, $color, $weight:400) {
     font-size: $size;
     color: $color;
     font-weight: $weight;
@@ -21,22 +20,10 @@
 }
 
 //Size
-@mixin width ($width, $max-w:$width, $min-w:$width) {
-    width: $width;
-    max-width: $max-w;
-    min-width: $min-w;
-}
-
-@mixin height ($height, $max-h: $height) {
-    height: $height;
-    max-height: $max-h;
-}
-
-//Border and shadow
-@mixin border ($border, $shadow, $radius) {
-    border: $border;
-    box-shadow: $shadow;
-    border-radius: $radius;
+@mixin size ($sizes...) {
+    @each $name, $size in meta.keywords($sizes) {
+        #{$name}: $size;
+    }
 }
 
 //Specific for "card"
@@ -58,5 +45,31 @@
     position: absolute;
     @each $name, $position in meta.keywords($positions) {
         #{$name}: $position;
+    }
+}
+
+//For Navbar
+@mixin screen-max($max) { 
+    @media (max-width: $max) { 
+      @content 
+    } 
+  };
+
+@mixin shrink($font-button, $height-button, $logo) {
+    nav {   
+        .create {
+            height: $height-button;
+            font-size: $font-button;
+            padding: 8px;
+        }
+
+        #logo {
+            img {
+                height: $logo;
+            }
+            p {
+                font-size: $logo;
+            }
+        }
     }
 }
