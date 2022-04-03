@@ -22,3 +22,24 @@ Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor es
 
 ## Desafios se você se sentir confiante
 * Usar alguma API na internet, tipo https://pokeapi.co/, para trazer os dados que vão aparecer nos cards da tela.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Olá me chamo Eduardo e esse é meu primeiro teste, uma landing page feita com Java script, html e css (puro).
+Criei uma pagina simulando uma loja de roupas tendo como referencia o layout do teste impar [Link para o layout](https://xd.adobe.com/view/c715f110-fbd4-4323-be0c-0e453c1450db-9246)
+nesse teste não foram usadas ferramentas como react pois ainda estou em fase de estudo, porém fiz meu melhor usando JS puro.
+
+
+### Pré-requisitos
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com),  Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+depois que o codigo estiver aberto em seu vscode é so ir na pasta do projeto e abrir o arquivo index.html.
+
+Tecnologias usadas no projeto:
+*html
+*css
+*java script
+
+
+
