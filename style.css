@@ -20,6 +20,9 @@ main{
     display: flex;
     justify-content: center;
 }
+
+
+/*---------------------------- header---------*/
 header{
     background: #00d2ff;  
     background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  
@@ -27,11 +30,7 @@ header{
     width: 100%;
     height: 8vh; 
     z-index: 1;
-    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.164);
 }
-
-
-/*---------------------------- header---------*/
 .cabeça{
     height: 100%;
     width: 80%;
@@ -274,4 +273,94 @@ footer h4{
     font-weight: 300;
     font-size: 2rem;
     color: #006efffe;
+}
+
+
+/* configuração de responsividade -----------------------------*/
+
+@media (max-width: 1230px ){
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 15rem;
+        height: 30rem;
+    }
+    #contato{
+        height: 600px;
+    }
+    .info{
+        flex-direction: column;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        height: 11vh;
+        
+    }
+    .cabeça{
+        display: inline-block;
+        text-align: center;
+    }
+    .navlinks{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px ){
+
+    .card{
+        width: 25rem;
+        
+    }
+    .card:hover{
+        width: 25rem;
+        height: 35rem;
+    }
+    .row{
+        max-width: 500px;
+    }
+
+}
+@media (max-width: 541px ){
+    .navlinks{
+        font-size: .7rem;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .input-filter #filter{
+        font-size: 1rem;
+    }
+
+    .cabeça .navlinks i{
+        font-size: 1.3rem;
+    }
+    .info p{
+        font-size: 1rem;
+    }
+    .info i{
+        font-size: 2rem;
+    }
+    .info h4{
+        font-size: 1.6rem;
+    }
+}
+@media (max-width: 338px ){
+    .info p{
+        font-size: .8rem;
+    }
+    .pe p{
+        font-size: 1rem;
+    }
+
 }
