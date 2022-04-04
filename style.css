@@ -1,0 +1,366 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300&display=swap');
+
+
+/*corpo do site*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto, sans-serif;
+}
+html{
+    scroll-behavior: smooth; /*rolagem suave */
+}
+body{
+    background-color: rgb(234, 234, 234);/*cor do corpo do site */
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*---------------------------- header---------*/
+header{
+    background: #00d2ff;  
+    background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  
+    background: linear-gradient(to right, #3a7bd5, #00d2ff); 
+    width: 100%;
+    height: 8vh; 
+    z-index: 1;
+}
+.cabeça{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;     
+    flex-wrap: wrap; 
+    margin: auto;    
+    z-index: 2;
+}
+.cabeça p{
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #00d2ff;
+    text-shadow: 3px 0px 6px rgba(0, 0, 0, 0.424);
+}
+.navlinks{
+    display: flex;
+    list-style: none;
+    gap: 3rem;  
+    
+}
+ .navlinks a{
+    color: #1d3351;
+    text-decoration: none;
+    font-size: 1.5em;    
+}
+.cabeça .navlinks i{  /*    icones instagram e face---------*/
+    font-size: 2rem;
+    transition: ease .4s;
+}
+.cabeça .navlinks i:hover{
+    font-size: 2.4rem;
+
+}
+.navlinks .a:hover{
+    border-bottom: 2px solid #022455;
+}
+
+
+/*-----------------background e barra de pesquisa----------------------*/
+
+.container{
+    width: 80%;
+}   
+.bg{
+    position: relative;
+    background:linear-gradient(rgba(44, 38, 108, 0.142), rgba(1, 9, 18, 0.446)), url(bg4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 30vh;
+    background-color: #010616;
+}
+input{   /*--------------------------------barra de pesquisa----------*/
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 18px;
+    background: transparent;
+    border: 2px solid #3a7bd5;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.input-filter{
+    position: absolute;
+    margin-top: 2rem;
+    width: 70%;
+    display:flex;
+    justify-content: center;
+    top:18%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.input-filter div{      
+   font-size: 2rem;
+   background-color: background #00d2ff;  
+   background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  
+   background: linear-gradient(to right, #3a7bd5, #00d2ff); 
+   width: 80px;
+   text-align: center;
+   padding-top: 6px;
+   border-radius: 0px 5px 5px 0px;
+   color: #6ee4ff;
+}
+.input-filter #filter{
+   background-color: rgb(215, 215, 215);
+    outline: none;
+    width: 100%; 
+    color: #0050c1;
+    font-weight:bold;
+    font-size: 1.5rem;
+    border: 3px solid #3a7bd5;
+}
+
+
+/*----------------------seta volta ao topo-----------*/
+.arrow{
+    font-size: 3rem;
+    position: absolute;
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+}
+
+.seta{
+    background: #00d2ff;  
+    background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  
+    background: linear-gradient(to right, #3a7bd5, #00d2ff); 
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2.1rem;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.274);
+}
+.seta i{
+    color: white;
+    padding-top: 5px;
+}
+
+/*--------------------------seção de cards-------------*/
+
+.card-lista{
+    margin-top: 40px;
+    width: 100%;
+}
+.row{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    margin-bottom: 5rem;
+}
+.card{
+    background-color: white;
+    width: 20rem;
+    height: 32rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.424);
+    margin: 30px;
+    transition: ease .5s;
+}
+.card:hover{
+    width: 23rem;
+    height: 35rem;
+}
+.card img{
+    cursor: pointer;
+    object-fit: contain;
+    width: 100%;
+    height: 80%;
+    padding-bottom: 30px;
+}
+.card-body{
+    position: relative;
+    width: 100%;
+    padding: .6rem;
+    border-radius:10px;
+    text-align: center;
+    bottom: 10px;
+}
+.card-body h5{
+    font-size: 1.7rem;
+    color: rgb(87, 87, 87);
+}
+.card-body span{        /* edita e excluir*/
+    display: none;
+}
+.pe{
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height:100%;
+    box-shadow: inset  0px 7px 0px rgba(0, 0, 0, 0.039);
+    padding-top: 10px;
+}
+.pe p{
+    cursor: pointer;
+    display:inline;
+    font-size: 1.2rem;
+    padding-top: 15px;
+    color:rgb(165, 165, 165);
+}
+.pe .p1{
+    padding-left: 30px;
+    float: left;
+}
+.pe .p2{
+    padding-right: 30px;
+    float: right;
+}
+.p1 i{
+    color: rgba(255, 98, 0, 0.759);
+}
+.p2 i{
+    color: rgba(254, 42, 42, 0.797);
+}   
+
+/*------------------------seção de contato------------------*/
+#contato{
+    margin-top: 50px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+.info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    width: 70%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.424);
+    border-radius: 10px;  
+}
+.info p{
+    font-size: 1.5rem;
+}
+.email, .linkedin, .site{
+    color: rgb(87, 87, 87);
+    font-size: 2rem;
+    text-align: center;
+}
+.info i{
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+
+/*--------------------------roda pé-----------------*/
+footer{
+    margin-top: 80px;
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+footer h4{
+    font-weight: 300;
+    font-size: 2rem;
+    color: #006efffe;
+}
+
+
+/* configuração de responsividade -----------------------------*/
+
+@media (max-width: 1230px ){
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 15rem;
+        height: 30rem;
+    }
+    #contato{
+        height: 600px;
+    }
+    .info{
+        flex-direction: column;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        height: 11vh;
+        
+    }
+    .cabeça{
+        display: inline-block;
+        text-align: center;
+    }
+    .navlinks{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px ){
+
+    .card{
+        width: 25rem;
+        
+    }
+    .card:hover{
+        width: 25rem;
+        height: 35rem;
+    }
+    .row{
+        max-width: 500px;
+    }
+
+}
+@media (max-width: 541px ){
+    .navlinks{
+        font-size: .7rem;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .input-filter #filter{
+        font-size: 1rem;
+    }
+
+    .cabeça .navlinks i{
+        font-size: 1.3rem;
+    }
+    .info p{
+        font-size: 1rem;
+    }
+    .info i{
+        font-size: 2rem;
+    }
+    .info h4{
+        font-size: 1.6rem;
+    }
+}
+@media (max-width: 338px ){
+    .info p{
+        font-size: .8rem;
+    }
+    .pe p{
+        font-size: 1rem;
+    }
+
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" 
+    integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
+    <title>Teste Impar</title>
+</head>
+<body>
+    <header>
+        <section class="cabeça" >
+            <p id="titulo">DESAFIO IMPAR</p> <!-- logotipo-->
+            <nav>
+                <ul class="navlinks">
+                    <li class="a"><a href="#bg">HOME</a></li>
+                    <li class="a"><a href="#card-lista">SERVIÇOS</a></li>
+                    <li class="a"><a href="#contato">CONTATO</a></li> 
+                    <li><a href="https://www.impar.com.br/" target="blank"><i class="fa-brands fa-facebook-square"></i></a></li>
+                    <li><a href="https://www.impar.com.br/" target="blank"><i class="fa-brands fa-instagram-square"></i></a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>  
+  <div class="bg" id="bg"></div>      <!--div do back ground-->  
+  <div class="arrow"><!--seta que volta ao topo-->
+      <div class="seta"><a href="#titulo"><i class="fa-solid fa-arrow-up"></i></a></div>
+    </div>
+    <main>      
+        <section class="container">
+            <div class="input-filter">  <!--barra de pesquisa-->
+                <input type="text" name="" id="filter"
+                 placeholder= "   Digite aqui sua busca..." onkeyup="pesquisaProduto()">
+                <div><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <section class="card-lista" id="card-lista"> <!--cartoes-->
+                <div class="row">
+                    <div class="card">
+                        <img src="tshirt.png" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">T-shirts <span>camisetas</span></h5>
+                            <div class="pe" onclick="clicar()"> <p class="p1"><i class="fa-solid fa-pencil"></i>   Editar</p> <p class="p2"><i class="fa-solid fa-trash-can"></i>   excluir</p></div> 
+                        </div> 
+                    </div>
+                    
+                    <div class="card">
+                        <img src="calca.png" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Calças</h5>
+                            <div class="pe"onclick="clicar()"> <p class="p1"><i class="fa-solid fa-pencil"></i>   Editar</p> <p class="p2"><i class="fa-solid fa-trash-can"></i>   excluir</p></div>                         
+                        </div>
+                    </div>    
+                    <div class="card">
+                        <img src="shorts.png" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Shorts<span>bermudas</span> </h5>
+                            <div class="pe"onclick="clicar()"> <p class="p1"><i class="fa-solid fa-pencil"></i>   Editar</p> <p class="p2"><i class="fa-solid fa-trash-can"></i>   excluir</p></div>                        
+                        </div>
+                    </div>        
+                    <div class="card">
+                        <img src="tenis.png" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Tênis <span>sapatos</span></h5>
+                            <div class="pe"onclick="clicar()"> <p class="p1"><i class="fa-solid fa-pencil"></i>   Editar</p> <p class="p2"><i class="fa-solid fa-trash-can"></i>   excluir</p></div>                         
+                        </div>
+                    </div>            
+                    <div class="card">
+                        <img src="bone.png" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Bonés</h5>
+                            <div class="pe"onclick="clicar()"> <p class="p1"><i class="fa-solid fa-pencil"></i>   Editar</p> <p class="p2"><i class="fa-solid fa-trash-can"></i>   excluir</p></div>                       
+                        </div>
+                    </div>    
+                    <div class="card">
+                        <img src="acessorios.png" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Acessórios <span>oculos relogio</span></h5>
+                            <div class="pe"onclick="clicar()"> <p class="p1"><i class="fa-solid fa-pencil"></i>   Editar</p> <p class="p2"><i class="fa-solid fa-trash-can"></i>   excluir</p></div>                         
+                        </div>
+                    </div>        
+                </div>
+            </section>
+        </section>
+        
+
+    </main>
+    <section> 
+        <div id="contato">
+            <div class="info">
+                <div class="email">
+                    <p><i class="fa-solid fa-envelope"></i></p>
+                    <h4>E-mail </h4>
+                    <p>contato@impar.com.br</p>
+                </div>
+                <div class="linkedin">
+                    <p><i class="fa-brands fa-linkedin"></i></p>
+                    <h4>Linkedin </h4>
+                    <p>www.linkedin.com/company/impar-brasil/</p>
+                </div>
+                <div class="site">
+                   <p><i class="fa-solid fa-at"></i></p>
+                    <h4>Site </h4>
+                    <p>www.impar.com.br</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <footer> <h4>Em breve novidades!</h4></footer>
+    <script src="script.js"></script>
+</body>
+</html>
