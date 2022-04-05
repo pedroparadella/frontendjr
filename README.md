@@ -39,7 +39,7 @@ Executando o servidor de desenolvimento:
 
 ## 😊  Expressões de gratidão
 
--   Queria deixar aqui meu agradecimento especial a  [Lorran Dias](https://www.linkedin.com/in/lorran-dias-142191124/) - Tech Recruiter - [i9hunter] -(https://www.linkedin.com/company/i9hunter/)  Que pessoa extraordinária!!!! - pela oportunidade oferecida em realizar este desafio, que com certeza, ajudou-me a desafiar-me e principalmente em estar a aprender um pouco mais.🤓 
+-   Queria deixar aqui meu agradecimento especial a  [Lorran Dias](https://www.linkedin.com/in/lorran-dias-142191124/) - Tech Recruiter - [i9hunter] -(https://www.linkedin.com/company/i9hunter/)  Que pessoa extraordinária!!!! - Muito obrigado pela oportunidade oferecida em realizar este desafio, que com certeza, ajudou-me a desafiar-me e principalmente em estar a aprender um pouco mais.🤓 
 
 
 ⌨️ com ❤️  [Erick Marinho](https://github.com/Erick-Marinho)
