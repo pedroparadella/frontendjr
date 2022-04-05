@@ -39,7 +39,7 @@ Executando o servidor de desenolvimento:
 
 ## 😊  Expressões de gratidão
 
--   Queria deixar aqui meu agradecimento especial a  [Josilene Dumas](https://www.linkedin.com/in/josilene-dumas-a0a0b433/) - Gerente de Gente e Desenvolvimento  [Forever Liss](https://www.linkedin.com/company/forever-liss/)  - pela oportunidade oferecida em realizar este desafio, que com certeza, ajudou-me a desafiar-me e principalmente em estar a aprender um pouco mais.🤓
+-   Queria deixar aqui meu agradecimento especial a  [Lorran Dias](https://www.linkedin.com/in/lorran-dias-142191124/) - Tech Recruiter - ser humano espetacular  [i9hunter](https://www.linkedin.com/company/i9hunter/)  - pela oportunidade oferecida em realizar este desafio, que com certeza, ajudou-me a desafiar-me e principalmente em estar a aprender um pouco mais.🤓 
 
 
 ⌨️ com ❤️  [Erick Marinho](https://github.com/Erick-Marinho)
