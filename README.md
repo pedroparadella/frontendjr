@@ -13,9 +13,9 @@ https://xd.adobe.com/view/c715f110-fbd4-4323-be0c-0e453c1450db-9246/
 
 ## 👨🏾‍💻Desenvolvimento
 
-Ao receber o desafio, fiz uma reflexão a fim de escolher as melhores ferramentas para a realização do mesmo. Optei por usar o Next.js e Tailwind. Já deixou aqui registrado que foi uma péssima escolha para o momento, era como se fosse dá um tiro de canhão em uma formiga :(
+Ao receber o desafio, fiz uma reflexão a fim de escolher as melhores ferramentas para a realização do mesmo. Optei por usar o Next.js e Tailwind. Já deixo aqui registrado que foi uma péssima escolha para o momento, era como se fosse dá um tiro de canhão em uma formiga :(
 
-O prazo foram de 05 dias corridos, estive dedincando-me ao desenvolvimento do mesmo aproximadamente umas 8h/dia.
+O prazo foram de 05 dias corridos, estive dedincando-me ao desenvolvimento por aproximadamente 8h/dia. Estou com um filho de 8 dias em casa e esse projeto veio com tudo, mas a vontade era grande, pois admiro a Ímpar e o que eles entregam.
 
 Meus pontos críticos foram justamente não conseguir implementar o modal em tão pouco tempo, cheguei pensando que seria igual como faço no React mas infelizmente deparei-me com um erro que abalou as estruturas, que foi justamente o fato de que o Next alertava sobre o erro de 'window is not defined'. Isso me levou um bom tempo, o que me comprometeu e muito meu desempenho e planejamento.
 
