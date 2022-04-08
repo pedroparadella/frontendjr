@@ -4,7 +4,7 @@ export function Header() {
     return (
         <Container>
             <Content>
-                <img src={logoImg} alt="logomarca da impar tecnologia" />
+                <img src={logoImg} alt="logomarca da Ímpar Tecnologia" />
             </Content>
         </Container>
     )

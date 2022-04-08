@@ -18,11 +18,11 @@ export function CardComponents(props) {
                 <p>{pokemon.name}</p>
                 <ControlButtons>
                     <button onClick={handleOpenNewDeleteModal}>
-                        <img src={imgDelete} alt="" />
+                        <img src={imgDelete} alt="Deletar Card" />
                         Excluir
                     </button>
                     <button onClick={showInsertCard}>
-                        <img src={imgEdit} alt="" />
+                        <img src={imgEdit} alt="Editar Card" />
                         Editar
                     </button>
                 </ControlButtons>
