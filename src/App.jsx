@@ -15,53 +15,53 @@ export function App() {
 
 
   const fetchPokemons = async () => {
-    try{
+    try {
       setLoading(true)
       const data = await getPokemon()
-      const promises = data.results.map( async (pokemon) => {
+      const promises = data.results.map(async (pokemon) => {
         return await getPokemonData(pokemon.url)
       })
       const result = await Promise.all(promises)
       setPokemons(result)
       setLoading(false)
-    } catch(error){
+    } catch (error) {
       console.log(error);
     }
-  } 
+  }
 
   const onSearchHandler = async (pokemon) => {
-    if(!pokemon){
+    if (!pokemon) {
       return fetchPokemons()
     }
     setLoading(true)
     setNotFound(false)
     const result = await searchPokemon(pokemon)
 
-    if(!result){
+    if (!result) {
       setNotFound(true)
     } else {
       setPokemons([result])
     }
     setLoading(false)
-  } 
+  }
 
   const showInsertCard = () => {
     setShowCard(true)
-}
+  }
   const CloseInsertCard = () => {
-    if(showCard){
+    if (showCard) {
       setShowCard(false)
     }
-}
-function handleOpenNewDeleteModal(){
-  setIsNewDeleteModalIsOpen(true)
-}
+  }
+  function handleOpenNewDeleteModal() {
+    setIsNewDeleteModalIsOpen(true)
+  }
 
-function handleCloseNewDeleteModal(){
-  setIsNewDeleteModalIsOpen(false)
-}
-  
-  useEffect(() =>{
+  function handleCloseNewDeleteModal() {
+    setIsNewDeleteModalIsOpen(false)
+  }
+
+  useEffect(() => {
     fetchPokemons()
   }, [])
 
@@ -69,22 +69,22 @@ function handleCloseNewDeleteModal(){
     <div>
       <GlobalStyle />
       <Header />
-      <DeleteModal 
+      <DeleteModal
         isOpen={isNewDeleteModalIsOpen}
         onRequestClose={handleCloseNewDeleteModal}
       />
 
-      <Banner onSearch= {onSearchHandler}/>
-      {notFound ? (<div className="search-error">Não encontramos este Pokemon, Refaça a pesquisa ou Recarregue a página.</div>) 
-      : (<MainContainer 
-            pokemons = {pokemons} 
-            loading={loading} 
-            showCard={showCard} 
-            showInsertCard={showInsertCard} 
-            CloseInsertCard ={CloseInsertCard}
-            handleOpenNewDeleteModal={handleOpenNewDeleteModal}
-          />
-      )}
+      <Banner onSearch={onSearchHandler} />
+      {notFound ? (<div className="search-error">Não encontramos este Pokemon, Refaça a pesquisa ou Recarregue a página.</div>)
+        : (<MainContainer
+          pokemons={pokemons}
+          loading={loading}
+          showCard={showCard}
+          showInsertCard={showInsertCard}
+          CloseInsertCard={CloseInsertCard}
+          handleOpenNewDeleteModal={handleOpenNewDeleteModal}
+        />
+        )}
     </div>
   );
 }

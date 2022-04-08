@@ -3,14 +3,14 @@ import imgMagnifyingGlass from '../../assets/lupa.png'
 import { useState } from "react";
 
 
-export function Banner(props){
+export function Banner(props) {
     const [search, setSearch] = useState('')
-    const {onSearch} = props
+    const { onSearch } = props
 
 
     const onChangeSearch = (e) => {
         setSearch(e.target.value.toLowerCase())
-        if(e.target.value === ''){
+        if (e.target.value === '') {
             onSearch(undefined)
         }
     }
@@ -19,11 +19,11 @@ export function Banner(props){
         onSearch(search)
     }
 
-    return(
+    return (
         <Container>
             <Content>
-                <input 
-                    type="text" 
+                <input
+                    type="text"
                     placeholder="Digite aqui sua busca..."
                     onChange={onChangeSearch}
                 />

@@ -69,6 +69,13 @@ export const ControlButtons = styled.span`
         outline: none;
         color: var(--text-colot);
         opacity: 0.48;
+        transition: all .5s ease-in-out;
+
+            &:hover{
+                color: var(--error-color);
+            }
+
+
         
         img{
             width: 14px;

@@ -6,7 +6,7 @@ import imgEdit from '../../assets/Icon-edit.png'
 
 
 export function CardComponents(props) {
-    const { pokemon, showInsertCard, handleOpenNewDeleteModal} = props
+    const { pokemon, showInsertCard, handleOpenNewDeleteModal } = props
 
     return (
         <Container>

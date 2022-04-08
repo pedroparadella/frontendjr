@@ -3,23 +3,23 @@ import { useEffect, useState } from "react";
 import { ContainerCard } from "../ContainerCard";
 import { ContainerOn, ContainerOff } from "./styles";
 
-export function CreateCard(props){
+export function CreateCard(props) {
     const [change, setChange] = useState(false)
-    const {showCard, CloseInsertCard} = props
+    const { showCard, CloseInsertCard } = props
 
 
-    useEffect(() =>{
+    useEffect(() => {
         setChange(showCard)
-    },[showCard])
-    return(
+    }, [showCard])
+    return (
         <>
             {change ? (<ContainerOn>
-                            <ContainerCard CloseInsertCard={CloseInsertCard}/>
-                       </ContainerOn>) :
-                       
-                       (<ContainerOff>
-                           <ContainerCard CloseInsertCard={CloseInsertCard}/>
-                       </ContainerOff>)
+                <ContainerCard CloseInsertCard={CloseInsertCard} />
+            </ContainerOn>) :
+
+                (<ContainerOff>
+                    <ContainerCard CloseInsertCard={CloseInsertCard} />
+                </ContainerOff>)
             }
         </>
     )

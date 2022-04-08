@@ -19,13 +19,15 @@ export const Container = styled.main`
             color: var(--primary-color);
         }
     }
-    .close{
+    button.close{
         width: 1rem;
         height: 1rem;
         box-shadow: none;
         background: transparent;
+        float: right;
+        border: none;
     }
-    button{
+    button.create-card{
         width: 10.5rem;
         height: 3rem;
         color: var(--white-color);
@@ -34,6 +36,8 @@ export const Container = styled.main`
         border: none;
         box-shadow: 0px 3px 6px rgba(146, 32, 114, 0.26);
         float: right;
+        font-size: 1.125rem;
+        font-weight: 600;
     }
 `
 export const Line = styled.div`
