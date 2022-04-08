@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Banner } from "./components/Banner";
+import { DeleteModal } from "./components/DeleteModal";
 import { Header } from "./components/Header";
 import { MainContainer } from "./components/MainContainer";
 import { getPokemon, getPokemonData, searchPokemon } from "./services/api";
@@ -10,6 +11,7 @@ export function App() {
   const [loading, setLoading] = useState(false)
   const [notFound, setNotFound] = useState(false)
   const [showCard, setShowCard] = useState(false)
+  const [isNewDeleteModalIsOpen, setIsNewDeleteModalIsOpen] = useState(false)
 
 
   const fetchPokemons = async () => {
@@ -51,6 +53,13 @@ export function App() {
       setShowCard(false)
     }
 }
+function handleOpenNewDeleteModal(){
+  setIsNewDeleteModalIsOpen(true)
+}
+
+function handleCloseNewDeleteModal(){
+  setIsNewDeleteModalIsOpen(false)
+}
   
   useEffect(() =>{
     fetchPokemons()
@@ -60,6 +69,11 @@ export function App() {
     <div>
       <GlobalStyle />
       <Header />
+      <DeleteModal 
+        isOpen={isNewDeleteModalIsOpen}
+        onRequestClose={handleCloseNewDeleteModal}
+      />
+
       <Banner onSearch= {onSearchHandler}/>
       {notFound ? (<div className="search-error">Não encontramos este Pokemon, Refaça a pesquisa ou Recarregue a página.</div>) 
       : (<MainContainer 
@@ -68,6 +82,7 @@ export function App() {
             showCard={showCard} 
             showInsertCard={showInsertCard} 
             CloseInsertCard ={CloseInsertCard}
+            handleOpenNewDeleteModal={handleOpenNewDeleteModal}
           />
       )}
     </div>

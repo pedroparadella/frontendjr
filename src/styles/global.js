@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
         --light-gray: #e4e4e4;
         --gray: #e5e5e5;
         --text-color: #263238;
+        --error-color: #DB2525;
     }
 
     *{
@@ -51,12 +52,32 @@ export const GlobalStyle = createGlobalStyle`
     .search-error {
         display: flex;
         justify-content: center;
-        margin-top: 2rem;
+        margin: 2rem auto;
         max-width: 65rem;
         padding: 0 2rem;
         font-size: 1.5rem;
         font-weight: 600;
         text-align: center;
         color: var(--primary-color);
+    }
+    .react-modal-overlay{
+        background: rgba(246, 244, 246, 0.8);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .react-modal-content{
+        position: relative;
+        width: min(100%, 27rem);
+        height: min(100%, 27rem);
+        background: var(--white-color);
+        padding: 3.125rem 2.625rem 2rem 2.625rem;
+        position: relative;
+        border-radius: 0.25rem;
     }
 `

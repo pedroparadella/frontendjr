@@ -1,11 +1,12 @@
-﻿import { Container, ContainerImage, Content, ControlButtons, Line } from "./styles";
+﻿
+import { Container, ContainerImage, Content, ControlButtons, Line } from "./styles";
 import imgDelete from '../../assets/Icon-trash.png'
 import imgEdit from '../../assets/Icon-edit.png'
 
 
 
 export function CardComponents(props) {
-    const { pokemon, showInsertCard} = props
+    const { pokemon, showInsertCard, handleOpenNewDeleteModal} = props
 
     return (
         <Container>
@@ -16,7 +17,7 @@ export function CardComponents(props) {
                 <Line />
                 <p>{pokemon.name}</p>
                 <ControlButtons>
-                    <button>
+                    <button onClick={handleOpenNewDeleteModal}>
                         <img src={imgDelete} alt="" />
                         Excluir
                     </button>

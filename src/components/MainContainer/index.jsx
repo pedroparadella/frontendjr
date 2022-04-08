@@ -4,7 +4,7 @@ import { CreateCard } from "../CreateCard";
 import { Container, HeaderContent, MainCardContent } from "./styles";
 
 export function MainContainer(props){
-    const {pokemons, loading, showCard, showInsertCard, CloseInsertCard} = props
+    const {pokemons, loading, showCard, showInsertCard, CloseInsertCard, handleOpenNewDeleteModal} = props
   
     return (
         <Container>
@@ -20,6 +20,7 @@ export function MainContainer(props){
                         return <CardComponents 
                                     showInsertCard={showInsertCard} 
                                     CloseInsertCard={CloseInsertCard}
+                                    handleOpenNewDeleteModal={handleOpenNewDeleteModal}
                                     pokemon={pokemon} 
                                     key={pokemon.name}
                                 />
