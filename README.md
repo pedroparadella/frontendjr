@@ -1,7 +1,7 @@
 # Avaliação Junior
 Olá Avaliador Ímpar!\
 Tudo ótimo e você ?! 😊\
-\
+
 
 Abaixo estarão listados o modo de execução de código, sobre como preparar o ambiente para a execução do mesmo, e a proposta de solução do projeto teste para a vaga de Desenvolvedor Front-End na Ímpar!
 
