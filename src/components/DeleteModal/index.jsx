@@ -1,6 +1,4 @@
 import Modal from 'react-modal'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { Container, Line } from './styles'
 import imgTrash from '../../assets/icon_trash_64.png'
 import imgClose from '../../assets/close_fff.svg'
@@ -8,18 +6,9 @@ import imgClose from '../../assets/close_fff.svg'
 Modal.setAppElement('#root')
 
 export function DeleteModal(props) {
-    const { isOpen, onRequestClose } = props
+    const { isOpen, onRequestClose, notify } = props
 
-    const notify = () => toast.warn('Função não implementada', {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-    });
-
+   
     return (
         <Modal
             isOpen={isOpen}
@@ -51,18 +40,8 @@ export function DeleteModal(props) {
                         Cancelar
                     </button>
                 </div>
+
             </Container>
-            <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss={false}
-                draggable
-                pauseOnHover
-            />
         </ Modal>
     )
 

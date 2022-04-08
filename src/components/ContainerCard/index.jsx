@@ -1,21 +1,11 @@
 ﻿import { Container, ContainerInput, Line } from "./styles";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import imgCreateCard from '../../assets/icone_criar.png'
 import imgClose from '../../assets/close.svg'
 
 export function ContainerCard(props) {
-    const { CloseInsertCard } = props
+    const { CloseInsertCard, notify } = props
+    console.log(notify);
 
-    const notify = () => toast.warn('Função não implementada', {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-    });
 
     return (
         <Container>
@@ -46,17 +36,6 @@ export function ContainerCard(props) {
             >
                 Criar Card
             </button>
-            <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss={false}
-                draggable
-                pauseOnHover
-            />
         </Container>
     )
 }

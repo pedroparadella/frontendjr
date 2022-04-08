@@ -5,20 +5,25 @@ import { ContainerOn, ContainerOff } from "./styles";
 
 export function CreateCard(props) {
     const [change, setChange] = useState(false)
-    const { showCard, CloseInsertCard } = props
-
-
+    const { showCard, CloseInsertCard, notify} = props
+    
     useEffect(() => {
         setChange(showCard)
     }, [showCard])
     return (
         <>
             {change ? (<ContainerOn>
-                <ContainerCard CloseInsertCard={CloseInsertCard} />
+                <ContainerCard 
+                    CloseInsertCard={CloseInsertCard} 
+                    notify={notify}
+                />
             </ContainerOn>) :
 
                 (<ContainerOff>
-                    <ContainerCard CloseInsertCard={CloseInsertCard} />
+                    <ContainerCard 
+                        CloseInsertCard={CloseInsertCard} 
+                        notify={notify}
+                    />
                 </ContainerOff>)
             }
         </>

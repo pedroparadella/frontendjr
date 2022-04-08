@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Banner } from "./components/Banner";
 import { DeleteModal } from "./components/DeleteModal";
 import { Header } from "./components/Header";
@@ -60,6 +62,16 @@ export function App() {
   function handleCloseNewDeleteModal() {
     setIsNewDeleteModalIsOpen(false)
   }
+  const notify = () => toast.warn('Função não implementada', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+});
+
 
   useEffect(() => {
     fetchPokemons()
@@ -72,17 +84,29 @@ export function App() {
       <DeleteModal
         isOpen={isNewDeleteModalIsOpen}
         onRequestClose={handleCloseNewDeleteModal}
+        notify={notify}
       />
-
       <Banner onSearch={onSearchHandler} />
+      <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable
+                pauseOnHover
+            />
       {notFound ? (<div className="search-error">Não encontramos este Pokemon, Refaça a pesquisa ou Recarregue a página.</div>)
         : (<MainContainer
-          pokemons={pokemons}
-          loading={loading}
-          showCard={showCard}
-          showInsertCard={showInsertCard}
-          CloseInsertCard={CloseInsertCard}
-          handleOpenNewDeleteModal={handleOpenNewDeleteModal}
+            pokemons={pokemons}
+            loading={loading}
+            showCard={showCard}
+            showInsertCard={showInsertCard}
+            CloseInsertCard={CloseInsertCard}
+            handleOpenNewDeleteModal={handleOpenNewDeleteModal}
+            notify={notify}
         />
         )}
     </div>
