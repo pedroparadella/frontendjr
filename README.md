@@ -15,11 +15,11 @@ Para implementação foi utilizado o layout proposto como base para orientação
 
 ### Ferramentas para implementação foram utilizadas: 
 
-[React JS](https://pt-br.reactjs.org/)
-[Styled Components](https://styled-components.com/)
-[Axios](https://axios-http.com/docs/intro)
-[React-Modal](https://reactcommunity.org/react-modal/)
-[React-Toastify](https://fkhadra.github.io/react-toastify/introduction)
+- [React JS](https://pt-br.reactjs.org/)
+- [Styled Components](https://styled-components.com/)
+- [Axios](https://axios-http.com/docs/intro)
+- [React-Modal](https://reactcommunity.org/react-modal/)
+- [React-Toastify](https://fkhadra.github.io/react-toastify/introduction)
 
 Interface gráfica contruída com React.
 Biblioteca Axios para requisições http.
