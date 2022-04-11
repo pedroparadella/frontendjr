@@ -1,28 +1,22 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
-import whiteLogo from "../../assets/white-logo.svg";
+import Carousel from 'flat-carousel';
+import './styles.css'
 
-class DemoCarousel extends Component {
-    render() {
-        return (
-            <Carousel>
-                <div>
-                    <img src={whiteLogo} />
-                    <p className="legend">Legend 1</p>
-                </div>
-                <div>
-                    <img src="assets/2.jpeg" />
-                    <p className="legend">Legend 2</p>
-                </div>
-                <div>
-                    <img src="assets/3.jpeg" />
-                    <p className="legend">Legend 3</p>
-                </div>
-            </Carousel>
-        );
-    }
-};
+const images = [
+    { src: 'https://reactjs.org/logo-og.png' },
+    { src: 'https://reactjs.org/logo-og.png' }
 
-export default DemoCarousel
+];
+
+const CarouselContainer = () => (
+    <Carousel>
+        {images.map((image, index) => (
+            <div
+                key={index}
+                className="demo-item"
+                style={{ backgroundImage: 'url(' + image.src + ')' }}
+            />
+        ))}
+    </Carousel>
+);
+
+export default CarouselContainer

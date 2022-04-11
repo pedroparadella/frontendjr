@@ -1,0 +1,27 @@
+Arguments: 
+  /home/adrianwarrior/.nvm/versions/node/v17.9.0/bin/node /usr/share/yarn/bin/yarn.js add flat-carousel
+
+PATH: 
+  /home/adrianwarrior/.nvm/versions/node/v17.9.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  17.9.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: connect ENETUNREACH 2606:4700::6810:1923:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1195:16)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
