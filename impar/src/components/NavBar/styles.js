@@ -10,3 +10,7 @@ export const NavBarContainer = styled.div `
   padding-left: 2vw;
   width: 100vw;
 `;
+
+export const WhiteLogo = styled.img `
+width: 11vw
+`
