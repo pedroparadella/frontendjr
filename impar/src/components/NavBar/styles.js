@@ -7,7 +7,6 @@ export const NavBarContainer = styled.div `
     rgb(169, 38, 112)
   );
   height: 10vh;
-  padding-left: 2vw;
   width: 100vw;
 `;
 

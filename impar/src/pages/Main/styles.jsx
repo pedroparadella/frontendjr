@@ -4,6 +4,7 @@ export const MainCardsContainer = styled.div`
   background-color: blue;
   display: flex;
   height: 100vh;
-  padding-left: 3vw;
-  width: 100vw;
+  flex-wrap: wrap;
+  padding-left: 1vw;
+  width: 100%;
 `;

@@ -11,8 +11,7 @@ const Main = () => {
       <NavBar />
       <Carousel />
       <MainCardsContainer>
-        <Card /> <Card /> <Card />
-        <Card />
+        <Card src={'sasd'}/> <Card /> <Card /><Card /><Card /><Card /><Card />
       </MainCardsContainer>
     </>
   );
