@@ -548,6 +548,13 @@ estree-walker@^2.0.1:
   resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-2.0.2.tgz#52f010178c2a4c117a7757cfe942adb7d2da4cac"
   integrity sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==
 
+flat-carousel@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/flat-carousel/-/flat-carousel-0.0.1.tgz#973405c3ca16438e3ee8be02d375f6eef3af24ad"
+  integrity sha512-oOHCNCjnw4Tx7KFNSH1rUaqJtvrCf5Ku7dBRfA3jIFySMgEervNlh941SqVI67nf7tNqNRMmJNU6WzibCx/K+w==
+  dependencies:
+    react "^16.11.0"
+
 fsevents@~2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
@@ -677,7 +684,7 @@ postcss@^8.4.12:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-prop-types@^15.5.8:
+prop-types@^15.5.8, prop-types@^15.6.2:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -735,6 +742,15 @@ react-router@6.3.0:
   integrity sha512-7Wh1DzVQ+tlFjkeo+ujvjSqSJmkt1+8JO+T5xklPlgrh70y7ogx75ODRW0ThWhY7S+6yEDks8TYrtQe/aoboBQ==
   dependencies:
     history "^5.2.0"
+
+react@^16.11.0:
+  version "16.14.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
+  integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
 
 react@^17.0.2:
   version "17.0.2"
