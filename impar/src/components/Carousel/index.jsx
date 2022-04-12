@@ -11,7 +11,6 @@ const CarouselContainer = () => (
     {images.map((image, index) => (
       <CarouselImg src={image.src} key={index}/>
     ))}
-    <input></input>
   </Carousel>
 );
 

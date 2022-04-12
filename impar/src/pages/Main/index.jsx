@@ -11,25 +11,27 @@ import {
   Ico,
 } from "./styles";
 import searchIco from "../../assets/search-ico.png";
-import getProducts from "../../services/axiosAPI";
+import API from "../../services/axiosAPI";
 
 const Main = () => {
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(async () => {
-    await getProducts()
+    await API.getProducts()
       .then(({ data: { results } }) => setProducts(results))
       .catch((error) => console.log(error));
   }, []);
 
   const search = () => {
-    alert("oi");
+    API.getBySearch(searchQuery)
+      .then(({ data: { results } }) => setProducts(results))
+      .catch((error) => console.log(error));
   };
 
-  const   handleChange = (event) => {
+  const handleChange = (event) => {
     setSearchQuery(event.target.value);
-  }
+  };
 
   return (
     <>
@@ -44,7 +46,7 @@ const Main = () => {
       <MainContainer>
         <MainCardsContainer>
           {products.map((product, index) => (
-            <Card src={product.thumbnail} title={product.title}  key={index}/>
+            <Card src={product.thumbnail} title={product.title} key={index} />
           ))}
           <button onClick={() => console.log(products)}>
             asssssssssssssssss

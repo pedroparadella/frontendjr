@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Routes, Route, Link } from "react-router-dom";
 
 function Home() {
   return (

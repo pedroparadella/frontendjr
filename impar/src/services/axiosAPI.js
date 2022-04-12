@@ -1,18 +1,20 @@
 import axios from "axios";
 
 const endpoint =
-    "https://api.mercadolibre.com/sites/MLB/search?category=MLB1384&limit=20";
+    "https://api.mercadolibre.com/sites/MLB";
 
-const API = axios.create({
+const categoryAndLimit = "search?category=MLB1384&limit=20";
+
+const http = axios.create({
     baseURL: endpoint,
 });
 
 const getProducts = () => {
-    return API.get("");
+    return http.get(categoryAndLimit);
 };
 
 const getBySearch = (query) => {
-    return API.get(`&q=${query}`)
-}
+    return http.get(`${categoryAndLimit}&q=${query}`);
+};
 
-export default { getProducts };
+export default { getProducts, getBySearch };

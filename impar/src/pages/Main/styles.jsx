@@ -4,6 +4,7 @@ export const CarouselAndInputContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 export const Input = styled.input`
   border-radius: 1vw;
   display: flex;
@@ -37,9 +38,9 @@ export const MainContainer = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
-
   padding-left: 1vw;
 `;
+
 export const MainCardsContainer = styled.div`
   display: flex;
   margin-top: 10vh;
