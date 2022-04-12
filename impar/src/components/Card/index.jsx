@@ -3,6 +3,7 @@ import {
   CardContainer,
   CardImgContainer,
   CardImg,
+  CardDescription,
   CardIcons,
   Ico,
   Button,
@@ -17,6 +18,7 @@ const Card = ({ src }) => {
       <CardImgContainer>
         <CardImg src={src} />
       </CardImgContainer>
+      <CardDescription/>
       <CardIcons>
         <Ico src={icoLixeira} /> <Button>Excluir</Button>
         <Ico src={icoLapiseira} /> <Button>Editar</Button>

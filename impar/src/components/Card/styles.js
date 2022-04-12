@@ -8,14 +8,14 @@ export const CardContainer = styled.div `
   padding: 2vw;
   width: 18vw;
   margin: 1vw;
-  `;
+`;
 
 export const CardImgContainer = styled.div `
   background-color: red;
   border-radius: 5%;
   height: 100%;
   width: 100%;
-  `;
+`;
 
 export const CardImg = styled.div `
   width: 100%;
@@ -24,11 +24,17 @@ export const CardImg = styled.div `
   background-size: cover;
 `;
 
+export const CardDescription = styled.div`
+  background-color: purple;
+  width: 100%;
+  height: 50%;
+`;
+
 export const CardIcons = styled.div`
   align-self: center;
   background-color: pink;
   display: flex;
-  height: 30%;
+  height: 28%;
   flex-direction: row;
   width: 20vw;
 `;
