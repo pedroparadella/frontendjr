@@ -1,30 +1,34 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../../components/NavBar";
 import Carousel from "../../components/Carousel";
 import Card from "../../components/Card";
-import { MainCardsContainer } from "./styles";
-import a from "../../assets/familia-feliz.jpg"
+import { MainContainer, MainCardsContainer } from "./styles";
+import getProducts from "../../services/axiosAPI";
+import a from "../../assets/familia-feliz.jpg";
 
 const Main = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(async () => {
+    await getProducts()
+      .then(({ data: { results } }) => setProducts(results))
+      .catch((error) => console.log(error));
+  }, []);
 
   return (
     <>
       <NavBar />
       <Carousel />
-      <MainCardsContainer>
-        <Card src={a} /> <Card /> <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </MainCardsContainer>
-      <button
-        onClick={() =>
-          API.get().then(({ data: { results } }) => console.log(results))
-        }
-      >
-        aaaaaaaa
-      </button>
+      <MainContainer>
+        <MainCardsContainer>
+          {products.map((product) => (
+            <Card src={product.thumbnail} title={product.title} />
+          ))}
+          <button onClick={() => console.log(products)}>
+            asssssssssssssssss
+          </button>
+        </MainCardsContainer>
+      </MainContainer>
     </>
   );
 };

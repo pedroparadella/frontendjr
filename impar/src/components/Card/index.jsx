@@ -3,7 +3,7 @@ import {
   CardContainer,
   CardImgContainer,
   CardImg,
-  CardDescription,
+  CardTitle,
   CardIcons,
   Ico,
   Button,
@@ -11,17 +11,16 @@ import {
 import icoLixeira from "../../assets/ico-lixeira.png";
 import icoLapiseira from "../../assets/ico-lapiseira.png";
 
-const Card = ({ src }) => {
-  console.log(src);
+const Card = ({ src, title }) => {
   return (
     <CardContainer>
       <CardImgContainer>
         <CardImg src={src} />
       </CardImgContainer>
-      <CardDescription/>
+      <CardTitle>{title}</CardTitle>
       <CardIcons>
-        <Ico src={icoLixeira} /> <Button>Excluir</Button>
-        <Ico src={icoLapiseira} /> <Button>Editar</Button>
+        <Ico src={icoLixeira} height={60}/> <Button>Excluir</Button>
+        <Ico src={icoLapiseira} height={70}/> <Button>Editar</Button>
       </CardIcons>
     </CardContainer>
   );
