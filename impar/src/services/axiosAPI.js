@@ -9,12 +9,10 @@ const http = axios.create({
     baseURL: endpoint,
 });
 
-const getProducts = () => {
+export const getProducts = () => {
     return http.get(categoryAndLimit);
 };
 
-const getBySearch = (query) => {
+export const getBySearch = (query) => {
     return http.get(`${categoryAndLimit}&q=${query}`);
 };
-
-export default { getProducts, getBySearch };

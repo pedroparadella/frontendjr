@@ -33,9 +33,7 @@ export const CardTitle = styled.div`
 
 export const CardIcons = styled.div`
   align-self: center;
-  background-image: linear-gradient(
-    to bottom, whitesmoke, white
-  );
+  background-image: linear-gradient(to bottom, whitesmoke, white);
   display: flex;
   flex-direction: row;
   height: 18%;
@@ -54,7 +52,7 @@ export const Button = styled.button`
   border: none;
   background-color: inherit;
   :hover {
-    color: red;
+    color: ${(props) => `${props.hover}`};
   }
   font-size: 1vw;
 `;

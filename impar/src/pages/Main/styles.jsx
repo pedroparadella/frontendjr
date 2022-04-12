@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+export const Button = styled.button`
+  color: white;
+  background-color: rgb(231, 99, 22);
+  border: none;
+  border-radius: 5%;
+  box-shadow: 1px 1px 1px 1px gray;
+  font-size: 1.5vw;
+  height: 8vh;
+  width: 15vw;
+  font-weight: bold;
+  margin-left: 45vw;
+`;
+
 export const CarouselAndInputContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -8,7 +21,7 @@ export const CarouselAndInputContainer = styled.div`
 export const Input = styled.input`
   border-radius: 1vw;
   display: flex;
-  font-size: 3vw;
+  font-size: 2vw;
   height: 8vh;
   margin-left: 15vw;
   margin-top: -15vh;
@@ -43,8 +56,18 @@ export const MainContainer = styled.div`
 
 export const MainCardsContainer = styled.div`
   display: flex;
-  margin-top: 10vh;
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
+`;
+
+export const NewCardsContainer = styled.div`
+  background-color: whitesmoke;
+  color: rgb(99, 21, 119);
+  display: flex;
+  font-size: 4vw;
+  height: 10vh;
+  padding-top: 15vh;
+  padding-left: 3vw;
+  width: 100vw;
 `;

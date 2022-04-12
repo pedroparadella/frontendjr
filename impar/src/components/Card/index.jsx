@@ -22,8 +22,8 @@ const Card = ({ src, title }) => {
         <CardTitle>{title}</CardTitle>
       </TitleContainer>
       <CardIcons>
-        <Ico src={icoLixeira} height={60} /> <Button>Excluir</Button>
-        <Ico src={icoLapiseira} height={70} /> <Button>Editar</Button>
+        <Ico src={icoLixeira} height={60} /> <Button hover={"red"}>Excluir</Button>
+        <Ico src={icoLapiseira} height={70} /> <Button hover={"orange"}>Editar</Button>
       </CardIcons>
     </CardContainer>
   );

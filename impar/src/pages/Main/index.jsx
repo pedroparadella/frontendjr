@@ -3,28 +3,30 @@ import NavBar from "../../components/NavBar";
 import Carousel from "../../components/Carousel";
 import Card from "../../components/Card";
 import {
-  MainContainer,
-  MainCardsContainer,
+  Button,
   CarouselAndInputContainer,
   Input,
   InputIco,
   Ico,
+  MainContainer,
+  MainCardsContainer,
+  NewCardsContainer,
 } from "./styles";
 import searchIco from "../../assets/search-ico.png";
-import API from "../../services/axiosAPI";
+import { getProducts, getBySearch } from "../../services/axiosAPI";
 
 const Main = () => {
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(async () => {
-    await API.getProducts()
+    await getProducts()
       .then(({ data: { results } }) => setProducts(results))
       .catch((error) => console.log(error));
   }, []);
 
   const search = () => {
-    API.getBySearch(searchQuery)
+    getBySearch(searchQuery)
       .then(({ data: { results } }) => setProducts(results))
       .catch((error) => console.log(error));
   };
@@ -43,6 +45,10 @@ const Main = () => {
           <Ico src={searchIco} onClick={() => search()} />
         </InputIco>
       </CarouselAndInputContainer>
+      <NewCardsContainer>
+        Resultado de busca
+        <Button> Novo Card </Button>
+      </NewCardsContainer>
       <MainContainer>
         <MainCardsContainer>
           {products.map((product, index) => (
