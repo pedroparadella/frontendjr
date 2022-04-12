@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const CardContainer = styled.div `
   background-color: white;
   border-radius: 5%;
+  box-shadow: 2px 2px 2px 2px gray;
   display: flex;
   flex-direction: column;
   height: 50vh;
@@ -27,23 +28,26 @@ export const CardImg = styled.div `
 
 export const CardTitle = styled.div`
   /* background-color: purple; */
-  width: 100%;
-  height: 50%;
+  color: gray;
 `;
 
 export const CardIcons = styled.div`
   align-self: center;
-  /* background-color: pink; */
+  background-image: linear-gradient(
+    to bottom, whitesmoke, white
+  );
   display: flex;
-  height: 18%;
   flex-direction: row;
-  width: 20vw;
+  height: 18%;
+  margin-top: 1vh;
+  width: 22vw;
 `;
 
 export const Ico = styled.img`
   display: flex;
   height: ${(props) => `${props.height}%`};
   margin-left: 10%;
+  margin-top: 2vh;
 `;
 
 export const Button = styled.button`
@@ -53,4 +57,11 @@ export const Button = styled.button`
     color: red;
   }
   font-size: 1vw;
+`;
+
+export const TitleContainer = styled.div`
+  height: 50%;
+  padding-top: 10%;
+  margin-bottom: -20%;
+  width: 100%;
 `;

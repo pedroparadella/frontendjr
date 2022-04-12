@@ -11,4 +11,8 @@ const getProducts = () => {
     return API.get("");
 };
 
-export default getProducts;
+const getBySearch = (query) => {
+    return API.get(`&q=${query}`)
+}
+
+export default { getProducts };
