@@ -3,7 +3,7 @@ import NavBar from "../../components/NavBar";
 import Carousel from "../../components/Carousel";
 import Card from "../../components/Card";
 import DeleteModal from "../../components/Modal/DeleteModal";
-
+import actions from "../../store/actions";
 import {
   Button,
   CarouselAndInputContainer,
@@ -16,21 +16,28 @@ import {
 } from "./styles";
 import searchIco from "../../assets/search-ico.png";
 import { getProducts, getBySearch } from "../../services/axiosAPI";
+import { useDispatch, useSelector } from "react-redux";
 
 const Main = () => {
-  const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [isDeleting, setDeleting] = useState(false);
+  const isDeleting = useSelector((state) => state.isDeleting);
+  const productsList = useSelector((state) => state.productsList);
+  const dispatch = useDispatch();
+
   useEffect(async () => {
     await getProducts()
-      .then(({ data: { results } }) => setProducts(results))
-      .catch((error) => console.log(error));
+      .then(({ data: { results } }) =>
+        dispatch({ type: actions.UPDATE_PRODUCTS_LIST, productsList: results })
+      )
+      .catch((error) => alert(error));
   }, []);
 
   const search = () => {
     getBySearch(searchQuery)
-      .then(({ data: { results } }) => setProducts(results))
-      .catch((error) => console.log(error));
+      .then(({ data: { results } }) =>
+        dispatch({ type: actions.UPDATE_PRODUCTS_LIST, productsList: results })
+      )
+      .catch((error) => alert(error));
   };
 
   const handleChange = (event) => {
@@ -44,7 +51,7 @@ const Main = () => {
         <Carousel />
         <Input type="text" onChange={handleChange} />
         <InputIco>
-          <Ico src={searchIco} onClick={() => search()} />
+          <Ico src={searchIco} onClick={search} />
         </InputIco>
       </CarouselAndInputContainer>
       <DeleteModal isDeleting={isDeleting} />
@@ -54,8 +61,8 @@ const Main = () => {
       </NewCardsContainer>
       <MainContainer>
         <MainCardsContainer>
-          {products.map((product, index) => (
-            <Card src={product.thumbnail} title={product.title} key={index} />
+          {productsList.map((product, index) => (
+            <Card src={product.thumbnail} title={product.title} index={index} key={index} />
           ))}
         </MainCardsContainer>
       </MainContainer>

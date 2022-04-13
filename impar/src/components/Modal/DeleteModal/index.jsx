@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import actions from "../../../store/actions";
 import {
   DeleteModalContainer,
   Overlay,
@@ -12,18 +13,27 @@ import {
 } from "./styles";
 
 import icoLixeira from "../../../assets/ico-lixeira.png";
+import { useSelector, useDispatch } from "react-redux";
 
-const DeleteModal = ({isDeleting}) => {
-  console.log(isDeleting)
-  const [modal, setModal] = useState(isDeleting);
+const DeleteModal = () => {
+  const dispatch = useDispatch();
+  const isDeleting = useSelector((state) => state.isDeleting);
+  const productsList = useSelector((state) => state.productsList);
+  const cardIndex = useSelector((state) => state.cardIndex);
 
   const toggleModal = () => {
-    setModal(!modal);
+    dispatch({ type: actions.TOGGLE_DELETING });
+  };
+
+  const deleteCard = () => {
+    productsList.splice(cardIndex, 1)
+    dispatch({ type: actions.UPDATE_PRODUCTS_LIST, productsList: productsList });
+    toggleModal();
   };
 
   return (
     <>
-      {modal && (
+      {isDeleting && (
         <DeleteModalContainer>
           <Overlay onClick={toggleModal}></Overlay>
           <Modal className="modal-content">
@@ -36,7 +46,7 @@ const DeleteModal = ({isDeleting}) => {
             </Text>
             <Text fontSize={1}>CERTEZA QUE DESEJA EXCLUIR?</Text>
             <ButtonsContainer>
-              <Button background={"red"} color={"white"}>
+              <Button background={"red"} color={"white"} onClick={deleteCard}>
                 Excluir
               </Button>
               <Button background={"white"} color={"red"} onClick={toggleModal}>
