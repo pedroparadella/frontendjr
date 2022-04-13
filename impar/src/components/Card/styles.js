@@ -13,7 +13,6 @@ export const CardContainer = styled.div `
 `;
 
 export const CardImgContainer = styled.div `
-  /* background-color: black; */
   height: 100%;
   width: 100%;
 `;
@@ -27,7 +26,6 @@ export const CardImg = styled.div `
 `;
 
 export const CardTitle = styled.div`
-  /* background-color: purple; */
   color: gray;
 `;
 

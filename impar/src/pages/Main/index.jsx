@@ -4,6 +4,7 @@ import Carousel from "../../components/Carousel";
 import Card from "../../components/Card";
 import DeleteModal from "../../components/Modal/DeleteModal";
 import CreateOrEditModal from "../../components/Modal/CreateOrEditModal";
+import WelcomeModal from "../../components/Modal/WelcomeModal";
 
 import actions from "../../store/actions";
 import {
@@ -22,6 +23,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Main = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [welcome, setWelcome] = useState(true);
+
   const isCreating = useSelector((state) => state.isCreating);
   const productsList = useSelector((state) => state.productsList);
   const dispatch = useDispatch();
@@ -67,6 +70,7 @@ const Main = () => {
           <Ico src={searchIco} onClick={search} />
         </InputIco>
       </CarouselAndInputContainer>
+      <WelcomeModal />
       <DeleteModal />
       <CreateOrEditModal isCreating={isCreating} />
       <NewCardsContainer>
