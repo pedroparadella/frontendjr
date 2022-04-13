@@ -16,7 +16,7 @@ export const LogoContainer = styled.div `
   background-image: ${(props) => `url(${props.src})`};
   background-size: cover;
   width: 35vw;
-  height: 40vh;
+  height: 44vh;
   margin-top: -4vh;
 `;
 
@@ -36,8 +36,8 @@ export const Modal = styled.div`
   border-radius: 1vh;
   display: flex;
   flex-direction: column;
-  height: 60vh;
-  margin-top: 40vh;
+  height: 70vh;
+  margin-top: 50vh;
   margin-left: 50vw;
   padding: 2%;
   position: absolute;
