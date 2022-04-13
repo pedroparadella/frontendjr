@@ -28,10 +28,8 @@ const DeleteModal = () => {
   };
 
   const deleteCard = () => {
-    productsList.splice(cardIndex, 1);
     dispatch({
-      type: actions.UPDATE_PRODUCTS_LIST,
-      productsList: productsList,
+      type: actions.REMOVE_PRODUCT,
     });
     toggleModal();
   };

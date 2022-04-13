@@ -32,11 +32,17 @@ const CreateOrEditModal = () => {
     const newInfo = { title, thumbnail };
 
     if (creatingOrEditing === "creating") {
-      productsList.splice(0, 0, newInfo);
+      dispatch({
+        type: actions.ADD_PRODUCTS_LIST,
+        newProduct: newInfo,
+      });
     }
 
     if (creatingOrEditing === "editing") {
-      productsList.splice(cardIndex, 1, newInfo);
+      dispatch({
+        type: actions.EDIT_PRODUCT,
+        newProduct: newInfo,
+      });
     }
 
     dispatch({

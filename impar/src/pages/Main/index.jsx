@@ -28,7 +28,6 @@ const Main = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    alert("useEffectei!!");
     getProducts()
       .then(({ data: { results } }) =>
         dispatch({

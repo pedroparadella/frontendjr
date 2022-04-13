@@ -48,6 +48,29 @@ const reducer = (state = INITIAL_STATE, action) => {
         productsList: action.productsList,
       };
 
+    case actions.ADD_PRODUCTS_LIST:
+      return {
+        ...state,
+        productsList: state.productsList.splice(0, 0, action.newProduct),
+      };
+
+    case actions.REMOVE_PRODUCT:
+      state.productsList.splice(state.cardIndex, 1);
+      return {
+        ...state,
+        productsList: state.productsList,
+      };
+
+    case actions.EDIT_PRODUCT:
+      return {
+        ...state,
+        productsList: state.productsList.splice(
+          state.cardIndex,
+          1,
+          action.newProduct
+        ),
+      };
+
     default:
       return state;
   }
