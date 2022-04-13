@@ -1,24 +1,27 @@
-# Avaliação Junior
-Olá desenvolvedor!\
-Tudo bem?! 😊\
-\
-Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor estilo de programar e resolver problemas.
+<img src="impar/src/assets/welcome-gif.gif" alt="site-template" width="800"/><br></br>
 
-## O que fazer
-1. Fazer um fork desse repositório e trabalhar no seu ambiente.
-2. Replicar o layout do link abaixo, pode usar dados de um JSON local:\
-[Link para o layout](https://xd.adobe.com/view/c715f110-fbd4-4323-be0c-0e453c1450db-9246)
-2. Fazer a funcionalidade de busca funcionar.
-3. Os cliques nos botões de editar/excluir/criar card podem exibir uma mensagem pro usuário de que a funcionalidade não foi implementada.
-4. Ao finalizar a avaliação modifique esse README com as instruções de como podemos fazer o seu código rodar na nossa máquina. Ou seja, passo a passo do que instalar e de quais comandos rodar para podermos visualizar o seu trabalho!
-5. Realizar um Pull Request para o nosso repositório e mandar um e-mail para processoseletivo@impar.com.br com o assunto "Avaliação Junior", informando que finalizou a avaliação e colocando o link do Pull Request. 
+<img src="impar/src/assets/gif.gif" alt="site-template" width="800"/><br></br>
 
-## Dicas
-* Não foi definido limite de linhas e colunas, portanto fique à vontade para tal escolha.
-* Gostamos de interfaces limpas e elegantes.
+## Seja bem vindo ao repositório do projeto Ímpar Baby.
+## Um projeto em React.js com uso de Vite, 
+## Manipulação de estados com Redux , 
+## Estilização com Styled Components , 
+## API do Mercado Livre, e  Deploy no AWS Amplify.
+<br></br>
+### Como funciona:
+### Para verificar o funcionamento na web, basta acessar:
+#### https://main.d338seei1inw34.amplifyapp.com/
 
-## Quais tecnologias usar
-* Deixaremos a seu critério qual tecnologia utilizar no entanto você terá mais pontos conosco se utilizar React para criação da interface e também o uso de pré-processadores/styled-components para o CSS.
+<br></br>
+### Para verificar o funcionamento em sua maquina local:
+#### Abre seu terminal e baixe essa aplicação com o comando:
+#### git clone https://github.com/adrianoforcellini/frontendjr/
 
-## Desafios se você se sentir confiante
-* Usar alguma API na internet, tipo https://pokeapi.co/, para trazer os dados que vão aparecer nos cards da tela.
+#### Entre na pasta do projeto, instale as dependências e inicie seu servidor com o comando:
+#### cd frontendjr/impar && npm i && npm run dev 
+<br></br>
+#### Agora basta acessar http://localhost:3000/ ;D
+#### ( Por padrão,o Vite executará a aplicação nesta porta, mas se ela estiver ocupada ele escolherá outra.)
+#### Por via das dúvidas, basta verificar o output do terminal:
+<img src="impar/src/assets/output.png" alt="output-terminal" width="500"/><br></br>
+
