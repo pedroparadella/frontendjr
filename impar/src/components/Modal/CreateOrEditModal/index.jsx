@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import actions from "../../../store/actions";
 import "../keyframes.css";
 
@@ -13,9 +13,14 @@ import {
 
 import { useSelector, useDispatch } from "react-redux";
 
-const CreateOrEditModal = ({ isCreating }) => {
+const CreateOrEditModal = () => {
+  const [title, setTitle] = useState("");
+  const [thumbnail, setThumbnail] = useState("");
+
   const dispatch = useDispatch();
+
   const isEditing = useSelector((state) => state.isEditing);
+  const creatingOrEditing = useSelector((state) => state.creatingOrEditing);
   const productsList = useSelector((state) => state.productsList);
   const cardIndex = useSelector((state) => state.cardIndex);
 
@@ -23,12 +28,22 @@ const CreateOrEditModal = ({ isCreating }) => {
     dispatch({ type: actions.TOGGLE_EDITING });
   };
 
-  const deleteCard = () => {
-    productsList.splice(cardIndex, 1);
+  const onClick = () => {
+    const newInfo = { title, thumbnail };
+
+    if (creatingOrEditing === "creating") {
+      productsList.splice(0, 0, newInfo);
+    }
+
+    if (creatingOrEditing === "editing") {
+      productsList.splice(cardIndex, 1, newInfo);
+    }
+
     dispatch({
       type: actions.UPDATE_PRODUCTS_LIST,
       productsList: productsList,
     });
+
     toggleModal();
   };
 
@@ -38,9 +53,20 @@ const CreateOrEditModal = ({ isCreating }) => {
         <CreateOrEditModalContainer>
           <Overlay onClick={toggleModal}></Overlay>
           <Modal className="modal-content">
-            <Text>{isCreating ? "Criar Card" : "Editar Card"}</Text>
-            <Input placeholder="   Digite o título do Card" />
-            <Input placeholder="   Digite o link da thumbnail" />
+            <Text>
+              {creatingOrEditing === "creating" ? "Criar Card" : "Editar Card"}
+            </Text>
+            <Input
+              placeholder="   Digite o título do Card"
+              onChange={(event) => setTitle(event.target.value)}
+            />
+            <Input
+              placeholder="   Digite o link da thumbnail"
+              onChange={(event) => setThumbnail(event.target.value)}
+            />
+            <Button onClick={onClick}>
+              {creatingOrEditing === "creating" ? "Criar" : "Editar"}
+            </Button>
           </Modal>
         </CreateOrEditModalContainer>
       )}

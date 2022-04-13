@@ -44,25 +44,25 @@ export const Modal = styled.div `
 `;
 
 export const Button = styled.button `
-  background-color: ${(props) => `${props.background}`};
-  border: 2px solid red;
-  color: ${(props) => `${props.color}`};
-  border-radius: 2vh;
+  background-color: rgb(231, 99, 22);
+  border: 0px;
+  border-radius: 1vh;
+  color: white;
   height: 5vh;
   font-size: 2vw;
   width: 10vw;
   margin-top: 14vh;
-  margin-left: 3vw;
+  margin-left: 15vw;
 `;
 
-export const Text = styled.p`
+export const Text = styled.p `
   display: flex;
   color: rgb(99, 21, 119);
   font-size: 2vw;
   font-weight: bold;
 `;
 
-export const Input = styled.input`
+export const Input = styled.input `
   border-radius: 1vh;
   display: flex;
   font-size: 1.5vw;

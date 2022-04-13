@@ -33,9 +33,14 @@ const Card = ({ thumbnail, title, index }) => {
   const editCard = () => {
     updateIndexCard();
     dispatch({ type: actions.TOGGLE_EDITING });
-    dispatch({ type: actions.SEND_THUMB_AND_TITLE, 
-      thumbAndTitle:{thumbnail, title} });
-    
+    dispatch({
+      type: actions.SEND_THUMB_AND_TITLE,
+      thumbAndTitle: { thumbnail, title },
+    });
+    dispatch({
+      type: actions.CREATING_OR_EDITING,
+      creatingOrEditing: "editing",
+    });
   };
 
   return (

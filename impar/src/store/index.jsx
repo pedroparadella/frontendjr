@@ -4,6 +4,7 @@ import actions from "./actions";
 const INITIAL_STATE = {
   isDeleting: false,
   isEditing: false,
+  creatingOrEditing: "",
   productsList: [],
   cardIndex: 0,
   thumbAndTitle: {},
@@ -16,11 +17,19 @@ const reducer = (state = INITIAL_STATE, action) => {
         ...state,
         isDeleting: !state.isDeleting,
       };
+
     case actions.TOGGLE_EDITING:
       return {
         ...state,
         isEditing: !state.isEditing,
       };
+
+    case actions.CREATING_OR_EDITING:
+      return {
+        ...state,
+        creatingOrEditing: action.creatingOrEditing,
+      };
+
     case actions.SEND_THUMB_AND_TITLE:
       return {
         ...state,
@@ -38,6 +47,7 @@ const reducer = (state = INITIAL_STATE, action) => {
         ...state,
         productsList: action.productsList,
       };
+
     default:
       return state;
   }

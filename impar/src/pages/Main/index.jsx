@@ -22,15 +22,19 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Main = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [isCreating, setIsCreating] = useState(false);
   const isDeleting = useSelector((state) => state.isDeleting);
+  const isCreating = useSelector((state) => state.isCreating);
   const productsList = useSelector((state) => state.productsList);
   const dispatch = useDispatch();
 
   useEffect(() => {
+    alert("useEffectei!!");
     getProducts()
       .then(({ data: { results } }) =>
-        dispatch({ type: actions.UPDATE_PRODUCTS_LIST, productsList: results })
+        dispatch({
+          type: actions.UPDATE_PRODUCTS_LIST,
+          productsList: results,
+        })
       )
       .catch((error) => alert(error));
   }, []);
@@ -48,7 +52,11 @@ const Main = () => {
   };
 
   const createCard = () => {
-    setIsCreating(true);
+    dispatch({
+      type: actions.CREATING_OR_EDITING,
+      creatingOrEditing: "creating",
+    });
+    dispatch({ type: actions.TOGGLE_EDITING });
   };
 
   return (
