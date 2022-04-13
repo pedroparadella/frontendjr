@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  color: white;
   background-color: rgb(231, 99, 22);
   border: none;
   border-radius: 5%;
   box-shadow: 1px 1px 1px 1px gray;
+  color: white;
   font-size: 1.5vw;
-  height: 8vh;
-  width: 15vw;
   font-weight: bold;
+  height: 8vh;
   margin-left: 45vw;
+  width: 15vw;
 `;
 
 export const CarouselAndInputContainer = styled.div`

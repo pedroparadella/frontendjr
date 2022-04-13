@@ -45,11 +45,6 @@ const CreateOrEditModal = () => {
       });
     }
 
-    dispatch({
-      type: actions.UPDATE_PRODUCTS_LIST,
-      productsList: productsList,
-    });
-
     toggleModal();
   };
 

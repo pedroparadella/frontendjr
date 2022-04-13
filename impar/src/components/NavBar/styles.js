@@ -11,5 +11,5 @@ export const NavBarContainer = styled.div `
 `;
 
 export const WhiteLogo = styled.img `
-width: 15vw
-`
+  width: 15vw;
+`;

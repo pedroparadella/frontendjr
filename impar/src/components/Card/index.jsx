@@ -1,4 +1,3 @@
-import * as React from "react";
 import actions from "../../store/actions";
 import {
   CardContainer,
@@ -12,7 +11,7 @@ import {
 } from "./styles";
 import icoLixeira from "../../assets/ico-lixeira.png";
 import icoLapiseira from "../../assets/ico-lapiseira.png";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const Card = ({ thumbnail, title, index }) => {
   const dispatch = useDispatch();

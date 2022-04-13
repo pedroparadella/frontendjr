@@ -1,33 +1,32 @@
 import styled from "styled-components";
 export const CreateOrEditModalContainer = styled.div `
   animation: animaterOpacity 1.5s;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
+  height: 100vh;
+  left: 0;
   position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
   z-index: 4;
 `;
 
 export const DeleteIcoContainer = styled.div `
-  /* background-color: pink; */
-  display: flex;
   align-self: center;
-  width: 10vw;
+  display: flex;
   height: 20vh;
+  width: 10vw;
 `;
 
 export const Overlay = styled.div `
   background: rgba(49, 49, 49, 0.8);
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
+  height: 100vh;
+  left: 0;
   position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
 `;
 
 export const Modal = styled.div `
@@ -50,9 +49,9 @@ export const Button = styled.button `
   color: white;
   height: 5vh;
   font-size: 2vw;
-  width: 10vw;
-  margin-top: 14vh;
   margin-left: 15vw;
+  margin-top: 14vh;
+  width: 10vw;
 `;
 
 export const Text = styled.p `

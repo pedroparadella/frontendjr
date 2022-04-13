@@ -19,9 +19,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 const DeleteModal = () => {
   const dispatch = useDispatch();
+
   const isDeleting = useSelector((state) => state.isDeleting);
-  const productsList = useSelector((state) => state.productsList);
-  const cardIndex = useSelector((state) => state.cardIndex);
 
   const toggleModal = () => {
     dispatch({ type: actions.TOGGLE_DELETING });

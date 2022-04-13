@@ -5,19 +5,19 @@ export const DeleteModalContainer = styled.div `
   animation: animaterOpacity 1.5s;
   bottom: 0;
   height: 100vh;
-  width: 100vw;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
+  width: 100vw;
   z-index: 4;
 `;
 
 export const DeleteIcoContainer = styled.div `
   align-self: center;
   display: flex;
-  width: 10vw;
   height: 20vh;
+  width: 10vw;
 `;
 
 export const Overlay = styled.div `
@@ -59,29 +59,29 @@ export const RoundedIco = styled.div `
 export const Ico = styled.img `
   display: flex;
   height: 17vh;
-  width: 9vw;
   margin-left: 10.4vw;
   margin-top: -17.5vh;
+  width: 9vw;
 `;
 
 export const ButtonsContainer = styled.div `
   display: flex;
   flex-direction: row;
-  width: 30vw;
   height: 30vh;
   margin-top: -10vh;
+  width: 30vw;
 `;
 
 export const Button = styled.button `
   background-color: ${(props) => `${props.background}`};
   border: 2px solid red;
-  color: ${(props) => `${props.color}`};
   border-radius: 2vh;
+  color: ${(props) => `${props.color}`};
   height: 5vh;
   font-size: 2vw;
-  width: 10vw;
   margin-top: 14vh;
   margin-left: 3vw;
+  width: 10vw;
 `;
 
 export const Text = styled.p`

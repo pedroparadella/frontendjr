@@ -22,7 +22,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Main = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const isDeleting = useSelector((state) => state.isDeleting);
   const isCreating = useSelector((state) => state.isCreating);
   const productsList = useSelector((state) => state.productsList);
   const dispatch = useDispatch();
