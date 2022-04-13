@@ -1,6 +1,8 @@
+<img src="impar/src/assets/welcome-gif.gif" alt="site-template" width="800"/><br></br>
+
 <img src="impar/src/assets/gif.gif" alt="site-template" width="800"/><br></br>
 
-## Seja bem vindo ao repositório do projeto Baby Impar.
+## Seja bem vindo ao repositório do projeto Ímpar Baby.
 ## Um projeto em React.js com uso de Vite, 
 ## Manipulação de estados com Redux , 
 ## Estilização com Styled Components , 
