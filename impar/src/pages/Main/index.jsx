@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import NavBar from "../../components/NavBar";
 import Carousel from "../../components/Carousel";
 import Card from "../../components/Card";
+import DeleteModal from "../../components/Modal/DeleteModal";
+
 import {
   Button,
   CarouselAndInputContainer,
@@ -18,7 +20,7 @@ import { getProducts, getBySearch } from "../../services/axiosAPI";
 const Main = () => {
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-
+  const [isDeleting, setDeleting] = useState(false);
   useEffect(async () => {
     await getProducts()
       .then(({ data: { results } }) => setProducts(results))
@@ -45,6 +47,7 @@ const Main = () => {
           <Ico src={searchIco} onClick={() => search()} />
         </InputIco>
       </CarouselAndInputContainer>
+      <DeleteModal isDeleting={isDeleting} />
       <NewCardsContainer>
         Resultado de busca
         <Button> Novo Card </Button>
@@ -54,9 +57,6 @@ const Main = () => {
           {products.map((product, index) => (
             <Card src={product.thumbnail} title={product.title} key={index} />
           ))}
-          <button onClick={() => console.log(products)}>
-            asssssssssssssssss
-          </button>
         </MainCardsContainer>
       </MainContainer>
     </>
