@@ -47,9 +47,17 @@ export default function Main() {
       <CssBaseline />
 
       {/* Header */}
-      <AppBar position='relative'>
+      <AppBar
+        position='relative'
+        sx={{ backgroundImage: 'linear-gradient(to right,#601478,#A82670)' }}
+      >
         <Toolbar>
-          <CameraIcon sx={{ mr: 2 }} />
+          <img
+            src={require('../assets/impar-removebg-preview.png')}
+            alt='Impar'
+            height='40px'
+            style={{ marginRight: '1em' }}
+          />
           <Typography variant='h6' color='inherit' noWrap>
             Teste Ímpar
           </Typography>
