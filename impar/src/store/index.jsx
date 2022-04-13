@@ -3,8 +3,10 @@ import actions from "./actions";
 
 const INITIAL_STATE = {
   isDeleting: false,
+  isEditing: false,
   productsList: [],
   cardIndex: 0,
+  thumbAndTitle: {},
 };
 
 const reducer = (state = INITIAL_STATE, action) => {
@@ -13,6 +15,16 @@ const reducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         isDeleting: !state.isDeleting,
+      };
+    case actions.TOGGLE_EDITING:
+      return {
+        ...state,
+        isEditing: !state.isEditing,
+      };
+    case actions.SEND_THUMB_AND_TITLE:
+      return {
+        ...state,
+        thumbAndTitle: action.thumbAndTitle,
       };
 
     case actions.UPDATE_CARD_INDEX:

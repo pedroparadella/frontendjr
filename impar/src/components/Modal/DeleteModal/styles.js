@@ -2,33 +2,33 @@ import styled from "styled-components";
 import icoLixeira from "../../../assets/ico-lixeira.png";
 
 export const DeleteModalContainer = styled.div `
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
+  animation: animaterOpacity 1.5s;
   bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
   position: fixed;
+  right: 0;
+  top: 0;
   z-index: 4;
 `;
 
 export const DeleteIcoContainer = styled.div `
-  /* background-color: pink; */
-  display: flex;
   align-self: center;
+  display: flex;
   width: 10vw;
   height: 20vh;
 `;
 
 export const Overlay = styled.div `
   background: rgba(49, 49, 49, 0.8);
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
+  height: 100vh;
+  left: 0;
   position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
 `;
 
 export const Modal = styled.div `
@@ -67,7 +67,6 @@ export const Ico = styled.img `
 export const ButtonsContainer = styled.div `
   display: flex;
   flex-direction: row;
-  /* background-color: purple; */
   width: 30vw;
   height: 30vh;
   margin-top: -10vh;

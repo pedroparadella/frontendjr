@@ -1,5 +1,7 @@
 import React from "react";
 import actions from "../../../store/actions";
+import "../keyframes.css";
+
 import {
   DeleteModalContainer,
   Overlay,
@@ -26,8 +28,11 @@ const DeleteModal = () => {
   };
 
   const deleteCard = () => {
-    productsList.splice(cardIndex, 1)
-    dispatch({ type: actions.UPDATE_PRODUCTS_LIST, productsList: productsList });
+    productsList.splice(cardIndex, 1);
+    dispatch({
+      type: actions.UPDATE_PRODUCTS_LIST,
+      productsList: productsList,
+    });
     toggleModal();
   };
 
