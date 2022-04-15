@@ -15,6 +15,7 @@ import axios from 'axios';
 import { Search } from '@mui/icons-material';
 import CustomSearchBar from '../components/CustomSearchBar';
 import zIndex from '@mui/material/styles/zIndex';
+import { Alert, Snackbar } from '@mui/material';
 
 const theme = createTheme({
   palette: {
@@ -31,6 +32,8 @@ export default function Main() {
   const [pokemons, setPokemons] = useState([]);
   const [pokemonUrls, setPokemonUrls] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [isSnackbarOpen, setSnackbarOpen] = useState(false);
+
   const POKEAPI_URL = 'https://pokeapi.co/api/v2/pokemon';
 
   useEffect(() => {
@@ -138,6 +141,7 @@ export default function Main() {
               variant='contained'
               size='large'
               sx={{ borderRadius: '0.7em', width: '12em', height: '4em' }}
+              onClick={() => setSnackbarOpen(true)}
             >
               Novo Card
             </Button>
@@ -146,10 +150,26 @@ export default function Main() {
           <Grid container spacing={4}>
             {pokemons.map((pokemon) => (
               <Grid item key={pokemon.id} xs={12} sm={6} md={4} lg={3}>
-                <CustomCard pokemon={pokemon} />
+                <CustomCard
+                  pokemon={pokemon}
+                  setSnackbarOpen={setSnackbarOpen}
+                />
               </Grid>
             ))}
           </Grid>
+
+          <Snackbar
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+            open={isSnackbarOpen}
+            autoHideDuration={6000}
+            onClose={() => setSnackbarOpen(false)}
+            onClick={() => setSnackbarOpen(false)}
+            message='Note archived'
+          >
+            <Alert severity='error' sx={{ width: '100%' }}>
+              Funcionalidade ainda não implementada!
+            </Alert>
+          </Snackbar>
         </Container>
       </main>
     </ThemeProvider>

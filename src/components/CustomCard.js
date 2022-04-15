@@ -7,7 +7,7 @@ import {
   Typography,
 } from '@mui/material';
 
-const CustomCard = ({ pokemon }) => {
+const CustomCard = ({ pokemon, setSnackbarOpen }) => {
   return (
     <Card
       sx={{
@@ -32,8 +32,12 @@ const CustomCard = ({ pokemon }) => {
           justifyContent: 'space-evenly',
         }}
       >
-        <Button style={{ flex: 1 }}>Excluir</Button>
-        <Button style={{ flex: 1 }}>Editar</Button>
+        <Button onClick={() => setSnackbarOpen(true)} style={{ flex: 1 }}>
+          Excluir
+        </Button>
+        <Button onClick={() => setSnackbarOpen(true)} style={{ flex: 1 }}>
+          Editar
+        </Button>
       </CardActions>
     </Card>
   );
