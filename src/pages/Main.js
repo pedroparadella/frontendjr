@@ -30,10 +30,12 @@ const theme = createTheme({
 export default function Main() {
   const [pokemons, setPokemons] = useState([]);
   const [pokemonUrls, setPokemonUrls] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const POKEAPI_URL = 'https://pokeapi.co/api/v2/pokemon';
 
   useEffect(() => {
     const getPokemonList = async () => {
-      const response = await axios.get('https://pokeapi.co/api/v2/pokemon');
+      const response = await axios.get(POKEAPI_URL);
       setPokemonUrls(response.data.results);
     };
 
@@ -41,17 +43,30 @@ export default function Main() {
   }, []);
 
   useEffect(() => {
+    setPokemons([]);
+
     const getPokemon = async (url) => {
-      const response = await axios.get(url);
-      setPokemons((pokemons) => [...pokemons, response.data]);
+      try {
+        const response = await axios.get(url);
+        setPokemons((pokemons) => [...pokemons, response.data]);
+      } catch (error) {
+        if (error.response.status === 404) {
+          console.log('Pokemon not found');
+        }
+      }
     };
 
-    Promise.all(
-      pokemonUrls.map(async (pokemon) => {
-        getPokemon(pokemon.url);
-      })
-    );
-  }, [pokemonUrls]);
+    if (searchTerm !== '') {
+      setPokemons([]);
+      getPokemon(`${POKEAPI_URL}/${searchTerm}`);
+    } else {
+      Promise.all(
+        pokemonUrls.map(async (pokemon) => {
+          getPokemon(pokemon.url);
+        })
+      );
+    }
+  }, [searchTerm, pokemonUrls]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -100,7 +115,10 @@ export default function Main() {
               width='100%'
               height='17em'
             >
-              <CustomSearchBar />
+              <CustomSearchBar
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+              />
             </Box>
           </Container>
         </Box>

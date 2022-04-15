@@ -18,9 +18,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function CustomSearchBar() {
+export default function CustomSearchBar({ searchTerm, setSearchTerm }) {
   return (
     <StyledInputBase
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
       placeholder='Digite aqui sua busca...'
       inputProps={{ 'aria-label': 'search' }}
       endAdornment={<SearchIcon color='action' fontSize='large' />}
