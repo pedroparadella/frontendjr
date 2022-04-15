@@ -6,8 +6,8 @@ Guilherme Goulart Climaco
 
 ## Como rodar o projeto
 
-1. Clone o repositório para sua área de trabalho com o comando `git clone `
-2. Execute o projeto com npm start e
+1. Clone o repositório para sua área de trabalho
+2. Execute o projeto com npm start para rodar o projeto
 
 ## Funcionalidade do Projeto
 
