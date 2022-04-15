@@ -25,8 +25,8 @@ const theme = createTheme({
   },
 });
 
-const iconImpar = require('../assets/impar-removebg-preview.png');
-const pokemonWallpaper = require('../assets/pokemon3.jpg');
+const iconImpar = require('../assets/impar.png');
+const pokemonWallpaper = require('../assets/pokemon.jpg');
 
 export default function Main() {
   const [pokemons, setPokemons] = useState([]);
@@ -130,7 +130,7 @@ export default function Main() {
         </Box>
 
         {/* Cards */}
-        <Container sx={{ py: 1 }} maxWidth='lg'>
+        <Container sx={{ pt: 1, pb: 5 }} maxWidth='lg'>
           <Box
             maxWidth='lg'
             display='flex'

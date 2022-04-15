@@ -7,6 +7,8 @@ import {
   CardMedia,
   Typography,
 } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 
 const StyledCard = styled(Card)(({ theme }) => ({
   height: '100%',
@@ -45,10 +47,16 @@ const CustomCard = ({ pokemon, setSnackbarOpen }) => {
       </CardContent>
 
       <StyledCardActions>
-        <StyledButton onClick={() => setSnackbarOpen(true)}>
+        <StyledButton
+          onClick={() => setSnackbarOpen(true)}
+          startIcon={<DeleteIcon></DeleteIcon>}
+        >
           Excluir
         </StyledButton>
-        <StyledButton onClick={() => setSnackbarOpen(true)}>
+        <StyledButton
+          onClick={() => setSnackbarOpen(true)}
+          startIcon={<EditIcon></EditIcon>}
+        >
           Editar
         </StyledButton>
       </StyledCardActions>
