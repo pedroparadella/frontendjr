@@ -14,7 +14,7 @@ const CustomCard = ({ pokemon }) => {
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        borderRadius: '0.5em',
+        borderRadius: '0.7em',
       }}
     >
       <CardMedia

@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
-import CameraIcon from '@mui/icons-material/PhotoCamera';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
@@ -13,8 +12,20 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CustomCard from '../components/CustomCard';
 import axios from 'axios';
+import { Search } from '@mui/icons-material';
+import CustomSearchBar from '../components/CustomSearchBar';
+import zIndex from '@mui/material/styles/zIndex';
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#E76316',
+    },
+    secondary: {
+      main: '#5F1478',
+    },
+  },
+});
 
 export default function Main() {
   const [pokemons, setPokemons] = useState([]);
@@ -67,47 +78,53 @@ export default function Main() {
       {/* Body */}
       <main style={{ backgroundColor: '#F6F4F6' }}>
         {/* Image and search bar */}
-        <Box
-          sx={{
-            pt: 8,
-            pb: 6,
-          }}
-        >
-          <Container maxWidth='sm'>
-            <Typography
-              component='h1'
-              variant='h2'
-              align='center'
-              color='text.primary'
-              gutterBottom
+        <Box>
+          <Box position='absolute' width='100%' height='17em'>
+            <img
+              src={require('../assets/pokemon2.jpg')}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+            ></img>
+          </Box>
+          <Container maxWidth='lg'>
+            <Box
+              sx={{
+                pb: '3em',
+                display: 'flex',
+                alignItems: 'flex-end',
+                justifyContent: 'center',
+              }}
+              width='100%'
+              height='17em'
             >
-              Album layout
-            </Typography>
-            <Typography
-              variant='h5'
-              align='center'
-              color='text.secondary'
-              paragraph
-            >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
-            </Typography>
-            <Stack
-              sx={{ pt: 4 }}
-              direction='row'
-              spacing={2}
-              justifyContent='center'
-            >
-              <Button variant='contained'>Main call to action</Button>
-              <Button variant='outlined'>Secondary action</Button>
-            </Stack>
+              <CustomSearchBar />
+            </Box>
           </Container>
         </Box>
 
         {/* Cards */}
-        <Container sx={{ py: 8 }} maxWidth='lg'>
-          {/* End hero unit */}
+        <Container sx={{ py: 1 }} maxWidth='lg'>
+          <Box
+            maxWidth='lg'
+            display='flex'
+            justifyContent='space-between'
+            m='2em 0em'
+          >
+            <Typography variant='h4' width='fit-content' color='secondary'>
+              Resultado de busca
+            </Typography>
+            <Button
+              variant='contained'
+              size='large'
+              sx={{ borderRadius: '0.7em', width: '12em', height: '4em' }}
+            >
+              Novo Card
+            </Button>
+          </Box>
+
           <Grid container spacing={4}>
             {pokemons.map((pokemon) => (
               <Grid item key={pokemon.id} xs={12} sm={6} md={4} lg={3}>
