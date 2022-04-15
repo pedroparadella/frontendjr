@@ -4,7 +4,7 @@ import Sidebar from "../sidebar";
 import ModalTrash from "../Modal";
 
 import { useEffect, useState } from "react";
-import { Box, MainImg, Name, FooterBox, Type } from "./estilos";
+import { Box, Img, Name, FooterBox, Type } from "./estilos";
 import getPokemonData from "../../services/api";
 
 export default function Card(props) {
@@ -35,9 +35,9 @@ export default function Card(props) {
       <>
         {arrayFiltrado.map((p) => (
           <Box>
-            <MainImg className={p.data.types[0].type.name}>
+            <Img className={p.data.types[0].type.name}>
               <img src={p.data.sprites.front_default} alt={p.data.name}></img>
-            </MainImg>
+            </Img>
             <Name>{p.data.name}</Name>
             <Type>{p.data.types[0].type.name}</Type>
 

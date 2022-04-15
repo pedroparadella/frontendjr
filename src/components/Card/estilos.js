@@ -80,7 +80,7 @@ export const Name = styled.p`
   text-transform: capitalize;
 `;
 
-export const MainImg = styled.div`
+export const Img = styled.div`
   padding: 15px;
   display: flex;
   justify-content: center;
