@@ -4,7 +4,6 @@ import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -12,21 +11,22 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CustomCard from '../components/CustomCard';
 import axios from 'axios';
-import { Search } from '@mui/icons-material';
 import CustomSearchBar from '../components/CustomSearchBar';
-import zIndex from '@mui/material/styles/zIndex';
 import { Alert, Snackbar } from '@mui/material';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#E76316',
+      main: '#A82670',
     },
     secondary: {
       main: '#5F1478',
     },
   },
 });
+
+const iconImpar = require('../assets/impar-removebg-preview.png');
+const pokemonWallpaper = require('../assets/pokemon3.jpg');
 
 export default function Main() {
   const [pokemons, setPokemons] = useState([]);
@@ -37,12 +37,12 @@ export default function Main() {
   const POKEAPI_URL = 'https://pokeapi.co/api/v2/pokemon';
 
   useEffect(() => {
-    const getPokemonList = async () => {
+    const getPokemonUrls = async () => {
       const response = await axios.get(POKEAPI_URL);
       setPokemonUrls(response.data.results);
     };
 
-    getPokemonList();
+    getPokemonUrls();
   }, []);
 
   useEffect(() => {
@@ -75,14 +75,16 @@ export default function Main() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      {/* Header */}
+      {/* App Bar */}
       <AppBar
         position='relative'
-        sx={{ backgroundImage: 'linear-gradient(to right,#601478,#A82670)' }}
+        sx={{
+          backgroundImage: `linear-gradient(to right,#5F1478,#A82670)`,
+        }}
       >
         <Toolbar>
           <img
-            src={require('../assets/impar-removebg-preview.png')}
+            src={iconImpar}
             alt='Impar'
             height='40px'
             style={{ marginRight: '1em' }}
@@ -99,7 +101,8 @@ export default function Main() {
         <Box>
           <Box position='absolute' width='100%' height='17em'>
             <img
-              src={require('../assets/pokemon2.jpg')}
+              src={pokemonWallpaper}
+              alt='Pokemon Wallpaper'
               style={{
                 width: '100%',
                 height: '100%',
@@ -132,6 +135,8 @@ export default function Main() {
             maxWidth='lg'
             display='flex'
             justifyContent='space-between'
+            alignItems='center'
+            flexWrap='wrap'
             m='2em 0em'
           >
             <Typography variant='h4' width='fit-content' color='secondary'>
@@ -164,7 +169,6 @@ export default function Main() {
             autoHideDuration={6000}
             onClose={() => setSnackbarOpen(false)}
             onClick={() => setSnackbarOpen(false)}
-            message='Note archived'
           >
             <Alert severity='error' sx={{ width: '100%' }}>
               Funcionalidade ainda não implementada!

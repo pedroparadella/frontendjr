@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import {
   Button,
   Card,
@@ -7,39 +8,51 @@ import {
   Typography,
 } from '@mui/material';
 
+const StyledCard = styled(Card)(({ theme }) => ({
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  borderRadius: '0.7em',
+}));
+
+const StyledCardActions = styled(CardActions)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-evenly',
+}));
+
+const StyledButton = styled(Button)(({ theme }) => ({
+  flex: 1,
+}));
+
+const firstLetterUppercase = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
 const CustomCard = ({ pokemon, setSnackbarOpen }) => {
   return (
-    <Card
-      sx={{
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        borderRadius: '0.7em',
-      }}
-    >
+    <StyledCard>
       <CardMedia
         component='img'
         image={pokemon.sprites.front_default}
-        // alt={pokemon.name}
+        alt={pokemon.name}
       />
+
       <CardContent sx={{ flexGrow: 1 }}>
-        <Typography align='center'>{pokemon.name}</Typography>
+        <Typography align='center'>
+          {firstLetterUppercase(pokemon.name)}
+        </Typography>
       </CardContent>
-      <CardActions
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-evenly',
-        }}
-      >
-        <Button onClick={() => setSnackbarOpen(true)} style={{ flex: 1 }}>
+
+      <StyledCardActions>
+        <StyledButton onClick={() => setSnackbarOpen(true)}>
           Excluir
-        </Button>
-        <Button onClick={() => setSnackbarOpen(true)} style={{ flex: 1 }}>
+        </StyledButton>
+        <StyledButton onClick={() => setSnackbarOpen(true)}>
           Editar
-        </Button>
-      </CardActions>
-    </Card>
+        </StyledButton>
+      </StyledCardActions>
+    </StyledCard>
   );
 };
 
