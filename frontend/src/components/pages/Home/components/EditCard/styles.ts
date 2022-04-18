@@ -100,5 +100,7 @@ export const Content = styled.div`
 `
 
 export const StyledTextInput = styled(TextField)({
-	width: '100%'
+	width: '100%',
+	backgroundColor: '#FFF',
+	borderRadius: 6
 })

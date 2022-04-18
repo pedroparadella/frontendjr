@@ -1,7 +1,6 @@
 # Avaliação Junior
 Saudações, time Ímpar! 🖖\
 Me chamo João, tenho 20 anos e sou formado em TI\
-\
 
 ## Sobre o projeto
 Decidi fazer um pouco mais do que estava na lista de tarefas. Além de conter tudo o que foi pedido, também fiz uma API em Node.js e um switch que troca entre o tema claro e escuro, feito com Context.

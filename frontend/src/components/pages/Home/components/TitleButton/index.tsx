@@ -1,7 +1,5 @@
 // External libraries
-import React, {
-	useState 
-} from 'react'
+import React from 'react'
 
 // Components
 import Button from '../../../../common/Button'
