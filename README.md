@@ -9,8 +9,7 @@ Decidi fazer um pouco mais do que estava na lista de tarefas. Além de conter tu
 ## Front-End
 <!--sec data-title="Your first command: OS X and Linux" data-id="OSX_Linux_whoami" data-collapse=true ces-->
 
-{% filename %}command-line{% endfilename %}
-
+    $ cd frontend
     $ yarn
     $ yarn dev
 
@@ -19,8 +18,7 @@ Decidi fazer um pouco mais do que estava na lista de tarefas. Além de conter tu
 ## API
 <!--sec data-title="Your first command: OS X and Linux" data-id="OSX_Linux_whoami" data-collapse=true ces-->
 
-{% filename %}command-line{% endfilename %}
-
+    $ cd api
     $ yarn
     $ yarn dev
 
