@@ -4,11 +4,11 @@ import Navbar from "./Navbar";
 import Searchbar from "./Searchbar";
 import Pokedex from "./Pokedex";
 import { getPokemonData, getPokemons, searchPokemon } from "./api";
-import { FavoriteProvider } from "./FavoritesContext";
+/* import { FavoriteProvider } from "./FavoritesContext"; */
 
 const { useState, useEffect } = React;
-
-const localStorageKey = "favorite_pokemon";
+/* 
+const localStorageKey = "favorite_pokemon"; */
 
 export default function App() {
   const [pokemons, setPokemons] = useState([]);
