@@ -1,21 +1,21 @@
 import React from "react";
-import FavoriteContext from "./FavoritesContext";
+/* import FavoriteContext from "./FavoritesContext"; */
 
-const { useContext } = React;
+/* const { useContext } = React; */
 
 const Navbar = () => {
-  const { favoritePokemons } = useContext(FavoriteContext);
+  /* const { favoritePokemons } = useContext(FavoriteContext); */
 
   let imgUrl =
-    "hhttps://impar.com.br/img/Impar_logo_branco.svg";
+    "https://impar.com.br/img/Impar_logo_branco.svg";
 
   return (
     <nav>
       <div />
       <div>
-        <img src={imgUrl} alt="impar-logo" className="navbar-image" />
+        <img src={imgUrl} alt="Teste-logo" className="navbar-image" />
       </div>
-      <div>&#10084;&#65039; {favoritePokemons.length}</div>
+      {/* <div>&#10084;&#65039; {favoritePokemons.length}</div> */}
     </nav>
   );
 };

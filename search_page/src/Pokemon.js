@@ -3,17 +3,13 @@ import FavoriteContext from "./FavoritesContext";
 
 const Pokemon = (props) => {
   const { pokemon } = props;
-  const { favoritePokemons, updateFavoritePokemons } = useContext(
+  const { updatePokemons } = useContext(
     FavoriteContext
   );
 
-  const redHeart = "❤️";
-  const blackHeart = "🖤";
-  const heart = favoritePokemons.includes(pokemon.name) ? redHeart : blackHeart;
-
-  const clickHeart = (e) => {
+  const clickEdit = (e) => {
     e.preventDefault();
-    updateFavoritePokemons(pokemon.name);
+    updatePokemons(pokemon.name);
   };
 
   return (
@@ -28,7 +24,6 @@ const Pokemon = (props) => {
       <div className="card-body">
         <div className="card-top">
           <h3>{pokemon.name}</h3>
-          <div>#{pokemon.id}</div>
         </div>
         <div className="card-bottom">
           <div className="pokemon-type">
@@ -40,9 +35,14 @@ const Pokemon = (props) => {
               );
             })}
           </div>
-          <button onClick={clickHeart} className="pokemon-heart-btn">
-            <div className="pokemon-favorite">{heart}</div>
-          </button>
+          <div className="pokemon-button">
+            <button className="pokemon-button-1">
+              <div className="Exclude-button">Excluir</div>
+            </button>
+            <button onClick={clickEdit} className="pokemon-button-2">
+            <div className="Edit-button">Editar</div>
+            </button>
+          </div>
         </div>
       </div>
     </div>

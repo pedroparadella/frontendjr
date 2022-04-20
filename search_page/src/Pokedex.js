@@ -1,31 +1,22 @@
 import React from "react";
-import Pagination from "./Pagination";
+
 import Pokemon from "./Pokemon";
 
 const Pokedex = (props) => {
-  const { pokemons, page, setPage, total, loading } = props;
-
-  const lastPage = () => {
-    const nextPage = Math.max(page - 1, 0);
-    setPage(nextPage);
-  };
-
-  const nextPage = () => {
-    const nextPage = Math.min(page + 1, total - 1);
-    setPage(nextPage);
-  };
+  const { pokemons, loading } = props;
 
   return (
     <div>
       <div className="header">
         <h1>Resultado de busca</h1>
-        <Pagination
-          page={page + 1}
-          totalPages={total}
-          onLeftClick={lastPage}
-          onRightClick={nextPage}
-        />
+        
+        <div className="card-btn" >
+        <button /* onClick={onClick} */>
+        Novo card          
+        </button>
       </div>
+      </div>
+      
       {loading ? (
         <div>Cargando pokemons...</div>
       ) : (

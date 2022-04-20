@@ -1,69 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+
 * {
     margin: 0px;
+  
+  }
+
+  body {
+    background-color: #F6F4F6;
+    margin: auto;
+    min-height:  100vh;
+    display: flex;
+    flex-direction: column;
+    
   }
   
   nav {
-    height: 100px;
+    background-color: #6B2582;
+    height: 65px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    margin: -5%  0% -5% ;
+    
   }
-  
+
   .navbar-image {
     width: 160px;
+    margin-right: 65rem;
+    margin-top: 0.7rem;
+    /* background-image: url("../public/logo-teste.png") ;
+    background-position: 300%;
+    background-size: 100%;
+    background-repeat: no-repeat; */
   }
   
   .searchbar-container {
     display: flex;
-    margin: 0px 10px;
-    padding: 0;
+    margin: 60px 0px 0px;
+    padding: 45px;
     align-items: center;
     flex: 1;
     align-items: stretch;
+    background-image: url("../public/Backgound_image.jpg") ;
+    background-position: 300%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
   }
   
-  .searchbar {
+ /*  .searchbar {
     background: white;
-    padding-right: 20px;
+    padding-right: 130px;
     flex: 1;
-  }
+    
+  } */
   
-  .searchbar input {
+   .searchbar input {
     padding: 10px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
+    border-radius: 10px;
+    margin-left: 20%;
     border: none;
-    width: 100%;
+    width: 104%;
+    height: 104%;
+    font-family: Mulish;
+    font-size: medium;
+    padding-right: 350px
+   
   }
   
-  .searchbar input:focus {
+  /*  .searchbar input:focus {
     outline: none;
-  }
+  } */
   
   .searchbar-btn button {
-    background-color: #363636;
+    background-color: #ffffff;
     border: none;
     border-radius: 10px;
-    height: 100%;
-    color: white;
-    padding: 10px 12px;
+    height: 104%;
+    padding: 10px 30px;
     margin-left: 20px;
+    cursor: pointer;
+    background-image: url("../public/lupa.png");
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    margin-left: 855%;
+    margin-top: 17%;
+
   }
-  
-  .header {
+
+  /* .header {
+    display: flex;
+    justify-content: space-around;
+    color: #6B2582;
+    font-family: Mulish;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 100px;
+    height: 0px;
+  }
+
+  .header-1 {
+    color: #6B2582;
+    padding: 50%;
+  }
+
+  .header-2 {
+    
+  } */
+
+  .header {
+    color: #6B2582;
+    font-family: Mulish;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px;
+    height: 0px;
+  }
+
+  .card-btn button {
+    background-color: chocolate;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 7%;
+    font-size:medium;
+    font-family: Mulish;
+    font-weight: bold;
+    margin: -20%;  
     padding: 10px;
+    cursor: pointer;
+
   }
   
   .pokedex-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 18px;
-    padding: 0px 10px 20px 10px;
+    padding: 0px 10px 20px 4px;
+    margin: 100px;
   }
   
   @media screen and (max-width: 992px) {
@@ -79,71 +160,134 @@
   }
   
   .pokemon-card {
+    background-color: #FFFFFF;
     display: flex;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
+    border-radius: 7px;
   }
   
   .pokemon-img-container {
-    padding: 0px 5px;
+    padding: 50px 5px;
   }
   
   .pokemon-img {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
+    background-color: #F6F4F6;
+    display:inline-block;
+    border-radius: 50%;
+    margin-left: 70%;
+    margin-top: -30%;
+    
   }
   
   .pokemon-type {
-    display: flex;
+    display: flex;    
   }
   
   .pokemon-type-text {
     margin-right: 10px;
     text-transform: capitalize;
+    margin-top: 15%;
+    margin-bottom: 10%;
   }
   
   .card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px 10px 10px 10px;
+    padding: 90px 10px 10px 5px;
     flex: 1;
+    margin-top: 18%;
+    margin-left: -12%;
+
   }
   
-  .card-top {
+ /*  .card-top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
+  } */
   
-  .card-bottom {
+  /* .card-bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  } */
+
+/*   .pokemon-heart-btn {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background-color: #f0f0f0;
+    background-image: url();
+    cursor: pointer;
   }
-  
+ */
+
+ .pokemon-button {
+  display: flex;
+  justify-content: space-between;
+  background-image: url();
+  margin-left: -50px;
+  margin-right: 10px;
+  color: #757575;
+ }
+
+ .horizontal-line {
+ width: 300px;
+ border: 1px solid #000;
+}
+
+ .pokemon-button button{
+  background-color: #ffffff;
+  border: none;
+  color: #757575;
+  padding-right: 10px;
+  margin-left: 8%;
+  cursor: pointer;
+ }
+
+ .pokemon-button button :hover{
+   color: chocolate;
+ }
+
+  .Exclude-button{
+    cursor: pointer;
+    padding: -0px 17px;
+    background-image: url("../public/Icon-trash.png");
+    background-repeat: no-repeat;
+  }
+
+  .Edit-button {
+    padding: -0px 17px;
+    background-image: url("../public/Icon-edit.png");
+    background-repeat: no-repeat;
+   
+  }
+
   .card-top h3 {
     text-transform: capitalize;
   }
   
-  .pagination {
+/*   .pagination {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-  
+   */
   .App {
     font-family: sans-serif;
   }
   
-  .icon {
+/*   .icon {
     width: 28px;
     height: 28px;
   }
-  
-  .pagination-btn {
+   */
+  /* .pagination-btn {
     background-color: black;
     border: none;
     border-radius: 50%;
@@ -154,32 +298,19 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-  }
+  } */
   
-  .pokemon-heart-btn {
+/*   .pokemon-heart-btn {
     border: none;
     background-color: #f0f0f0;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
     padding: 4px;
     border-radius: 4px;
     cursor: pointer;
-  }
+  } */
   
   .not-found-text {
     text-align: center;
     font-size: 1.25rem;
     padding: 20px;
-  }
-  
-  footer {
-    font-family: inherit;
-    background-color: #363636;
-    padding: 10px;
-    color: white;
-    text-align: center;
-    font-size: 1.1rem;
-  }
-  footer a {
-    color: #e58112;
-  }
-  
+  }  

@@ -23,7 +23,7 @@ const Searchbar = (props) => {
       </div>
       <div className="searchbar-btn">
         <button onClick={onClick}>
-         buscar          
+
         </button>
       </div>
     </div>
