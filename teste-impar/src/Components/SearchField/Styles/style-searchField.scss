@@ -1,0 +1,38 @@
+$bgSearch: '../../../Assets/Images/fundo-busca.png';
+$lupa: '../../../Assets/Images/lupa.svg';
+
+.field-search{
+  width: 100vw;
+  height: 30vh;
+  background-image: url($bgSearch);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-search{
+  border: none;
+  border-radius: 8px;
+  width: 60rem;
+  height: 3rem;
+  padding-left: 2rem;
+  background-image: url($lupa);
+  background-repeat: no-repeat;
+  background-position: 56.5rem;
+  background-size: 40px;
+  font-size: 24px;
+
+  @media screen and (min-width:768px) and (max-width:1023px){
+    width: 40rem;
+    background-position: 36.5rem;
+  }
+
+  @media screen and (max-width:767px) {
+    width: 20rem;
+    background-position: 16.5rem;
+    font-size: 18px;
+    background-size: 35px;
+  }
+}

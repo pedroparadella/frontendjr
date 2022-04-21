@@ -1,0 +1,36 @@
+$cor-primaria: #5F1478;
+$cor-destaque: #E76316;
+
+h1{
+  font-size: 32px;
+  color: $cor-primaria;
+}
+
+#button-create-card {
+  background-color: $cor-destaque;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0px 3px 6px #92207242;
+  width: 173px;
+  height: 48px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.container-cards{
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  
+  @media screen and (min-width:768px) and (max-width:1023px){
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width:767px) {
+    grid-template-columns: 1fr;
+
+  }
+}
