@@ -16,6 +16,7 @@ git clone git@github.com:FredericoCanoeira/frontendjr.git
 ## Step 3. access the directory
 
 Type or copy the command below to access the directory
+
 cd search_page
 
 ## Step 4. install the dependencies
