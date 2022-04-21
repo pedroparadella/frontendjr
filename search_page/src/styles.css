@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+
+* {
+    margin: 0px;
+  
+  }
+
+  body {
+    background-color: #F6F4F6;
+    margin: auto;
+    min-height:  100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav {
+    background-color: #6B2582;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    margin: -5%  0% -5% ;
+    
+  }
+
+  .navbar-image {
+    width: 160px;
+    margin-right: 65rem;
+    margin-top: 0.7rem;
+  }
+  
+  .searchbar-container {
+    display: flex;
+    margin: 60px 0px 0px;
+    padding: 45px;
+    align-items: center;
+    flex: 1;
+    align-items: stretch;
+    background-image: url("../public/Backgound_image.jpg") ;
+    background-position: 300%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+   .searchbar input {
+    padding: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-left: 20%;
+    border: none;
+    width: 104%;
+    height: 104%;
+    font-family: Mulish;
+    font-size: medium;
+    padding-right: 350px
+   
+  }
+  
+  .searchbar-btn button {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    height: 104%;
+    padding: 10px 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    background-image: url("../public/lupa.png");
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    margin-left: 855%;
+    margin-top: 17%;
+  }
+
+  .header {
+    color: #6B2582;
+    font-family: Mulish;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px;
+    height: 0px;
+  }
+
+  .card-btn button {
+    background-color: chocolate;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 7%;
+    font-size:medium;
+    font-family: Mulish;
+    font-weight: bold;
+    margin: -20%;  
+    padding: 10px;
+    cursor: pointer;
+
+  }
+  
+  .pokedex-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 18px;
+    padding: 0px 10px 20px 4px;
+    margin: 100px;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .pokedex-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .pokedex-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  .pokemon-card {
+    background-color: #FFFFFF;
+    display: flex;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+  }
+  
+  .pokemon-img-container {
+    padding: 50px 5px;
+  }
+  
+  .pokemon-img {
+    width: 100px;
+    height: 100px;
+    background-color: #F6F4F6;
+    display:inline-block;
+    border-radius: 50%;
+    margin-left: 70%;
+    margin-top: -30%;
+    
+  }
+  
+  .pokemon-type {
+    display: flex;    
+  }
+  
+  .pokemon-type-text {
+    margin-right: 10px;
+    text-transform: capitalize;
+    margin-top: 15%;
+    margin-bottom: 10%;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 90px 10px 10px 5px;
+    flex: 1;
+    margin-top: 18%;
+    margin-left: -12%;
+
+  }
+
+ .pokemon-button {
+  display: flex;
+  justify-content: space-between;
+  background-image: url();
+  margin-left: -50px;
+  margin-right: 10px;
+  color: #757575;
+ }
+
+ .horizontal-line {
+ width: 300px;
+ border: 1px solid #000;
+}
+
+ .pokemon-button button{
+  background-color: #ffffff;
+  border: none;
+  color: #757575;
+  padding-right: 10px;
+  margin-left: 8%;
+  cursor: pointer;
+ }
+
+ .pokemon-button button :hover{
+   color: chocolate;
+ }
+
+  .Exclude-button{
+    cursor: pointer;
+    padding: -0px 17px;
+    background-image: url("../public/Icon-trash.png");
+    background-repeat: no-repeat;
+  }
+
+  .Edit-button {
+    padding: -0px 17px;
+    background-image: url("../public/Icon-edit.png");
+    background-repeat: no-repeat;
+  }
+
+  .card-top h3 {
+    text-transform: capitalize;
+  }
+  
+  .App {
+    font-family: sans-serif;
+  }
+  
+  .not-found-text {
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 20px;
+  }  
