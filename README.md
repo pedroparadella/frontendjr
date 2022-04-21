@@ -5,9 +5,10 @@
 ## Step 1. What you will need
 
 install on your machine
+
 npm (The most up-to-date version)
-node (The most up-to-date version)
-You can find it on the website https://nodejs.org/es/
+
+node (The most up-to-date version you can find it on the website https://nodejs.org/es/)
 
 
 ## Step 2. clone the repository
@@ -26,7 +27,7 @@ Type or copy the command below to access the directory
 ## Step 4. install the dependencies
 
 ```http
-  npm i
+  npm intall
 ```
 
 
