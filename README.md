@@ -42,3 +42,8 @@ After that Open http://localhost:3000 to view it in the browser.
 # Thanks!
 
 
+## Authors
+
+- [@FredericoCanoeira](https://github.com/FredericoCanoeira)
+
+
