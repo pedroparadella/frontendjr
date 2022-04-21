@@ -9,6 +9,11 @@ const Pokedex = (props) => {
     <div>
       <div className="header">
         <h1>Resultado de busca</h1>
+        <div className="card-btn" >
+        <button /* onClick={onClick} */>
+        Novo card          
+        </button>
+      </div>
       </div>
       {loading ? (
         <div>Cargando pokemons...</div>
