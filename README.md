@@ -1,24 +1,49 @@
 # Avaliação Junior
-Olá desenvolvedor!\
-Tudo bem?! 😊\
-\
-Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor estilo de programar e resolver problemas.
 
-## O que fazer
-1. Fazer um fork desse repositório e trabalhar no seu ambiente.
-2. Replicar o layout do link abaixo, pode usar dados de um JSON local:\
-[Link para o layout](https://xd.adobe.com/view/c715f110-fbd4-4323-be0c-0e453c1450db-9246)
-2. Fazer a funcionalidade de busca funcionar.
-3. Os cliques nos botões de editar/excluir/criar card podem exibir uma mensagem pro usuário de que a funcionalidade não foi implementada.
-4. Ao finalizar a avaliação modifique esse README com as instruções de como podemos fazer o seu código rodar na nossa máquina. Ou seja, passo a passo do que instalar e de quais comandos rodar para podermos visualizar o seu trabalho!
-5. Realizar um Pull Request para o nosso repositório e mandar um e-mail para processoseletivo@impar.com.br com o assunto "Avaliação Junior", informando que finalizou a avaliação e colocando o link do Pull Request. 
+Teste Ímpar
 
-## Dicas
-* Não foi definido limite de linhas e colunas, portanto fique à vontade para tal escolha.
-* Gostamos de interfaces limpas e elegantes.
+Matheus Phillipo Silverio Silva
 
-## Quais tecnologias usar
-* Deixaremos a seu critério qual tecnologia utilizar no entanto você terá mais pontos conosco se utilizar React para criação da interface e também o uso de pré-processadores/styled-components para o CSS.
+## O que fazer para rodar o projeto
 
-## Desafios se você se sentir confiante
-* Usar alguma API na internet, tipo https://pokeapi.co/, para trazer os dados que vão aparecer nos cards da tela.
+1. Verifique se tem o Node.js instalado na sua máquina, caso contrário pode baixar por esse link https://nodejs.org/en/download/ (Vesão LTS)
+
+2. Clone esse repositório e abra seu terminal na pasta "teste-impar"
+
+3. Execute o seguinte comando no diretório do projeto (./teste-impar) : npm install
+   
+4. Com tudo instalado, execute o comando "npm start" no mesmo diretório do projeto (./teste-impar) e espere a inicialização do projeto.
+
+## Funcionalidades
+1. Consumo de informações da API https://pokeapi.co/
+2. Barra de Busca
+3. Aviso ao usuário de funcionalidade nao implementada
+
+## Tecnologias Utilizadas
+- React
+- Axios
+- Sass
+
+## Adendos
+- Trabalhei no layout da página para que tivesse um comportamento responsivo utilizando as propriedades do CSS flex e grid, além de um efeito hover nos botões.
+- Em todas as pastas dos componentes, tem uma pasta styles em que eu divido uma para somente posicionamento e outra para uma estilização (cor, background, efeitos...)
+
+## Desabafo
+No meu atual cenário de trabalho, mexo com diversas tecnologias e comecei a colocar React na prática há alguns meses. Enfrentei diversos erros lidando com a filosofia que o React foi construído. Tentei colocar as funcionalidades dos botões e um hover no card dos pokemons que abrisse uma caixa com as suas descrições (tipo, ataque, evolução). Isso acabou pegando muito do meu tempo e concluí que precisava revisar mais sobre React para lidar com essas aplicações.
+
+## Melhorias que eu faria
+Implementaria as funcionalidades dos botões e o hover nos cards com as descrições, além de nunca parar de estudar e aplicar códigos que melhorassem a sua visibilidade e performance
+
+
+## Videos
+
+https://user-images.githubusercontent.com/18178688/164570596-b6f5480e-6982-4e4f-9917-48d469373a68.mp4
+
+
+
+https://user-images.githubusercontent.com/18178688/164570642-ca2430d2-6c77-47d7-9ebc-f645e70d03a9.mp4
+
+
+
+
+https://user-images.githubusercontent.com/18178688/164570666-7b7026c5-8810-4c38-bd71-f5c8b45eb697.mp4

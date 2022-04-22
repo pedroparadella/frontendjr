@@ -1,0 +1,26 @@
+.results-section{
+  width: 100vw;
+}
+
+.div-grid{
+  display: grid;
+  grid-template-columns: 4;
+  grid-template-rows: 2;
+  justify-content: center;
+}
+
+.header-grid{
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 10px 0 10px;
+  align-items: center;
+
+  @media screen and (min-width:768px) and (max-width:1023px){
+    width: 40rem;
+  }
+
+  @media screen and (max-width:767px) {
+    width: 23rem;
+
+  }
+}
