@@ -1,24 +1,36 @@
-# Avaliação Junior
-Olá desenvolvedor!\
-Tudo bem?! 😊\
-\
-Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor estilo de programar e resolver problemas.
+# Desafio frontend Ímpar :airplane:
 
-## O que fazer
-1. Fazer um fork desse repositório e trabalhar no seu ambiente.
-2. Replicar o layout do link abaixo, pode usar dados de um JSON local:\
-[Link para o layout](https://xd.adobe.com/view/c715f110-fbd4-4323-be0c-0e453c1450db-9246)
-2. Fazer a funcionalidade de busca funcionar.
-3. Os cliques nos botões de editar/excluir/criar card podem exibir uma mensagem pro usuário de que a funcionalidade não foi implementada.
-4. Ao finalizar a avaliação modifique esse README com as instruções de como podemos fazer o seu código rodar na nossa máquina. Ou seja, passo a passo do que instalar e de quais comandos rodar para podermos visualizar o seu trabalho!
-5. Realizar um Pull Request para o nosso repositório e mandar um e-mail para processoseletivo@impar.com.br com o assunto "Avaliação Junior", informando que finalizou a avaliação e colocando o link do Pull Request. 
 
-## Dicas
-* Não foi definido limite de linhas e colunas, portanto fique à vontade para tal escolha.
-* Gostamos de interfaces limpas e elegantes.
+## :page_facing_up: Descrição do Projeto 
+Este projeto tem como objetivo analisar o conhecimento técnico, o estilo de resolver problemas e programar do candidadto.
 
-## Quais tecnologias usar
-* Deixaremos a seu critério qual tecnologia utilizar no entanto você terá mais pontos conosco se utilizar React para criação da interface e também o uso de pré-processadores/styled-components para o CSS.
+## :computer: Desenvolvimento
+Para desenvolver esse projeto eu optei por utilizar **<a href="https://pt-br.reactjs.org/">React</a>** em conjunto com o framework **<a href="https://nextjs.org/">Next.Js</a>**, com certeza tecnicamente não havia necessidade de se usar um framwork, porém com o objetivo de aprender ferramentas novas decidi desenvolver utilizando tal framework. Para a estilização do projeto utilizei **<a href="https://styled-components.com/">styled-components</a>**
 
-## Desafios se você se sentir confiante
-* Usar alguma API na internet, tipo https://pokeapi.co/, para trazer os dados que vão aparecer nos cards da tela.
+Deve comentar que como foi a primeira vez que utilizei Typescript e Next.Js, tive alguns problemas, que a propósito foi meu maior desafio, fazer a configuração dos dois, mas nada que um boa lida na documentação (stackoverflow) não resolvesse.
+
+## :technologist: Inicialização
+Após o **git clone** abra o terminal na pasta do projeto e execute os seguintes comandos:
+  - cd frontend
+  - yarn
+  - yarn dev
+  - Acesse [http://localhost:3000](http://localhost:3000/) no seu browser.
+  - Ou então se estiver utilizando VScode, aperte ctrl + shift + p, digite 'simple browser' e abra o projeto no browser do vscode.
+
+## :hammer_and_wrench: Ferramentas utilizadas
+- **<a href="https://pt-br.reactjs.org/">React</a>**
+- **<a href="https://www.typescriptlang.org//">Typescript</a>**
+- **<a href="https://nextjs.org/">Next.Js</a>**
+- **<a href="https://styled-components.com/">styled-components</a>**
+- **<a href="https://developer.marvel.com/">Marvel Developer Portal</a>**
+- **<a href="https://xd.adobe.com/view/c715f110-fbd4-4323-be0c-0e453c1450db-9246/">Adobe XD, Layout do projeto</a>**
+
+## :gear: Funcionalidades
+  - [x] Replicar layout
+  - [x] Fazer a funcionalidade de busca funcionar
+  - [x] Modal de criar card, excluir card e 'funcionalidade não criada'
+
+## :monocle_face: Observações
+Optei por utilizar um api de personagens da Marvel (não achei da DC :pleading_face:). E ela precisa de algumas configurações para poder utiliza-la. Essas configurações pódem ser observadas em: src/hooks/useRequest.tsx.
+Algumas dessas informações são sensíveis como privateKey e publicKey e o correto seria configura variáveis de hambiente um arquivo .env para protege-las, não achei necessario, porém deixo aqui meu conhecimento do que seria uma boa prática. 
+
