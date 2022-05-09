@@ -1,0 +1,26 @@
+.modalContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  h1 {
+    color: #db2525;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 0;
+    text-align: center;
+  }
+
+  h4 {
+    color: #454545;
+    font-size: 16px;
+    line-height: 15px;
+    font-weight: 400px;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+}

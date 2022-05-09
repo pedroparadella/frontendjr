@@ -1,0 +1,11 @@
+.FilledButton {
+  .Button {
+    font-size: 18px;
+    font-style: Bold;
+    text-transform: capitalize;
+    background-color: #e76316;
+    &:hover {
+      background-color: #e76316;
+    }
+  }
+}
