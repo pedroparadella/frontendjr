@@ -1,0 +1,14 @@
+.Header {
+  display: flex;
+  background: transparent linear-gradient(272deg, #ae276f 0%, #5f1478 100%) 0%
+    0% no-repeat padding-box;
+  height: 64px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 24px;
+  box-shadow: 0px 3px 6px #00000029;
+  img {
+    height: 37px;
+  }
+}
