@@ -5,13 +5,14 @@ Tudo bem?! 😊\
 Seja bem-vindo, o intuito do teste não é reprovar e sim conhecer seu melhor estilo de programar e resolver problemas.
 
 ## O que fazer
-1. Fazer um fork desse repositório e trabalhar no seu ambiente.
-2. Replicar o layout do link abaixo, pode usar dados de um JSON local:\
+1. Crie um repositório no GitHub.
+2. Use esse repositório para desenvolver a aplicação.
+3. Replicar o layout do link abaixo, pode usar dados de um JSON local:\
 [Link para o layout](https://xd.adobe.com/view/c715f110-fbd4-4323-be0c-0e453c1450db-9246)
-2. Fazer a funcionalidade de busca funcionar.
-3. Os cliques nos botões de editar/excluir/criar card podem exibir uma mensagem pro usuário de que a funcionalidade não foi implementada.
-4. Ao finalizar a avaliação modifique esse README com as instruções de como podemos fazer o seu código rodar na nossa máquina. Ou seja, passo a passo do que instalar e de quais comandos rodar para podermos visualizar o seu trabalho!
-5. Realizar um Pull Request para o nosso repositório e mandar um e-mail para processoseletivo@impar.com.br com o assunto "Avaliação Junior", informando que finalizou a avaliação e colocando o link do Pull Request. 
+4. Fazer a funcionalidade de busca funcionar.
+5. Os cliques nos botões de editar/excluir/criar card podem exibir uma mensagem pro usuário de que a funcionalidade não foi implementada.
+6. Ao finalizar a avaliação crie um README na raiz do repositório com as instruções de como podemos fazer o seu código rodar na nossa máquina. Ou seja, passo a passo do que instalar e de quais comandos rodar para podermos visualizar o seu trabalho!
+7. Ao finalizar a sua avaliação enviar um e-mail para processoseletivo@impar.com.br com o assunto "Avaliação Junior", informando que finalizou a avaliação e colocando o link do seu repositório GitHub com o código feito. 
 
 ## Dicas
 * Não foi definido limite de linhas e colunas, portanto fique à vontade para tal escolha.
