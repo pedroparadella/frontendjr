@@ -431,44 +431,36 @@ const Home = () => {
             :
               <>
                 <GroupCards>
-                  {dataSearch.length <= 0 ? (
-                    <Message>
-                      <p>Nenhum resultado encontrado.</p>
-                    </Message>
-                  ) : (
-                    <>
-                      {dataSearch.map((item) => {
-                        if (!item) return null;
+                  {dataSearch.map((item) => {
+                    if (!item) return null;
 
-                        return (
-                          <Card
-                            key={Math.random().toString(36).substr(2, 9)}
-                            setDataDelete={setDataDelete}
-                            dataCard={item}
-                            setIsOpen={setIsOpen}
-                            setWarning={setWarning}
-                            setDataUpdate={setDataUpdate}
-                            setLoading={setLoading}
-                          />
-                        );
-                      })}
-                      {valueSearch === "" &&
-                        pokemonList.map((item) => {
-                          if (!item) return null;
+                    return (
+                      <Card
+                        key={Math.random().toString(36).substr(2, 9)}
+                        setDataDelete={setDataDelete}
+                        dataCard={item}
+                        setIsOpen={setIsOpen}
+                        setWarning={setWarning}
+                        setDataUpdate={setDataUpdate}
+                        setLoading={setLoading}
+                      />
+                    );
+                  })}
+                  {valueSearch === "" &&
+                    pokemonList.map((item) => {
+                      if (!item) return null;
 
-                          return (
-                            <Card
-                              key={Math.random().toString(36).substr(2, 9)}
-                              setDataDelete={setDataDelete}
-                              result={item}
-                              setIsOpen={setIsOpen}
-                              setWarning={setWarning}
-                              setLoading={setLoading}
-                            />
-                          );
-                        })}
-                    </>
-                  )}
+                      return (
+                        <Card
+                          key={Math.random().toString(36).substr(2, 9)}
+                          setDataDelete={setDataDelete}
+                          result={item}
+                          setIsOpen={setIsOpen}
+                          setWarning={setWarning}
+                          setLoading={setLoading}
+                        />
+                      );
+                    })}
                 </GroupCards>
                 <ContainerPaginate>
                   {valueSearch === "" && previous && (
