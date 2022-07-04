@@ -123,21 +123,6 @@ const GroupCards = styled.div`
   }
 `;
 
-const Message = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  font-weight: 500;
-  grid-column: 2/4;
-  grid-row: 3;
-
-  @media (max-width: 648px) {
-    grid-column: 1;
-  }
-`;
-
 // Modal Trash
 const ContainerDelete = styled.div`
   width: 27.375rem;
