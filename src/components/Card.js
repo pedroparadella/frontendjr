@@ -118,16 +118,24 @@ const CardComponent = ({
   setDataUpdate,
   setDataDelete,
   setIsOpen,
+  setLoading
 }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    api
-      .get(`pokemon/${result?.name}/`)
-      .then((response) => setData(response?.data))
-      .catch((err) => {
-        console.error("ops! ocorreu um erro" + err);
-      });
+    if(result?.name) {
+      api
+        .get(`pokemon/${result?.name}/`)
+        .then((response) => {
+          if(response.status === 200) {
+            setLoading(false)
+            return setData(response?.data)
+          }
+        })
+        .catch((err) => {
+          console.error("ops! ocorreu um erro" + err);
+        });
+    }
   }, [result]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (

@@ -3,7 +3,6 @@ import styled from "styled-components/macro";
 import { useQuery } from "react-query";
 
 // Assets
-import logo from "../assets/logo.svg";
 import trash from "../assets/trash.svg";
 import search from "../assets/search.svg";
 import exit from "../assets/exit.png";
@@ -15,6 +14,7 @@ import Card from "../components/Card";
 import api from "../Api";
 import BaseModal from "./BaseModal";
 import CreateCard from "./CreateCard";
+import Loading from "./Loading";
 
 const Container = styled.div`
   width: 100%;
@@ -33,10 +33,6 @@ const Header = styled.div`
     linear-gradient(272deg, var(--color_pink) 0%, var(--color_purple) 100%)
     no-repeat padding-box;
   box-shadow: 0 0.1875rem 0.375rem #00000029;
-`;
-
-const Logo = styled.img`
-  width: 12rem;
 `;
 
 const ContainerSearch = styled.div`
@@ -270,14 +266,20 @@ const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [animation, setAnimation] = useState(false);
   const [warning, setWarning] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [endPointRequest, setEndPointRequest] = useState(
-    "pokemon?limit=16&offset=0"
+    "pokemon?offset=0&limit=16"
   );
 
   const pokemonRequest = useQuery("pokemonRequest", async () => {
     const { data } = await api
       .get(endPointRequest)
-      .then((response) => response)
+      .then((response) => {
+        if(response.status === 200) {
+          setLoading(false)
+          return response
+        }
+      })
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
       });
@@ -293,7 +295,11 @@ const Home = () => {
     setPokemonList(pokemonRequest?.data?.results || []);
     setPrevious(pokemonRequest?.data?.previous);
     setNext(pokemonRequest?.data?.next);
-  }, [pokemonRequest?.data]); // eslint-disable-line react-hooks/exhaustive-deps
+
+    setTimeout(() => {
+      setLoading(false)
+    }, "1000")
+  }, [pokemonRequest]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     setDataSearch([...newCard]);
@@ -302,15 +308,25 @@ const Home = () => {
   const handleChange = (e) => {
     const { value } = e.target;
     setValueSearch(value);
-
-    const search = dataSearch.filter((item) => {
-      return !item.name.toLowerCase().indexOf(value.toLowerCase());
+    
+    let allData = [...dataSearch, ...pokemonList]
+    
+    const search = allData.filter((item) => {  
+      return !item.name.toLowerCase().indexOf(valueSearch.toLowerCase());
     });
+    
+    const set = new Set();
+    const newSearch = search.filter(item => {
+      const removeDuplicate = set.has(item?.name);
+      set.add(item?.name);
+
+      return !removeDuplicate;
+    })
 
     if (value === "") {
-      setDataSearch([...newCard]);
+      setDataSearch([...allData]);
     } else {
-      setDataSearch(search);
+      setDataSearch(newSearch);
     }
   };
 
@@ -388,7 +404,6 @@ const Home = () => {
   return (
     <Container>
       <Header>
-        <Logo src={logo} alt="Logo do site" />
       </Header>
       <ContainerSearch>
         <SearchLabel>
@@ -411,71 +426,81 @@ const Home = () => {
             Novo Card
           </Button>
         </HeaderCards>
-        <GroupCards>
-          {!dataSearch.length && !pokemonList.length ? (
-            <Message>
-              <p>Nenhum resultado encontrado.</p>
-            </Message>
-          ) : (
-            <>
-              {dataSearch.map((item) => {
-                if (!item) return null;
+        { loading
+            ? <Loading/>
+            :
+              <>
+                <GroupCards>
+                  {dataSearch.length <= 0 ? (
+                    <Message>
+                      <p>Nenhum resultado encontrado.</p>
+                    </Message>
+                  ) : (
+                    <>
+                      {dataSearch.map((item) => {
+                        if (!item) return null;
 
-                return (
-                  <Card
-                    key={Math.random().toString(36).substr(2, 9)}
-                    setDataDelete={setDataDelete}
-                    dataCard={item}
-                    setIsOpen={setIsOpen}
-                    setWarning={setWarning}
-                    setDataUpdate={setDataUpdate}
-                  />
-                );
-              })}
-              {valueSearch === "" &&
-                pokemonList.map((item) => {
-                  if (!item) return null;
+                        return (
+                          <Card
+                            key={Math.random().toString(36).substr(2, 9)}
+                            setDataDelete={setDataDelete}
+                            dataCard={item}
+                            setIsOpen={setIsOpen}
+                            setWarning={setWarning}
+                            setDataUpdate={setDataUpdate}
+                            setLoading={setLoading}
+                          />
+                        );
+                      })}
+                      {valueSearch === "" &&
+                        pokemonList.map((item) => {
+                          if (!item) return null;
 
-                  return (
-                    <Card
-                      key={Math.random().toString(36).substr(2, 9)}
-                      setDataDelete={setDataDelete}
-                      result={item}
-                      setIsOpen={setIsOpen}
-                      setWarning={setWarning}
-                    />
-                  );
-                })}
-            </>
-          )}
-        </GroupCards>
-        <ContainerPaginate>
-          {valueSearch === "" && previous && (
-            <Paginate
-              onClick={() => {
-                const endPoint = previous.replace(
-                  "https://pokeapi.co/api/v2/",
-                  ""
-                );
-                setEndPointRequest(endPoint);
-              }}
-            >
-              &#8678;
-            </Paginate>
-          )}
-          {valueSearch === "" && next && (
-            <Paginate
-              onClick={() => {
-                const endPoint = next.replace("https://pokeapi.co/api/v2/", "");
-                setEndPointRequest(endPoint);
-              }}
-            >
-              &#8680;
-            </Paginate>
-          )}
-        </ContainerPaginate>
+                          return (
+                            <Card
+                              key={Math.random().toString(36).substr(2, 9)}
+                              setDataDelete={setDataDelete}
+                              result={item}
+                              setIsOpen={setIsOpen}
+                              setWarning={setWarning}
+                              setLoading={setLoading}
+                            />
+                          );
+                        })}
+                    </>
+                  )}
+                </GroupCards>
+                <ContainerPaginate>
+                  {valueSearch === "" && previous && (
+                    <Paginate
+                      onClick={() => {
+                        const endPoint = previous.replace(
+                          "https://pokeapi.co/api/v2/",
+                          ""
+                        );
+                        setEndPointRequest(endPoint);
+                        setLoading(true);
+                      }}
+                    >
+                      &#8678;
+                    </Paginate>
+                  )}
+                  {valueSearch === "" && next && (
+                    <Paginate
+                      onClick={() => {
+                        const endPoint = next.replace("https://pokeapi.co/api/v2/", "");
+                        setEndPointRequest(endPoint);
+                        setLoading(true);
+                      }}
+                    >
+                      &#8680;
+                    </Paginate>
+                  )}
+                </ContainerPaginate>
+              </>
+        }
       </ContainerCards>
-      {(isOpen || dataUpdate?.length) && (
+      {(isOpen || dataUpdate?.length > 0) && (
         <BaseModal
           closeModal={() => {
             setTimeout(() => {

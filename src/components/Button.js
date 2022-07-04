@@ -27,7 +27,7 @@ const Button = styled.button`
   }
 `;
 
-const Home = (props) => {
+const ButtonComponent = (props) => {
   return (
     <Button
       type="button"
@@ -49,4 +49,4 @@ const Home = (props) => {
   );
 };
 
-export default Home;
+export default ButtonComponent;
