@@ -1,11 +1,13 @@
-# What you will need
+# PokeAPI Visualizer
+
+## What you will need
 
 - npm (version used: 8.5.0)
 - node (version used: 16.14.2)
 
 Link to download and install above items: https://nodejs.org/es/
 
-# How to run this app
+## How to run this app
 
 After installation, you will need to run the following commands in the project directory:
 
