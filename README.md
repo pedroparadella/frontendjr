@@ -1,4 +1,5 @@
 # PokeAPI Visualizer
+ReactJS app developed for a job challenge. It fetches data from the pokeAPI and shows it on screen.
 
 ## What you will need
 
