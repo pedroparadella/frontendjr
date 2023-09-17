@@ -1,5 +1,5 @@
 # PokeAPI Visualizer
-ReactJS app developed for a job challenge. It consumes data from the pokeAPI and shows it on screen.
+ReactJS app developed for a job challenge. It consumes the pokeAPI and shows some data about Pokemons on screen.
 
 ## What you will need
 
