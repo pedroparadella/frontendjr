@@ -1,10 +1,13 @@
 # PokéAPI Visualizer
-ReactJS app developed for a job challenge. It consumes the [PokéAPI](https://pokeapi.co/) and shows some data about Pokemons on screen.
+This project is a ReactJS app that consumes the [PokéAPI](https://pokeapi.co/) and shows some data about Pokemons on screen.
+
+![pokeapi-visualizer](https://github.com/nicolastmaia/pokeapi-visualizer/assets/45211638/7525097f-c132-4281-b267-efb3bfef9769)
+
+&nbsp;
 
 ## What you will need
 
-- npm (version used: 8.5.0)
-- node (version used: 16.14.2)
+- NodeJS version 16.14.2
 
 Link to download and install above items: https://nodejs.org/es/
 
