@@ -14,19 +14,22 @@ import axios from 'axios';
 import CustomSearchBar from '../components/CustomSearchBar';
 import { Alert, Snackbar } from '@mui/material';
 
+const mainColor = '#cf3042';
+const secondaryColor = '#e67586';
+
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#A82670',
+      main: mainColor,
     },
     secondary: {
-      main: '#5F1478',
+      main: secondaryColor,
     },
   },
 });
 
-const iconImpar = require('../assets/impar.png');
-const pokemonWallpaper = require('../assets/pokemon.jpg');
+const pokemonIcon = require('../assets/icon.png');
+const pokemonCover = require('../assets/cover.jpg');
 
 export default function Main() {
   const [pokemons, setPokemons] = useState([]);
@@ -79,18 +82,18 @@ export default function Main() {
       <AppBar
         position='relative'
         sx={{
-          backgroundImage: `linear-gradient(to right,#5F1478,#A82670)`,
+          backgroundImage: `linear-gradient(to right,${secondaryColor},${mainColor})`,
         }}
       >
         <Toolbar>
           <img
-            src={iconImpar}
+            src={pokemonIcon}
             alt='Impar'
             height='40px'
             style={{ marginRight: '1em' }}
           />
           <Typography variant='h6' color='inherit' noWrap>
-            Teste Ímpar
+            PokéAPI Visualizer
           </Typography>
         </Toolbar>
       </AppBar>
@@ -101,7 +104,7 @@ export default function Main() {
         <Box>
           <Box position='absolute' width='100%' height='17em'>
             <img
-              src={pokemonWallpaper}
+              src={pokemonCover}
               alt='Pokemon Wallpaper'
               style={{
                 width: '100%',
