@@ -1,5 +1,5 @@
 # PokéAPI Visualizer
-This project is a ReactJS app that consumes the [PokéAPI](https://pokeapi.co/) and shows some data about Pokemons on screen.
+This project is a ReactJS app that consumes the [PokéAPI](https://pokeapi.co/) and shows some data about Pokemons on screen.  
 In this project I was able to practice responsive design by using Grid Layout and to practice creating a design with colors following the 60-30-10 rule.
 
 ![pokeapi-visualizer](https://github.com/nicolastmaia/pokeapi-visualizer/assets/45211638/7525097f-c132-4281-b267-efb3bfef9769)
